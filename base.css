@@ -1,0 +1,57 @@
+body {
+    width: 80%; 
+    max-width: 38em;
+    margin: 1.5em 15%;
+    line-height: 1.2em;
+    font-family: Helvetica, sans-serif;
+}
+
+img, .figure {
+    max-width: 100%;
+    border: 1px solid lightgrey;
+}
+
+blockquote {
+    font: 112% Georgia, serif;
+    background: whitesmoke;
+    border-left: 8px solid lightgrey;
+    margin: 1.5em 4px;
+    padding: 3ex 3ex;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+    color: lightgrey;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+blockquote p {
+    display: inline;
+}
+
+.figure {
+    text-align: center;
+}
+.figure img {
+    border: none;
+}
+.figure .caption {
+    font-style: italic;
+    font-size: 90%;
+}
+
+@media print {
+    body {
+        width: 94%;
+        margin: 1.5em;
+        font-size: 90%;
+    }
+}
+
+td {
+    border: 1px solid gray;
+    text-align: center;
+    padding: .8ex 3ex;
+}
