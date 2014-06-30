@@ -1,3 +1,6 @@
+% Samenvatting ISMI
+% Mathijs Bernson
+
 # Samenvatting ISMI
 
 ## Stof

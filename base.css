@@ -55,3 +55,11 @@ td {
     text-align: center;
     padding: .8ex 3ex;
 }
+
+hr {
+    height: 1px !important;
+    margin: 2em auto;
+    width: 80%;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+}

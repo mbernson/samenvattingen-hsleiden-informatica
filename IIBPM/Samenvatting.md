@@ -1,3 +1,6 @@
+% Samenvatting IIBPM
+% Mathijs Bernson
+
 # Samenvatting IIBPM
 
 ## Kerninhoud om te leren
@@ -295,11 +298,15 @@ Critical Success Factors (ook wel **Kritische succes factoren** in het Nederland
 
 ## Doelen
 
-Er zijn 3 soorten doelen:* ER-Doelen zijn na te streven, maar onbereikbare doelen als beter, goedkoper, klantgerichter, ...
+Er zijn 3 soorten doelen:
+
+* ER-Doelen zijn na te streven, maar onbereikbare doelen als beter, goedkoper, klantgerichter, ...
 * MAGIE-Doelen zijn Meetbaar, Acceptabel, Gecommuniceerd, Inspirerend en Engagerend
 * SMART-Doelen zijn Specifiek, Meetbaar, Acceptabel, Realistisch en Tijdgebonden
 
-* Een ER-doel is een algemeen uitgangspunt.* Een MAGIE-doel zet mensen in beweging.* Een SMART-doel geeft aan wanneer welke resultaten bereikt moeten zijn.
+* Een ER-doel is een algemeen uitgangspunt.
+* Een MAGIE-doel zet mensen in beweging.
+* Een SMART-doel geeft aan wanneer welke resultaten bereikt moeten zijn.
 
 ## Matrices
 

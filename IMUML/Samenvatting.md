@@ -1,3 +1,6 @@
+% Samenvatting IMUML
+% Mathijs Bernson
+
 # Samenvatting IMUML
 
 ## Stof
