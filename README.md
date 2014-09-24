@@ -1,13 +1,17 @@
 # Samenvattingen
 
-Om de HTML-versie te genereren, typ:
+Summaries for computer-science related courses at [Hogeschool Leiden](http://www.hsleiden.nl/informatica/).
 
-`pandoc Samenvatting.md -o samenvatting.html -c base.css`
+## Generating HTML, EPUB, etc.
 
-Of het automatisch te doen:
+The build and watch scripts require [Pandoc](http://johnmacfarlane.net/pandoc/) and [Kicker](https://github.com/alloy/kicker) to be installed, respectively.
 
-```
-$ gem install kicker
-$ cd <samenvatting>
-$ kicker -e "pandoc Samenvatting.md -o samenvatting.html -c base.css" Samenvatting.md
-```
+Run `script/build` to generate the HTML versions. `script/build epub` generates EPUB books for your e-reader.
+
+To watch a single summary for changes, run `script/watch <course>`. (Example: `script/watch ISMI`)
+
+## License
+
+2013-2014, Mathijs Bernson and contributors.
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons-Licentie" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Dit <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" rel="dct:type">werk</span> valt onder een <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Naamsvermelding-NietCommercieel-GelijkDelen 4.0 Internationaal-licentie</a>.

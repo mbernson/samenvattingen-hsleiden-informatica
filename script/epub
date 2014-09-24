@@ -1,0 +1,24 @@
+#!/bin/bash
+
+for DIRECTORY in `find . -type d -maxdepth 1`
+do
+    if [ $DIRECTORY != "./script" ]; then
+    if [ $DIRECTORY != "./.git" ]; then
+    if [ $DIRECTORY != "." ]; then
+
+        cd $DIRECTORY
+
+        if [ -f Samenvatting.md ]; then
+            EPUB_FILE="../epub/$DIRECTORY.epub"
+            echo "Converting Samenvatting.md to $EPUB_FILE"
+            pandoc Samenvatting.md -o $EPUB_FILE
+        fi
+
+        cd ..
+
+    fi
+    fi
+    fi
+done
+
+# pandoc $MD_PATH -o $HTML_PATH -c ../base.css
