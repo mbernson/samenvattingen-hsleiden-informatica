@@ -177,10 +177,9 @@ Indexes
 
 Een transactie is een logische unit van _database processing_ die één of meer statements bevat. Het combineert deze statements in een _alles-of-niets_ operatie. De tussenstappen zijn onzichtbaar voor de rest van de database totdat de transactie voltooid is.
 
-Transacties hebben boundaries (begin en end statements). De acties in een transactie kun je verdelen in twee categorieën: lezen en schrijven.
+Transacties hebben boundaries (begin en eind statements). De acties in een transactie kun je verdelen in twee categorieën: lezen en schrijven.
 
-Queries worden door het DBMS altijd sequentieel uitgevoerd. Met een transactie groepeer je queries tot een _unit of work_ 
-waar niks tussenin kan komen. Anders heb je bij meerdere queries geen controle over de _concurrency_.
+Dankzij transacties kunnen we queries **groeperen**, waardoor er niks tussenin kan komen. Dit geeft _concurrency control_.
 
 #### Voorbeeld
 
