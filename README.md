@@ -6,7 +6,9 @@ Summaries for computer-science related courses at [Hogeschool Leiden](http://www
 
 The build and watch scripts require [Pandoc](http://johnmacfarlane.net/pandoc/) and [Kicker](https://github.com/alloy/kicker) to be installed, respectively.
 
-Run `script/build` to generate the HTML versions. `script/build epub` generates EPUB books for your e-reader.
+Run `script/build <format>` to output to a desired format. For instance, `script/build docx` wil convert all summaries to docx. When called with no arguments, the script defaults to HTML.
+
+`script/epub` generates EPUB books for your e-reader and dumps them in a `./epub` folder.
 
 To watch a single summary for changes, run `script/watch <course>`. (Example: `script/watch ISMI`)
 
