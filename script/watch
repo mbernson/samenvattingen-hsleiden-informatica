@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Gem install kicker
+
+if [ -z `which kicker` ]; then
+    echo "Please install 'Kicker' by running 'gem install kicker'."
+    exit 1;
+fi
+
+DIRECTORY=$1
+
+if [ -z "$DIRECTORY" ]; then
+    echo "USAGE:"
+    echo "$ script/watch <course>"
+    exit 0;
+fi
+
+MD_PATH="$DIRECTORY/Samenvatting.md"
+HTML_PATH="$DIRECTORY/Samenvatting.html"
+
+kicker -e "pandoc $MD_PATH -o $HTML_PATH -c ../base.css" $MD_PATH
