@@ -56,10 +56,10 @@ beveiliging, concurrency.
 ### 3 niveau's van DBMS'en
 
 * **Internal** (fysieke laag)
-	* Is de "fysieke" opslagstructuur.
+	* Dit is de "fysieke" opslagstructuur.
 	* Is onzichtbaar voor de buitenwereld.
 * **Conceptual** (logische laag)
-	* Beschrijft de structuur van de database.
+	* Beschrijft de structuur van de database voor de gebruikers.
 	* Tabellen
 	* Vorig jaar met IRDB behandeld.
 * **External** (view laag)
@@ -72,7 +72,20 @@ Dit wordt de _three-schema architecture_ genoemd.
 ![© 2011, Navathe](three-schema-architecture.png)
 
 Het "DBMS" conept is ontstaan uit software die het wegschrijven naar een file handelt. Hier is een relationeel systeem omheen gebouwd.
+
+### Data independence
+
 Een DBMS wil _Data independence_ waarborgen. In theorie wordt deze scheiding met het drie-schema model behaald.
+
+We kennen twee niveau's van data independence:
+
+#### Logical data independence
+
+Dit wil zeggen dat het **conceptuele schema** kan veranderen, maar de **externe interface** hetzelfde blijft (m.b.v. views). Hierdoor blijven applicaties gewoon werken met de database.
+
+#### Physical data independence
+
+Het schema niet afhankelijk is van de manier waarop het wordt opgeslagen op het opslagmedium (hardeschijf).
 
 #### Tedd Codd
 
@@ -84,22 +97,26 @@ Bedacht een relationeel model in de jaren '60. Is in de jaren '70 geïmplementee
 
 ### DML, DDL en DCL
 
+Met deze drie termen delen we SQL op in drie subgedeelten, op basis van functionaliteit.
+
 * DDL
 	* Data Definition Language (statements)
 	* Creëren van structuren
+	* `CREATE TABLE` etc.
 * DML
 	* Data Manipulation Statements
-	* SELECT's, UPDATE's (SET WHERE AND OR) enz.
+	* Dit zijn alle statements om data te manipuleren.
+	* `SELECT, UPDATE, INSERT` en `DELETE`
 * DCL
 	* Data Control Language
-	* Security
-		* Toegang beheren
+	* Security en access control tot de database.
+	* O.a. `GRANT` en `REVOKE`
 
 ## Nieuwe SQL
 
 ### Views
 
-Views werken als een virtuele tabel. Ze kunnen gegevens opvragen, en kunnen deze eventueel ook muteren.
+Views werken als een virtuele tabel. Ze kunnen gegevens opvragen, en kunnen deze eventueel ook op een andere manier weergeven.
 
 ```sql
 CREATE [OR REPLACE] VIEW some_view_name
@@ -111,9 +128,9 @@ AS SELECT a, b, c
                      -- to ensure new rows satisfy the view-defining condition.
 ```
 
-Bevat geen data, maar is gelinkt aan één of meer _base tables_. De gebruiker ziet het verschil niet bij bijv. een SELECT statement.
+Een view bevat geen data, maar is gelinkt aan één of meer _base tables_. De gebruiker ziet het verschil niet bij bijv. een SELECT statement. Views kunnen bijv. handig zijn om een query met JOINs die je vaak gebruikt te vervangen.
 
-Joins kun je soms vervangen door een view.
+Het uitvoeren van UPDATEs op een view kan ingewikkeld zijn.
 
 Een **update view** kan het volgende **niet** hebben:
 
@@ -121,33 +138,49 @@ Een **update view** kan het volgende **niet** hebben:
 * Distinct
 * Group by of having
 
+En een **update view** moet het volgende **wel** hebben:
+
+* `WITH CHECK OPTION` achter de definitie.
+
+#### Inline views
+
+Het is ook mogelijk om een view in de `FROM` clause van een SQL-query te hebben. In dit geval bestaat de view alleen in de query zelf.
+
 ### Triggers
 
-Wordt geactiveerd bij een bepaalde gebeurtenis (conditie). Dan wordt er een actie uitgevoerd.
+Triggers vallen onder _active database rules_. D.w.z. dat de database niet alleen maar een passieve kaartenbak is, maar ook acties uit kan voeren.
 
-Een trigger kan niet expliciet worden aangeroepen (anders dan een stored procedure).
+Dit beschouwen we als een **Event-Condition-Action** model:
 
-Veelvoorkomende events (triggers) zijn:
+1. Het **event** is hetgeen wat de trigger activeert.
+2. De **condition** is de voorwaarde waaraan voldaan moet worden voordat de trigger wordt uitgevoerd.
+3. De **action** is de handeling die aan de trigger verbonden is. Dit kan SQL-code of code in een andere programmeertaal zijn.
+
+Een trigger kan niet expliciet worden aangeroepen, in tegenstelling tot een stored procedure. Triggers kunnen worden aangeroepen door (**events**):
 
 * Een time trigger.
 * Een UPDATE, INSERT of DELETE in een tabel.
 
-De actie kan van alles zijn, bijv. code in een andere taal. Kan ook SQL-code zijn.
-
 #### Opbouw
 
-Trigger maken met CREATE TRIGGER. Bevat het volgende:
+Je maakt een trigger met `CREATE TRIGGER`. Bevat het volgende:
 
 * Events
-	* BEFORE, AFTER, INSTEAD OF
-	* FOR EACH ROW of FOR EACH STATEMENT
+	* `BEFORE, AFTER, INSTEAD OF`
+	* `FOR EACH ROW` of `FOR EACH STATEMENT`
 * Conditie
 * Body
 
 Vraag: blocking of non-blocking? Hangt ervan af.
 Bij een transactie moet je wachten tot de trigger is uitgevoerd.
 
-_Zie boek voor voorbeelden van triggers_
+#### Voorbeeld
+
+![De tabellen voor het triggers voorbeeld.](employee-triggers-tabel.png)
+
+![Met triggers wordt het totale salaris van alle afdelingen automatisch bijgehouden.](employee-triggers.png)
+
+_Zie ook: Navathe pagina 935._
 
 ### Stored procedures
 
@@ -157,11 +190,61 @@ Trigger kan een stored procedure aanroepen.
 
 ## Constraints
 
-TODO
+_Constraints_ zijn een manier om data-integriteit in ons schema te garanderen. Het stelt eisen aan de data die opgeslagen wordt.
+
+We maken onderscheid tussen drie soorten constraints.
+
+1. _Inherent model-based constraints_ of _implicit constraints_
+	* Dit zijn de beperkingen die het model van de gebruikte database(-systeem) ons oplegt.
+	* Bijvoorbeeld: dezelfde rij in een tabel kan nooit twee keer bestaan. Dit wordt voorgeschreven door het database-model.
+2. _Schema-based constraints_ of _explicit constraints_
+	* Zijn direct uit te drukken in het schema van het datamodel.
+	* Bijvoorbeeld: films hebben maar één regisseur. Dit is een _belongs to_ relatie met een _foreign key_.
+3. _Application-based constraints_ of _business rules_
+	* Dit zijn regels die niet in SQL uitgedrukt kunnen worden.
+	* Bijvoorbeeld: Validatie van e-mail adressen e.d.
+
+In SQL kennen we een aantal verschillende _constraints_:
+
+* PRIMARY KEY
+	* Is een kolom of combinatie van kolommen die uniek identificerend is voor alle rijen.
+* UNIQUE KEY
+	* Is een kolom of combinatie van kolommen.
+* FOREIGN KEY
+	* Verwijzing naar een rij in een andere tabel. Hiermee wordt het bestaan van de tegenhangende rij afgedwongen.
+* NOT NULL
+	* De waarde in een veld mag niet gelijk zijn aan NULL.
+* Assertion
+	* Is een stukje DDL om een zelf gedefinieerde check mee uit te voeren. Dit geeft altijd een boolean terug; klopt dit of niet?
+* Stored procedure
+	* M.b.v. een stored procedure is de check van de constraint niet beperkt tot de mogelijkheden van de databasetaal.
+* Andere conditie (zoals "integer waarde tussen 1 en 10")
+	* Hier is specifieke SQL voor.
+
+### Data integriteit
+
+Twee soorten, **entiteits**- en **referentiële** integriteit.
 
 ## Relationele algebra
 
-TODO
+Relationele algebra, ook bedacht door meneer Codd, is een manier waarmee we queries op een abstracte manier kunnen modelleren.
+
+### Operaties
+
+R en S zijn willekeurige tabellen.
+
+* Union (R &cup; S)
+	* Alle records uit R en S.
+* Intersection (R &cap; S)
+	* De records die zowel in R als in S zitten.
+* Difference (R &mdash; S)
+	* De records die in R maar niet in S zitten.
+
+## Cartesisch product
+
+Het Cartesisch product is een wiskundige operatie waarmee we het **product** van meerdere sets krijgen. Het symbool hiervoor is een kruis (&#10799;).
+
+Speelkaarten zijn een goed voorbeeld: we hebben de 13 rangen {A, K, Q, J, 10, 9, 8, 7, 6, 5, 4, 3, 2} en de 4 soorten {Schoppen, Harten, Ruiten, Klaver}. Het cartesisch product hiervan zijn 52 _geordende paren_, namelijk de 52 mogelijke speelkaarten:
 
 ## Query optimalisatie
 
@@ -190,7 +273,10 @@ BEGIN; -- Start de transactie
 
 UPDATE accounts SET balance = balance - 100.00
     WHERE name = 'Alice';
--- Etc etc
+UPDATE departments SET total_salary = total_salary + 100.00
+    WHERE department_name = "foo";
+
+-- Nog meer queries...
 
 COMMIT; -- Voer de commando's uit
 [of]
