@@ -1,0 +1,19 @@
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	width: 70%;
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+  }
+}
+
+hr {
+    height: 1px !important;
+    margin: 2em auto;
+    width: 80%;
+    background-color: lightgray;
+    border: none;
+    border-radius: 2px;
+}
