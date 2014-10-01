@@ -69,6 +69,8 @@ beveiliging, concurrency.
 
 Dit wordt de _three-schema architecture_ genoemd.
 
+![© 2011, Navathe](three-schema-architecture.png)
+
 Het "DBMS" conept is ontstaan uit software die het wegschrijven naar een file handelt. Hier is een relationeel systeem omheen gebouwd.
 Een DBMS wil _Data independence_ waarborgen. In theorie wordt deze scheiding met het drie-schema model behaald.
 
@@ -221,14 +223,25 @@ Waarom zijn deze locks wel of niet serializable?
 
 ## ACID
 
-* Atomicity
-Operatie wordt compleet afgemaakt of helemaal niet.
-* Consistenty preservation
-De db moet in een consistente staat blijven.
-* Isolation
-Transacties mogen elkaar niet beïnvloeden. Updates/inserts/deletes van een transactie zijn onzichtbaar voor de buitenwereld totdat deze zijn gecommit.
-* Durability or permanency
-Als een transactie eenmaal gecommit is, mogen de changes nooit verloren gaan door een latere fout.
+### Atomicity
+	
+Atomiciteit wil zeggen dat een operatie compleet wordt afgemaakt of helemaal niet. Er is geen tussenstaat.
+
+_Voorbeeld_: Als er in een banksysteem geld van mij naar iemand anders wordt overgemaakt, dan is er _geen moment_ waarop we geen van beiden het geld hebben, of juist allebei het geld hebben.
+
+### Consistency preservation
+
+De database moet in een consistente staat blijven (zijn integriteit behouden). D.w.z. dat er de door ons gestelde _constraints_ altijd geldig blijven.
+
+### Isolation
+
+Transacties mogen elkaar niet beïnvloeden. Updates/inserts/deletes van een transactie zijn onzichtbaar voor de buitenwereld totdat er een COMMIT heeft plaatsgevonden.
+
+Dit is belangrijk bij bijv. rapporteren. Stel dat het genereren van een rapport een uur duurt, dan mogen er tijdens dit uur geen wijzigingen zichtbaar worden.
+
+### Durability or permanency
+	
+Als een transactie eenmaal gecommit is, mogen de changes nooit verloren gaan door een latere fout. Het is hierbij belangrijk dat de database bouwt op het OS waar het op draait.
 
 ## Recovery en logging
 
@@ -245,13 +258,37 @@ Recovery kent een _undo_ en een _redo_ operatie.
 
 Een _recovery manager_ schrijft de hele tijd in een speciale journal. Daarmee kun je teruglezen wat er gefaald is en recoveren.
 
+#### Binary logging?
+
+## Deadlocks
+
+Twee actoren wachten telkens op elkaar om toegang te krijgen tot een bepaalde _resource_. Deze situatie is onoplosbaar.
+
+Dit kan in een RDBMS gebeuren als bijv. twee tabellen van elkaar bepaalde _resources_ willen _locken_. Het komt echter niet vaak voor.
+
+(two-phase locking)
+
+Om het te voorkomen moet je de locks voor beide _resources_ in het begin leggen. Dit wordt "strict(e)" of "rigoreuze" locking genoemd.
+
 ## Beveiliging
+
+Zie slides over:
+
+* Integrity
+* Availability
+* Confidentiality
+
+En countermeasures.
+
+mandatory vs discretionary.
 
 ### Access Control
 
+Users en privileges.
+
 ### SQL injectie
 
-Lijkt me voor de hand liggend.
+Lijkt me voor de hand liggend. Bijna niks over verteld. Zie iweb.
 
 ### Encryptie
 
@@ -259,7 +296,7 @@ Hashing?
 
 ## Distributed databases
 
-Cassandra
+Cassandra?
 
 ## NoSQL
 
