@@ -1,5 +1,7 @@
 # IRDBMS
 
+<a href="the-sequel.jpg"><img src="the-sequel.jpg" style="width: 35%; float: right;" /></a>
+
 ## Intro en literatuur
 
 * Studiepunten: 3 ECTS
@@ -240,29 +242,154 @@ R en S zijn willekeurige tabellen.
 * Difference (R &mdash; S)
 	* De records die in R maar niet in S zitten.
 
+### Set operators
+
+#### Projection (&#960;)
+
+Een projectie is een kolom die gebruikt gaat worden door een operatie.
+
+#### Selection (&sigma;)
+
+Selectie is een restrictie die wordt opgelegd aan hetgene wat **eronder** in de _query tree_ opgevraagd wordt.
+
+#### Rename (&rho;)
+
+// Aliast de naam van een kolom naar iets anders?
+
+### Joins en join-like operators
+
+#### Natural join (&#x22C8;)
+
+De _natural join_ pakt van twee tabellen R en S het resultaat van de overlappende kolomnamen.
+
 ## Cartesisch product
 
-Het Cartesisch product is een wiskundige operatie waarmee we het **product** van meerdere sets krijgen. Het symbool hiervoor is een kruis (&#10799;).
+Het Cartesisch product is een wiskundige operatie waarmee we het **product** van meerdere sets krijgen. Het symbool hiervoor is een kruis ( X ).
 
 Speelkaarten zijn een goed voorbeeld: we hebben de 13 rangen {A, K, Q, J, 10, 9, 8, 7, 6, 5, 4, 3, 2} en de 4 soorten {Schoppen, Harten, Ruiten, Klaver}. Het cartesisch product hiervan zijn 52 _geordende paren_, namelijk de 52 mogelijke speelkaarten:
 
 ## Query optimalisatie
 
-* Query tree
+Om zo snel mogelijk met een antwoord op je query te komen (ook bij grote datasets) maken DBMS'en gebruik van _query optimalisatie technieken_.
 
-Todo
+Query optimalisatie gebeurt in een aantal fasen:
+
+1. Scanning, parsing and validating
+	* Returns _immediate form of query_
+2. Query optimizer
+	* Returns _execution plan_
+3. Query code generator
+	* Returns _code to execute the query_
+4. Runtime database processor
+	* Returns _result of the query_
+
+De naam "query optimizer" is niet altijd even toepasselijk, aangezien het gekozen _execution plan_ niet altijd optimaal is. Een beter omschrijving zou zijn: "_het plannen van een goede execution strategy_".
+
+### Query tree
+
+De _optimizer_ vertaalt je query in feite naar [relationele algebra](#relationele-algebra). De datastructuur die hiermee overeen komt noemen we de _query tree_.
+
+Elk _blad_ in deze boom is een relatie, elke _interne knoop_ is een operatie die we uitvoeren. Vanzelfsprekend is dat dit in de query tree op volgorde staat.
+
+SQL is vrij gemakkelijk om te vormen naar relationele algebra, omdat de volgorde van bewerkingen in SQL niet wordt vastgelegd. Je vertelt het DBMS alleen _wat_ je wilt hebben (en waar het vandaan moet komen), en niet _hoe_ het dat precies moet doen.
+
+### Optimalisatietechnieken
+
+Het vinden van de beste optimalisatie-strategie is moeilijk en duur.
+
+// Er zijn een aantal manieren om tot die geoptimaliseerde query te komen: het netwerk model, hiërarchisch model en objectmodel.
+
+#### Heuristics
+
+Het woord "heuristics" definiëren we als:
+
+> Proceeding to a solution by trial and error or by rules that are only loosely defined.
+
+Wat het voor databases betekent is dat het DBMS een aantal van deze optimalisatieregels kent, en achter elkaar toepast op de gegeven query.
+
+Bij heuristics worden de bladen en knopen van de query tree gerangschikt om tot een efficiëntere query te komen.
+
+##### Voorbeeld
+
+Een query wordt vertaald naar [relationele algebra](#relationele-algebra) in de vorm van een _query tree_. Op die tree past het DBMS de volgende bewerkingen toe:
+
+* Complexe selecties worden opgesplitst in meerdere eenvoudige selecties.
+* Select operaties worden naar beneden verplaatst in de tree.
+* Select operaties worden gerangschikt van meest restrictief naar minst restrictief. De meest restrictieve selecties worden links gerangschikt. Deze geven kleinere relaties.
+* Waar mogelijk worden cartesische producten vermeden.
+* Vervolgens wordt het `CARTESIAN PRODUCT` en `SELECT` waar mogelijk met `JOIN` operaties vervangen.
+* Projection operaties worden naar beneden verplaatst in de query tree, telkens onder de operatie(s) waarin deze bepaald wordt.
+	* Gooi onnodige attributen direct weg.
+* Identificeer deelbomen die door één algoritme kunnen worden uitgevoerd (zonder tijdelijke tabel).
+
+##### Pipelined en materialised evaluatie
+
+Bij _materialised evaluation_ hebben we het over het tijdelijk opslaan van de (tussen)resultaten van de query. In sommige gevallen kan dit tot veel overhead leiden.
+
+Bij _pipelined evaluation_ worden de operaties achter elkaar geketend zonder dat er een tijdelijk bestand nodig is.
+
+##### Kostenschatting
+
+De kosten van een query schatten we aan de hand van een aantal factoren:
+
+* Toegang tot hulpgeheugen (hoeveel blokken kun je lezen/schrijven in de tijdelijke storage?)
+* Opslag van tijdelijke bestanden
+* Berekeningen
+* Gebruik van het RAM
+* Communicatiekosten tussen server en client
+
+De toegang tot het hulpgeheugen weegt hier meestal in door.
 
 ## Performance tuning
 
-Indexes
+### Queries analyzeren
+
+Je kunt SQL-queries analyseren met `EXPLAIN`. Dit toont:
+
+* De geschatte kosten in de vorm van de execution time.
+* Hoe tabellen benaderd worden (sequentieel/index etc).
+* De gebruikte join algoritmes.
+
+Als DBA kun je `EXPLAIN` gebruiken om langzame queries te onderzoeken, en te achterhalen wat ze precies langzaam maakt.
+
+### Indices
+
+Indices zijn tabellen met verwijzingen naar andere gegevens, zodat deze gegevens sneller opgevraagd kunnen worden.
+In de praktijk komt dit neer op de _caching_ van de meest gebruikte, minst veranderende gegevens, wat queries soms (veel) sneller kan maken.
+
+Indices zijn echter geen wondermiddel. Als het herberekenen van de indices meer tijd kost dan het gebruik van de index oplevert is het proces inefficient.
+
+### Hoe maak je een index?
+
+```SQL
+CREATE [UNIQUE] INDEX index_naam
+ON tabel_naam (`kolom_naam`, ...)
+[CLUSTER];
+```
+
+Met `UNIQUE` wordt de uniciteit van één of meer kolommen afgedwongen. Wanneer de unieke index over meerdere kolommen spant, moet de combinatie van deze kolommen uniek zijn.
+
+Met `CLUSTER` worden de _data file records_ ook nog eens gesorteerd.
+
+### Soorten indices
+
+@TODO
+
+#### Impliciet en expliciet
+
+#### Clustered indexes
+
+#### Heap
+
+#### Unique
 
 ## Transacties, locking en concurrency control
 
 ### Transacties
 
-Een transactie is een logische unit van _database processing_ die één of meer statements bevat. Het combineert deze statements in een _alles-of-niets_ operatie. De tussenstappen zijn onzichtbaar voor de rest van de database totdat de transactie voltooid is.
+Een transactie is een logische unit van _database processing_ die één of meer _access operations_ (insert, update of delete) bevat. Het combineert deze statements in een _alles-of-niets_ operatie. De tussenstappen zijn onzichtbaar voor de rest van de database totdat de transactie voltooid is.
 
-Transacties hebben boundaries (begin en eind statements). De acties in een transactie kun je verdelen in twee categorieën: lezen en schrijven.
+Transacties hebben boundaries (begin en end statements). De acties in een transactie kun je verdelen in twee categorieën: lezen en schrijven.
 
 Dankzij transacties kunnen we queries **groeperen**, waardoor er niks tussenin kan komen. Dit geeft _concurrency control_.
 
@@ -283,18 +410,6 @@ COMMIT; -- Voer de commando's uit
 ROLLBACK; -- Annuleer alles uit de transactie
 ```
 
-### Concurrency control
-
-Zie transacties
-
-Voorbeelden uit Boek: 
-
-* lost update problem
-* temporary update (dirty read) problem
-* incorrect summary problem
-
-Queries worden altijd opvolgend uitgevoerd. Serialization garandeert isolatie van de queries.
-
 ### Locking
 
 Concurrency wordt bereikt door een _two-phase locking protocol_:
@@ -307,7 +422,21 @@ Concurrency wordt bereikt door een _two-phase locking protocol_:
 
 Waarom zijn deze locks wel of niet serializable?
 
+### Concurrency control
+
+Zie transacties
+
+Voorbeelden uit Boek: 
+
+* lost update problem
+* temporary update (dirty read) problem
+* incorrect summary problem
+
+Queries worden altijd opvolgend uitgevoerd. Serialization garandeert isolatie van de queries.
+
 ## ACID
+
+_ACID_ is een belangrijke set eigenschappen die garanderen dat [database transacties](#transacties) op een betrouwbare manier verwerkt worden. Het is een afkorting voor **Atomicity**, **Consistency preservation**, **Isolation** en **Durability**.
 
 ### Atomicity
 	
