@@ -705,6 +705,8 @@ BiSL kent de volgende 7 procesclusters:
 
 _Nog geen tekst_
 
+![BiSL en ASL tussen vraag en aanbod](BiSL-ASL-vraag-aanbod.jpg)
+
 ### Gebruiksbeheer
 
 Dit proces houdt de informatievoorziening operationeel.
