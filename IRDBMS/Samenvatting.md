@@ -385,6 +385,17 @@ Met `CLUSTER` worden de _data file records_ ook nog eens gesorteerd.
 
 ## Transacties, locking en concurrency control
 
+### Concurrency control
+
+Bij concurrency control hebben we het over het beheersen van operaties die gelijktijdig kunnen lopen. Dit brengt onder andere de volgende problemen met zich mee:
+
+* Lost update problem
+	* Wanneer meerdere updates tegelijk plaatsvinden kunnen deze invloed uitoefenen op hetzelfde item, wat kan leiden tot onwenselijke resultaten.
+* Temporary update (dirty read) problem
+	* Een item wordt gemanipuleerd door een transactie die voortijdig afgebroken wordt, maar ondertussen leest een andere transactie de incorrecte waarde van het item uit, voordat de oorspronkelijke waarde hersteld wordt.
+* Incorrect summary problem
+	* Als één transactie een opsomming maakt van meerdere database items, terwijl andere transacties deze items manipuleren, leidt dit tot een incorrecte opsomming.
+
 ### Transacties
 
 Een transactie is een logische unit van _database processing_ die één of meer _access operations_ (insert, update of delete) bevat. Het combineert deze statements in een _alles-of-niets_ operatie. De tussenstappen zijn onzichtbaar voor de rest van de database totdat de transactie voltooid is.
@@ -410,29 +421,134 @@ COMMIT; -- Voer de commando's uit
 ROLLBACK; -- Annuleer alles uit de transactie
 ```
 
+### Serializability
+
+Een transactie is _serializable_ wanneer het resultaat van de operaties in sequentie (achtereenvolgend) hetzelfde is als bij _concurrent_ (met overlap) uitvoering. Serializability is een belangrijk criterium om transacties _concurrently_ uit te kunnen voeren.
+
 ### Locking
 
-Concurrency wordt bereikt door een _two-phase locking protocol_:
+Concurrency kan bereikt worden door middel van locking:
 
-* Locking pakt ofwel _permission to read_ of _permission to write_ (voor een transactie).
-* Unlocking verwijdert deze permissies van het data item (Zoals een rij).
-* Lock en unlock zijn atomic operaties.
+* Locking pakt ofwel _permission to read_ of _permission to write_ op een _data item_ (zoals een rij).
+* Unlocking verwijdert deze permissies weer.
+* Lock en unlock zijn atomic operaties. Ze kunnen nooit onderbroken worden en worden altijd achtereenvolgens uitgevoerd.
 
-**Voorbeeldvraag**: volgen de volgende transacties het two-phase locking protocol?
+Een _lock_ is een variabele die de status van een item aangeeft. Zo is het duidelijk of je op een bepaald moment toegang tot iets kan krijgen of niet. Er is één lock voor elk item in de database. Over het algemeen hebben we het over **binary locks**. Dit zijn locks die over twee _states_ beschikken, **locked** of **unlocked**.
 
-Waarom zijn deze locks wel of niet serializable?
+#### Shared/exclusive locks
 
-### Concurrency control
+Binary locking is echter te beperkt voor de meeste DBMS'en. Een andere manier van locken is met **shared/exclusive** (of **read/write** locks).
 
-Zie transacties
+Hierbij definieren we 3 staten: **read-locked**, **write-locked** en **unlocked**. Als een item **read-locked** is mag hij door alles gelezen worden, maar niet aangepast. Daarom noemen we dit **share-locked**. Bij **write-locked** eist één transactie het item op, en mag niemand anders het lezen of schrijven. Dit heet **exclusive-locked**.
 
-Voorbeelden uit Boek: 
+#### Two-phase locking
 
-* lost update problem
-* temporary update (dirty read) problem
-* incorrect summary problem
+Een transactie dwingt het _two-phase locking_ protocol af als het alle locks aanvraagt **voordat** het de eerste unlock heeft gedaan. Zoals de naam al zegt worden de locks in twee fasen verkregen en weer losgelaten:
 
-Queries worden altijd opvolgend uitgevoerd. Serialization garandeert isolatie van de queries.
+1. Expanding phase: locks worden verkregen en niks wordt losgelaten
+2. Shrinking phase: locks worden losgelaten en niks wordt verkregen
+
+![](no-two-phase-locking.png)
+
+![](two-phase-locking.png)
+
+Op de toets kan bijvoorbeeld gevraagd worden: volgen de getoonde transacties het two-phase locking protocol? Waarom zijn deze locks wel of niet serializable?
+
+#### Varianten
+
+Er bestaan een aantal varianten van two-phase locking:
+
+* Basic 2PL
+	* Dit is al uitgelegd
+* Conservative
+	* Eist van een transactie dat alles van tevoren gelockt wordt, voordat de transactie uitgevoerd wordt.
+	* Het doet dit door de _read-set_ en de _write-set_ op voorhand te definiëren.
+	* Met conservative locking zijn deadlocks uitgesloten.
+* Strict 2PL
+	* Een transactie T laat geen **exclusive** locks los tot nadat T commit of abort.
+	* Daardoor kan geen enkele transactie schrijven of lezen in een item waar T een lock op heeft, totdat T heeft gecommit.
+	* Dit leidt tot een _strict schedule_ voor recoverability.
+	* Met strict locking kunnen deadlocks **niet** worden uitgesloten.
+* Rigorous 2PL
+	* Is hetzelfde als strick 2PL, maar laat ook geen **shared locks** los.
+
+Let op het verschil tussen _conservative_ en _rigorous_ locking. Conservative locks alles voordat de transactie begint. Zodra de transactie begint zit hij in de _shrinking phase_.
+_Rigorous_ locking unlockt pas nadat de transactie termineert, waardoor de transactie in de _expanding phase_ is tot hij eindigt.
+
+### Deadlocks
+
+Als twee of meer transacties wachten op een item dat gelockt is door een andere transactie, noemen we dat een _deadlock_. Deze situatie is onoplosbaar. Het is daarom een belangrijk probleem bij _concurrent_ systemen.
+
+Een deadlock kan in een RDBMS voorkomen als bijv. twee tabellen van elkaar bepaalde _resources_ willen _locken_. In de praktijk komt het echter niet vaak voor.
+
+### Deadlock preventie met timestamps
+
+Er zijn twee methodes van deadlock-preventie, die allebei gebaseerd zijn op timestamps:
+
+#### Wait-die
+
+Als de timestamp van transactie I kleiner (dus ouder) is dan die van transactie J, dan mag I wachten. Anders (als I jonger is dan J) abort transactie I (hij sterft, _dies_), en herstart I later met **dezelfde** timestamp.
+
+#### Wound-wait
+
+Als transactie I kleiner (dus ouder) is dan J, dan wordt J ge-abort (I "verwondt" J) en later herstart met dezelfde timestamp. Anders, als I groter (dus jonger) is dan J, dan mag I wachten.
+
+### Deadlock preventie zonder timestamps
+
+Er zijn twee methodes van deadlock-preventie, die allebei niet gebaseerd zijn op timestamps:
+
+#### No waiting
+
+Als een transactie geen lock kan krijgen, wordt hij onmiddelijk ge-abort en na een tijdsvertraging weer herstart. Dit gebeurt zonder te checken of er daadwerkelijk een deadlock plaatsvindt. Hierdoor wachten transacties nooit, en kan er dus geen deadlock ontstaan.
+
+#### Cautious waiting
+
+_Cautious waiting_ is bedoeld om het aantal nodeloze aborts en restarts te verminderen. Stel: transactie I probeert een item probeert te waarop transactie J al een lock heeft, dan gelden de volgende regels: als J niet geblokkeerd (aan het wachten) is, dan wordt I geblokkeerd en toegestaan om te wachten. Anders wordt I afgebroken (ge-abort).
+
+Cautious waiting is deadlock-vrij.
+
+### Deadlock detectie
+
+Bij deadlock detectie controleren we of er sprake is van een deadlock. Dit is aantrekkelijk als we weten dat de transacties niet (vaak) dezelfde items zullen benaderen. Als je weet dat het gaat om lange transacties die elk veel items gebruiken, of als de transaction load zwaar is, kan het voordelig zijn om deadlock **preventie** toe te passen i.p.v. deadlock **detectie**.
+
+Deadlock detectie kan op een aantal manieren:
+
+#### Wait-for graph
+
+Hierin bouwen we een graaf (intern model) van de transacties en de afhankelijkheden op elkaar. Dit kan echter veel overhead veroorzaken.
+
+#### Victim selection
+
+Als het systeem in een staat van deadlock is, moet het systeem kiezen welke deadlock-veroorzakende transacties het beëindigt. Het kiezen van deze transacties noemen we _victim selection_.
+
+#### Timeouts
+
+Dit is een eenvoudige manier om deadlocks af te handelen. Als een transactie langer dan een gespecificeerde tijd duurt, wordt het gekilld door het systeem. Dit kan er echter voor zorgen dat processen ongewenst vroegtijdig worden afgebroken. Er wordt niet gecheckt of er wel sprake van een deadlock is.
+
+#### Starvation
+
+Starvation houdt in dat een transactie voor een onbepaalde tijd niet voltooit terwijl andere transacties in het systeem normaal doorgaan. Dit kan gebeuren wanneer het wachtschema voor locked items oneerlijk is en prioriteit toekent aan bepaalde transacties.
+
+**Voorbeeld**: een transactie komt nooit aan de beurt in de queue omdat er steeds transacties met een hogere prioriteit ingevoerd worden. **Voorbeeld 2**: een transactie wordt telkens gemarkeerd als deadlock, en voltooid daardoor niet.
+
+Een mogelijke oplossing voor starvation is om een eerlijk wachtschema te hebben, zoals een FIFO-queue.
+
+### Timestamp ordering
+
+Een **timestamp** zien we als een unieke identifier die gegeven wordt naar de volgorde waarin transacties ingevoerd worden in het systeem. We hebben het dus over de starttijd van de transactie.
+
+Timestamps kunnen op een aantal manieren gegenereerd worden.
+Dit kan door middel van een counter, die zijn waarde ophoogt bij iedere transactie. De maximumwaarde van de counter is eindig, dus zal hij om de zoveel tijd gereset moeten worden.
+
+Een andere manier is gebruik maken van de systeemklok. Echter moet er gegarandeerd worden dat er geen twee timestampwaarden gegenereerd worden tijdens dezelfde _tick_ van de klok.
+
+**Opmerking**: Moeten ticks dan extreem nauwkeurig zijn?
+
+#### Timestamp ordering algoritmes
+
+### Multiversion concurrency control
+
+Een andere techniek voor concurrency is om de oude waardes van een _data item_ te bewaren. Dit heet **multiversion concurrency control**, aangezien er meerdere versies van een item worden bewaard. Als een transactie toegang tot een item nodig heeft, wordt de juiste versie van dat item gekozen om _serializability_ te behouden. Zo zijn sommige read-operaties alsnog mogelijk omdat er een oude versie van het item gelezen kan worden. Wanneer er naar een item wordt geschreven, wordt er gewoon een nieuw item bewaard.
 
 ## ACID
 
@@ -475,16 +591,6 @@ Een _recovery manager_ schrijft de hele tijd in een speciale journal. Daarmee ku
 
 #### Binary logging?
 
-## Deadlocks
-
-Twee actoren wachten telkens op elkaar om toegang te krijgen tot een bepaalde _resource_. Deze situatie is onoplosbaar.
-
-Dit kan in een RDBMS gebeuren als bijv. twee tabellen van elkaar bepaalde _resources_ willen _locken_. Het komt echter niet vaak voor.
-
-(two-phase locking)
-
-Om het te voorkomen moet je de locks voor beide _resources_ in het begin leggen. Dit wordt "strict(e)" of "rigoreuze" locking genoemd.
-
 ## Beveiliging
 
 Zie slides over:
@@ -516,3 +622,19 @@ Cassandra?
 ## NoSQL
 
 _Zie reader_
+
+### Kenmerken van NoSQL
+
+* Gedistribueerd, grote schaal
+* Horizontaal/lineair schaalbaar
+* Open source
+* Schemaless
+* Consistent (lol)
+* Ondersteunt replicatie
+* API ondersteuning
+
+### Voorbeelden van NoSQL DBMS'en
+
+* Cassandra
+* Mongo
+* HBase
