@@ -30,7 +30,7 @@
 
 Business Process Management (BPM) is een management-aanpak, die staat voor het afstemmen van [aspecten van] een organisatie ten opzichte van de behoeften en vereisten van een cliënt.
 
-<img src="BPM-mindmap.png" alt="BPM overzicht mindmap" style="margin-left: -40%; max-width: none;">
+![BPM overzicht mindmap](BPM-mindmap.png)
 
 De aandachtspunten hierbij zijn _effectiviteit_ en _efficiëntie_. Daarnaast wordt er gestreefd naar _innovatie_, _flexibiliteit_ en _integratie met technologie_ met behulp van IT.
 
@@ -140,13 +140,13 @@ Deze elementen zijn gerelateerd aan elkaar en hebben daardoor een _samenhang_. E
 
 Bij een _black box_ benadering wordt een systeem gezien als een gesloten iets, waarvan je niet ziet wat er binnenin gebeurt. Je gaat er maar vanuit dat het doet wat het moet doen, en anders heeft de leverancier ervan een probleem; niet jijzelf of je organisatie. Met een _black box_ kun je complexiteit dus verbergen.
 
-<img src="Black_Box_Testing.png" style="width: 70%;" />
+![](Black_Box_Testing.png)
 
 ### White box
 
 Een _white box_ is het tegenovergestelde, waarbij je wel zicht hebt op de inhoud. Liefste wordt hier in detail weergegeven hoe het proces in elkaar steek en hoe de input getransformeerd wordt naar output.
 
-<img src="White_Box_Testing.png" style="width: 70%;" />
+![](White_Box_Testing.png)
 
 ## Visie
 
