@@ -117,6 +117,15 @@ Met deze drie termen delen we SQL op in drie subgedeelten, op basis van function
 	* Security en access control tot de database.
 	* O.a. `GRANT` en `REVOKE`
 
+Daarnaast kennen we:
+
+* SDL
+	* Storage definition language
+	* Specificeert het interne schema.
+* VDL
+	* View Definition Language
+	* Specificeert views/mappings naar het conceptuele schema.
+
 ## Nieuwe SQL
 
 ### Views
@@ -140,8 +149,8 @@ Het uitvoeren van UPDATEs op een view kan ingewikkeld zijn.
 Een **update view** kan het volgende **niet** hebben:
 
 * Meer dan één base table
-* Distinct
-* Group by of having
+* Distinct in de `FROM`-clause
+* `GROUP BY` of `HAVING`
 
 En een **update view** moet het volgende **wel** hebben:
 
@@ -151,17 +160,19 @@ En een **update view** moet het volgende **wel** hebben:
 
 Het is ook mogelijk om een view in de `FROM` clause van een SQL-query te hebben. In dit geval bestaat de view alleen in de query zelf.
 
+### Detour: Active database rules
+
+Triggers en stored procedures vallen onder de _active database rules_. D.w.z. dat de database niet alleen maar een passieve kaartenbak is, maar ook acties uit kan voeren.
+
 ### Triggers
 
-Triggers vallen onder _active database rules_. D.w.z. dat de database niet alleen maar een passieve kaartenbak is, maar ook acties uit kan voeren.
+Anders dan een stored procedure kan een trigger kan niet expliciet worden aangeroepen. Een trigger wordt geactiveerd wanneer er een bepaalde gebeurtenis plaatsvindt.
 
-Dit beschouwen we als een **Event-Condition-Action** model:
+Triggers vallen onder het **Event-Condition-Action** model:
 
-1. Het **event** is hetgeen wat de trigger activeert.
+1. Het **event** is de gebeurtenis die de trigger activeert.
 2. De **condition** is de voorwaarde waaraan voldaan moet worden voordat de trigger wordt uitgevoerd.
 3. De **action** is de handeling die aan de trigger verbonden is. Dit kan SQL-code of code in een andere programmeertaal zijn.
-
-Een trigger kan niet expliciet worden aangeroepen, in tegenstelling tot een stored procedure. Triggers kunnen worden aangeroepen door (**events**):
 
 * Een time trigger.
 * Een UPDATE, INSERT of DELETE in een tabel.
@@ -191,7 +202,32 @@ _Zie ook: Navathe pagina 935._
 
 Behoort ook tot de categorie _actieve data_. Is een stuk SQL-code die aangeroepen kan worden en iets doet. Heeft in- en uitvoerparameters.
 
-Trigger kan een stored procedure aanroepen.
+Een trigger kan een stored procedure aanroepen.
+
+* Naam
+* Parameters
+* Body
+
+```sql
+CREATE PROCEDURE procedure_naam (a, b, c)
+BEGIN
+END;
+
+CREATE PROCEDURE procedure_naam (a, b, c)
+RETURNS return_type
+BEGIN
+END;
+```
+
+```sql
+CREATE PROCEDURE schrap_werknemers (variabele_x IN CHAR(4), jobcode_var IN CHAR(6) AS
+BEGIN
+	DELETE FROM werknemer
+	WHERE dnr = variabele_x AND jobcode = jobcode_var
+END;
+
+CALL PROCEDURE schrap_werknemers ('D112', 'JOB124');
+```
 
 ## Constraints
 
@@ -376,11 +412,22 @@ Met `CLUSTER` worden de _data file records_ ook nog eens gesorteerd.
 
 ### Soorten indices
 
-@TODO
+Indices worden altijd aangemaakt op een _ordered file_. Als je tabel maar één kolom heeft met bijv. text, is het geen _ordered file_.
 
 #### Impliciet en expliciet
 
-#### Clustered indexes
+Een expliciete index is een index die je zelf aanmaakt. Impliciete indexes worden door het DBMS gegenereerd. _Primary keys_ zijn hier een voorbeeld van.
+
+#### Primary, clustered en secondary indices
+
+De primary index wordt gespecificeerd op het _ordering key field_ van de _ordered file_. Met dit key field worden de records fysiek op de disk gesorteerd.
+
+Wanneer de _ordering field_ geen key field is, d.w.z. als meerdere records in het bestand dezelfde waarde kunnen hebben voor het _ordering field_, kan een ander type index gebruikt 
+worden genaamd de _clustering index_.
+
+##### Secondary index
+
+Er is altijd **of** een primary index, **of** een clustering index. Soms wil je gegevens verder ordenen. Hiervoor gebruikt men _secondary indices_, die gespecificeerd kunnen worden op een willekeurig _non-ordering field_ van een bestand. Een data-bestand kan meerdere _secondary indices_ hebben naast de primaire toegangsmethode.
 
 #### Heap
 
@@ -532,22 +579,20 @@ Dit is een eenvoudige manier om deadlocks af te handelen. Als een transactie lan
 
 Starvation houdt in dat een transactie voor een onbepaalde tijd niet voltooit terwijl andere transacties in het systeem normaal doorgaan. Dit kan gebeuren wanneer het wachtschema voor locked items oneerlijk is en prioriteit toekent aan bepaalde transacties.
 
-**Voorbeeld**: een transactie komt nooit aan de beurt in de queue omdat er steeds transacties met een hogere prioriteit ingevoerd worden. **Voorbeeld 2**: een transactie wordt telkens gemarkeerd als deadlock, en voltooid daardoor niet.
+**Voorbeeld**: een transactie komt nooit aan de beurt in de queue omdat er steeds transacties met een hogere prioriteit ingevoerd worden.
+
+**Voorbeeld 2**: een transactie wordt telkens gemarkeerd als deadlock, en voltooid daardoor niet.
 
 Een mogelijke oplossing voor starvation is om een eerlijk wachtschema te hebben, zoals een FIFO-queue.
 
 ### Timestamp ordering
 
-Een **timestamp** zien we als een unieke identifier die gegeven wordt naar de volgorde waarin transacties ingevoerd worden in het systeem. We hebben het dus over de starttijd van de transactie.
+Een **timestamp** zien we als een unieke identifier die gegeven wordt naar de volgorde waarin transacties worden ingevoerd in het systeem. We hebben het dus over de starttijd van de transactie.
 
 Timestamps kunnen op een aantal manieren gegenereerd worden.
 Dit kan door middel van een counter, die zijn waarde ophoogt bij iedere transactie. De maximumwaarde van de counter is eindig, dus zal hij om de zoveel tijd gereset moeten worden.
 
 Een andere manier is gebruik maken van de systeemklok. Echter moet er gegarandeerd worden dat er geen twee timestampwaarden gegenereerd worden tijdens dezelfde _tick_ van de klok.
-
-**Opmerking**: Moeten ticks dan extreem nauwkeurig zijn?
-
-#### Timestamp ordering algoritmes
 
 ### Multiversion concurrency control
 
@@ -565,7 +610,7 @@ _Voorbeeld_: Als er in een banksysteem geld van mij naar iemand anders wordt ove
 
 ### Consistency preservation
 
-De database moet in een consistente staat blijven (zijn integriteit behouden). D.w.z. dat er de door ons gestelde _constraints_ altijd geldig blijven.
+De database moet in een consistente staat blijven (zijn integriteit behouden). In de praktijk wil dat zeggen dat de door ons gestelde _constraints_ altijd geldig blijven.
 
 ### Isolation
 
@@ -573,40 +618,90 @@ Transacties mogen elkaar niet beïnvloeden. Updates/inserts/deletes van een tran
 
 Dit is belangrijk bij bijv. rapporteren. Stel dat het genereren van een rapport een uur duurt, dan mogen er tijdens dit uur geen wijzigingen zichtbaar worden.
 
-### Durability or permanency
+### Durability or permanence
 	
-Als een transactie eenmaal gecommit is, mogen de changes nooit verloren gaan door een latere fout. Het is hierbij belangrijk dat de database bouwt op het OS waar het op draait.
+Als een transactie eenmaal gecommit is, mogen de changes nooit verloren gaan door een latere fout. Problemen veroorzaakt door het OS vallen echter buiten beschouwing van het DBMS.
 
 ## Recovery en logging
 
 ### Recovery
 
-Bij een transactie kunnen er dingen mis gaan. Dit gebeurt met ROLLBACK. Mogelijke oorzaken van het falen van een transactie kunnen zijn:
+Bij een transactie kunnen er dingen mis gaan. Mogelijke oorzaken van het falen van een transactie kunnen zijn:
 
 * Systeemcrash (hardware of software falen)
 * Transactie of systeem error (een conditie in je code klopt niet en je wilt terugrollen)
 
 Recovery kent een _undo_ en een _redo_ operatie.
 
+**Undo** lijkt op rollback, maar het werkt op een enkele operatie ipv op een hele transactie.
+
+**Redo** specificeert dat _bepaalde_ (transactie) operaties opnieuw uitgevoerd moeten worden, zodat alle operaties van een committed transactie succesvol zijn uitgevoerd op de database.
+
+![](transactie_states.png)
+
 ### Logging
 
-Een _recovery manager_ schrijft de hele tijd in een speciale journal. Daarmee kun je teruglezen wat er gefaald is en recoveren.
+Een _recovery manager_ schrijft alle operaties binnen het DBMS weg in een logbestand. De volgende operaties worden bijgehouden:
 
-#### Binary logging?
+* Begin en einde van een transactie
+* Alle reads en writes
+* Commit van een transactie
+* Rollback/abort van een transactie
+
+Aan de hand van de log (of journal) moet het mogelijk zijn om te herstellen van transactiefouten. Aangezien de log op de schijf bewaard wordt, kan alleen een "catastrofale fout" zoals een hardeschijfcrash het onbruikbaar maken. Er wordt in sommige situaties ook een backup van de log gemaakt.
 
 ## Beveiliging
 
-Zie slides over:
+### Algemene database beveiligings issues
 
-* Integrity
-* Availability
-* Confidentiality
+Database security heeft met allerlei onderwerpen te maken. Voorbeelden zijn:
 
-En countermeasures.
+* Legale en ethische kwesties over het recht van toegang tot bepaalde informatie.
+* Beleidskwesties op overheids- institutioneel- of bedrijfsniveau van wat voor informatie publiekelijk beschikbaar moet zijn.
+	* Denk aan medische gegevens en kredietgegevens.
+* Systeem-gerelateerde kwesties zoals welke security-functies toegepast moeten worden en op welk niveau.
+* De behoefte [in sommige organisaties] om meerdere security levels te identificeren, en zowel de gebruikers als de data te categoriseren op basis van deze opgestelde classificaties.
 
-mandatory vs discretionary.
+De DBA is de eindverantwoordelijke over de beveiliging van de database.
 
-### Access Control
+### Risico's
+
+Er zijn drie belangrijke risico's voor ieder DBMS.
+
+* Loss of integrity
+	* Informatie moet altijd beschermd zijn tegen ongeoorloofde wijzigingen en/of verlies.
+	* Dit kan zowel opzettelijk als per ongeluk gebeuren.
+* Loss of availability
+	* Data moet beschikbaar zijn voor de geoorloofde gebruikers wanneer zij daar de rechten toe hebben.
+* Loss of confidentiality
+	* Data mag niet bekend worden aan ongeoorloofde partijen.
+
+### Control measures
+
+We onderscheiden vier belangrijke maatregelen om beveiliging te ondersteunen in databases:
+
+1. Access control
+2. Inference control
+3. Flow control
+4. Data encryption
+
+### Access control
+
+We onderscheiden drie vormen van access control:
+
+### Inference control
+
+### Flow control
+
+#### Mandatory
+
+
+
+#### Discretionary
+
+
+
+#### Role-based
 
 Users en privileges.
 
@@ -624,7 +719,13 @@ Cassandra?
 
 ## NoSQL
 
-_Zie reader_
+NoSQL is een ander model dan relationeel. Waar relationele databases sterk zijn in data-integriteit, laat NoSQL dat vallen. Het neemt het niet zo nauw met ACID properties, en dan met name de _Consistency_.
+
+![CAP Theorem van Eric Brouwer (2000)](CAP_Diagram.jpg)
+
+Het is daarom niet zinnig om bijv. aandelenkoersen en boekhoudgegevens (die relationeel van aard zijn) in een NoSQL database op te slaan. NoSQL leent zich goed voor **semi-gestructureerde** data. Denk aan profielgegevens, zoektermen enzovoort.
+
+Op dit moment zijn relationele databases de gevestigde orde, en staat NoSQL nog in de kinderschoenen.
 
 ### Kenmerken van NoSQL
 
@@ -635,6 +736,22 @@ _Zie reader_
 * Consistent (lol)
 * Ondersteunt replicatie
 * API ondersteuning
+
+### Waarom NoSQL?
+
+NoSQL-databases zijn soms een aantrekkelijke keuze omdat ze een aantal zaken beter beloven te doen:
+
+* Schalen, o.a. door distribution
+* Semi-gestructureerde data opslaan
+
+### NoSQL oplossingen
+
+We onderscheiden grofweg 4 vormen van NoSQL:
+
+1. Column-oriented databases
+2. Document-oriented databases
+3. Key/value stores
+4. Graph databases
 
 ### Voorbeelden van NoSQL DBMS'en
 
