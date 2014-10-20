@@ -1,7 +1,7 @@
 % Samenvatting ISMI
 % Mathijs Bernson
 
-# Samenvatting ISMI
+# Inleiding IT Service Management
 
 ## Stof
 

@@ -1,7 +1,7 @@
 % Samenvatting INST
 % Mathijs Bernson
 
-# Samenvatting INST
+# Inleiding Netwerkstructuren
 
 ## Inhoudsopgave
 

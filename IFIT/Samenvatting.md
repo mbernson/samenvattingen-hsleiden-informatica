@@ -1,7 +1,7 @@
 % Samenvatting IFIT
 % Mathijs Bernson
 
-# Samenvatting I(p)FIT
+# Inleiding Forensische ICT
 
 ## Stof
 

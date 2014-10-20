@@ -1,7 +1,7 @@
 % Samenvatting IMUML
 % Mathijs Bernson
 
-# Samenvatting IMUML
+# Inleiding UML
 
 ## Stof
 

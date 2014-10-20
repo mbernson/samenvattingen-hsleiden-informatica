@@ -1,4 +1,7 @@
-# IRDBMS
+% Samenvatting IRDBMS
+% Mathijs Bernson
+
+# Inleiding Relational database management systems
 
 <a href="the-sequel.jpg"><img src="the-sequel.jpg" style="width: 35%; float: right;" /></a>
 

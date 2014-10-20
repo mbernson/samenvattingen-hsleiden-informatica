@@ -1,7 +1,7 @@
 % Samenvatting IIBPM
 % Mathijs Bernson
 
-# Samenvatting IIBPM
+# Inleiding Business Procesmanagement
 
 ## Kerninhoud om te leren
 

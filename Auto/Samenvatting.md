@@ -1,7 +1,7 @@
 % Samenvatting Auto theorie
 % Mathijs Bernson
 
-# Samenvatting Auto theorie
+# Auto theorie
 
 ## Informatie
 

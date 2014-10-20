@@ -1,9 +1,7 @@
 % Samenvatting IOPR2
 % Mathijs Bernson
 
-# IOPR2
-
-Object-geörienteerd programmeren.
+# Inleiding Object-geörienteerd programmeren 2
 
 ## Stof
 
