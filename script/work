@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Gem install kicker
-
 if [ -z `which kicker` ]; then
     echo "Please install 'Kicker' by running 'gem install kicker'."
     exit 1;
@@ -18,4 +16,6 @@ fi
 MD_PATH="$DIRECTORY/Samenvatting.md"
 HTML_PATH="$DIRECTORY/samenvatting.html"
 
-kicker -e "pandoc $MD_PATH -o $HTML_PATH -c ../base.css" $MD_PATH
+kicker -e "pandoc $MD_PATH -o $HTML_PATH -c ../base.css" $MD_PATH &
+# watch -n60 script/deploy &
+open IRDBMS/*.{md,html}
