@@ -1,4 +1,5 @@
-# Samenvatting ICOMPP
+% Samenvatting ICOMPP
+% Mathijs Bernson
 
 ## Informatie
 

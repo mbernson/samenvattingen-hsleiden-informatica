@@ -1,4 +1,5 @@
-# ICOMMH
+% Samenvatting ICOMMH
+% Mathijs Bernson
 
 ## Portfolio opdrachten
 
