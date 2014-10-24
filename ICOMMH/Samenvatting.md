@@ -58,8 +58,6 @@ Je bent bewust bezig met het leren van nieuwe vaardigheden en deze af en toe toe
 
 Herhalen! Alweer vergeten.
 
-
-
 ## Belbin teamrollen
 
 1. Bedrijfsman
