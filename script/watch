@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Gem install kicker
-
 if [ -z `which kicker` ]; then
     echo "Please install 'Kicker' by running 'gem install kicker'."
     exit 1;
@@ -15,7 +13,13 @@ if [ -z "$DIRECTORY" ]; then
     exit 0;
 fi
 
+if [[ "--mathjax" == $2 ]]; then
+    MATHJAX="--mathjax='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'"
+else
+    MATHJAX=""
+fi
+
 MD_PATH="$DIRECTORY/Samenvatting.md"
 HTML_PATH="$DIRECTORY/samenvatting.html"
 
-kicker -e "pandoc $MD_PATH -o $HTML_PATH -c ../base.css" $MD_PATH
+kicker -e "pandoc $MD_PATH -o $HTML_PATH -c ../base.css $MATHJAX" $MD_PATH
