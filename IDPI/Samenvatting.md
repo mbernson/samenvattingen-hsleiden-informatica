@@ -42,9 +42,14 @@ De student kan:
 ## Inhoudsopgave
 
 * [Inleiding en introductie](#inleiding-en-introductie)
+* [Termen](#termen)
+	* [Single Responsibility Principle](#single-responsibility)
+	* [Hollywood principle](#hollywood-principle)
+	* [Tell, don't ask](#tell-dont-ask)
+	* [Dependency injection](#dependency-injection)
 * [Patterns](#patterns)
 	* [Creational](#creational-patterns)
-		* [Factories](#factories)
+		* [Abstract factory](#abstract-factory)
 		* [Singleton](#singleton)
 		* [Factory method](#factory-method)
 	* [Structural](#structural-patterns)
@@ -61,7 +66,6 @@ De student kan:
 		* [Template Method](#template)
 		* [State](#state)
 	* [MVC](#mvc)
-* [Outro](#outro)
 
 ## Inleiding en introductie
 
@@ -85,20 +89,61 @@ We onderscheiden drie soorten van design patterns, *structural*, *creational* en
 
 Inheritance breekt compositie. Compositie is flexibeler omdat de onderdelen uitwisselbaar zijn.
 
+> Favor object composition over class inheritance.
+
+(Gang of Four 1995:20)
+
+**TODO**: *White-box reuse* wat betreft zichtbaarheid.
+
 ## Interface/implementation
 
-> Program to an interface, not an implementation.
+> Program to an interface, not an **implementation**.
+
+(Gang of Four 1995:18)
+
+Volgens de GoF is dit een belangrijke eigenschap van goed OO software design, omdat:
+
+* Clients zich niet bewust hoeven zijn van het specifieke object dat ze gebruiken.
+* Clients zich niet bewust zijn van de class(es) van de implementatie, alleen de abstracte class(es) die de interface definiëren.
+
+Het gebruik van een interface leidt ook tot *dynamic binding* en polymorfisme, wat centrale features van OOP zijn.
+
+## Termen
+
+### Single Responsibility Principle
+
+Eén verantwoordelijkheid voor iedere *context* (class, functie, variabele).
+
+### Hollywood principle
+
+> Don't call us, we'll call you.
+
+Het Hollywood principe is belangrijk als je class of component in een bestaand framework moet passen. Je hoeft alleen maar aan juiste interface(s) te voldoen, en het framework roept je op het juiste moment aan.
+Je kunt het Hollywood principe zien als een speciale *tell don't ask*.
+
+### Tell, don't ask
+
+> Very very short summary: It is okay to use accessors to get the state of an object, as long as you don't use the result to make decisions outside the object. Any decisions based entirely upon the state of one object should be made 'inside' the object itself.
+
+([http://c2.com/cgi/wiki?TellDontAsk](http://c2.com/cgi/wiki?TellDontAsk))
+
+### Dependency injection
+
+Het toepassen van constructor-injectie of setter-injectie om *Inversion of Control* te bereiken.
 
 ## Creational patterns
 
 Creational patterns vormen een abstractie rond het instantiëren van objecten.
 Hiermee kan een systeem onafhankelijk worden van hoe zijn objecten worden aangemaakt en samengesteld. Met dit laatste bedoelen we dat objecten kunnen worden opgebouwd met andere objecten (**composition**).
 
-Naarmate je systeem meer gebruik gaat maken van compositie [dan van overerving], worden creational patterns belangrijk. In plaats van een vaste set hard gecodeerd gedrag te hebben, komt de nadruk te liggen op kleinere onderdelen, die je kunt samenstellen om complexer gedrag te maken.
-Hierdoor wordt het maken van objecten met bepaald gedrag moeilijker dan alleen maar het instantiëren van een class.
+Naarmate je systeem meer gebruik maakt van compositie [in plaats van overerving], worden creational patterns belangrijk. In plaats van een vaste set hard gecodeerd gedrag te hebben, komt de nadruk te liggen op kleinere onderdelen, die je kunt samenstellen om complexer gedrag te maken.
+Hierdoor komt er meer nadruk te liggen op het maken van objecten. Soms is dat moeilijker dan het simpelweg instantiëren van een class.
 
-Binnen creational patterns hebben we twee thema's. Inkapseling van de concrete classes die het systeem gebruikt, en het verbergen hoe deze classes gecreeërd en samengesteld worden.
-Het enige dat het systeem over de objecten weet is hun interface.
+Alle creational patterns zijn gebaseerd op het principe van **tegen een interface** programmeren, niet tegen een implementatie.
+
+Binnen creational patterns hebben we twee thema's. Als eerste kunnen we de concrete classes die het systeem gebruikt inkapselen. Dit is wat het [factory method pattern](#factory-method) doet.
+
+De tweede maakt meer gebruik van compositie: we maken een object verantwoordelijk voor hoe de objecten gecreeërd en samengesteld worden. Dit object is zelf een parameter van het systeem; hij kan verwisseld worden.
 
 ### Abstract factory
 
@@ -118,7 +163,7 @@ Ook kun je met een abstract factory alleen de interface van de "producten" bloot
 
 ### Singleton
 
-Met het singleton pattern zorg je ervoor er precies één instance van een class bestaat, en er globale toegang tot die instance is. Deze toegang verloopt via één punt, waar de wrapper van de singleton controle over heeft.
+Met het singleton pattern zorg je dat er precies één instance van een class bestaat, en er globale toegang tot die instance is. Deze toegang verloopt via één punt, waar de wrapper van de singleton controle over heeft.
 
 Het pattern is nuttig bij objecten waarvan er maar één logische instantie bestaat. Zo is er altijd maar één window manager actief.
 
@@ -129,6 +174,8 @@ Voor het instantiëren van de singleton instance kan **lazy** of **eager** initi
 ### Factory method
 
 Definieer een interface om een object te creëren, maar laat subclasses bepalen welke class er geïnstantieerd wordt.
+
+![](FactoryMethod.svg)
 
 #### Voorbeeld
 
@@ -151,7 +198,7 @@ Het [composite pattern](#composite) is een voorbeeld van een structural *object*
 
 ### Decorator
 
-Een decorator voegt op dynamische manier verantwoordelijkheden (functionaliteit) toe aan een object, zonder de class van dat object te beïnvloeden.
+Een decorator voegt op dynamische wijze verantwoordelijkheden (functionaliteit) toe aan een object, zonder de class van dat object te beïnvloeden.
 
 Deze uitbreiding van functionaliteit is doorgaans statisch, maar kan soms ook tijdens runtime gedaan worden.
 
@@ -246,15 +293,37 @@ Een goed voorbeeld van het composite pattern is de volledige Java GUI-toolkit, S
 
 ## Behavioral patterns
 
-Behavioral patterns houden zich bezig met 
+Behavioral patterns houden zich bezig met het toewijzen van verantwoordelijkheden aan objecten. We beschrijven bij behavioral patterns niet alleen objecten en classes, maar ook hun onderlinge communicatie.
+
+Ook hier maken we onderscheid tussen *behavioral class patterns* en *behavioral object patterns*. De eerste categorie maakt gebruik van inheritance om gedrag over classes te verdelen. [Template method](#template-method) is hier een voorbeeld van.
+
+*Behavioral object patterns* maken gebruik van compositie om gedrag te verdelen. Het [observer](#observer) en [mediator](#mediator) pattern zijn hier voorbeelden van.
 
 ### Strategy
 
-"Encapsulate what varies" in een interface. Programmeer hier vervolgens tegenaan en sta toe om dit in te vullen.
+Bij het *strategy pattern* hebben we te maken met een reeks algoritmen die uitwisselbaar zijn.
+
+Hier wordt "Encapsulate what varies" toegepast.
 
 ### Observer
 
-Clients kunnen luisteren naar updates van een ander object.
+Met het *observer pattern* kunnen meerdere objecten (**observers**) luisteren naar updates van een ander object (het **subject**). Het is een publish-subscribe model.
+
+Het subject geeft veranderingen aan alle clients door. De clients kunnen vervolgens meer informatie aan het subject vragen.
+
+Het observer pattern is nuttig wanneer meerdere objecten op de hoogte van veranderingen moeten blijven, dit geen vast aantal is.
+Ook hoeft het *subject* niet te weten **wie** de objecten zijn die luisteren. Dit promoot *loose coupling*.
+
+![](Observer.svg)
+
+#### Voorbeeld
+
+Meerdere views moeten een up-to-date weergave doen van één set data.
+
+#### Voorbeeld 2
+
+Een `Notification` class kan meerdere observers hebben die bepalen hoe deze verstuurd wordt. Zo kan er een `Mail` en een `SMS` observer toegevoegd worden.
+De *manier waarop* de notificatie verzonden (die kan variëren) wordt staat los van de notificatie zelf.
 
 ### Command
 
@@ -299,21 +368,19 @@ Eén class stelt een algoritme(s) vast, en roep daarvoor methods aan. Als je der
 
 Het boek geeft hier een voorbeeld van een `Beverage`, met `Coffee` en `Tea` subclasses. Die overriden specifieke methods voor hun doeleinden.
 
-#### Single responsibiliy (SRP)
-
-#### Hollywood principle
-
-> Don't call us, we'll call you.
-
-#### Tell, don't ask
-
 ### State
 
 Behavioral pattern. Lijkt op het [strategy pattern](#strategy);
 
-Een _context_-object heeft op elk moment maar één bepaalde _state_. Hier kan het calls aan geven. De context bepaalt een beginstaat. Vanuit de _state_ kan er een _transition_ naar een nieuwe state gedaan worden. Dit kan ook vanuit de context.
+Met het *state pattern* kan het gedrag van een object veranderen afhankelijk van zijn interne staat.
 
-Voorbeeld: **auto huren**.
+Bij elke staat hoort een klasse, die allen aan dezelfde interface voldoen.
+
+#### Voorbeeld
+
+Een TCP-connectie kan in een aantal staten verkeren, waaronder *established*, *listening* en *closed*. Deze reageren elk anders op calls zoals `ack`, `open` en `close`. In plaats van dit met ingewikkelde control-flow op te lossen, is er voor elke staat een class die het gewenste gedrag inkapselt.
+
+Voor bijvoorbeeld de staat *closed* zouden alle methods als no-op geïmplementeerd kunnen worden, aangezien een gesloten connectie niks kan.
 
 ### Mediator
 
@@ -341,7 +408,3 @@ Alleen wat zichtbaar is voor de user. Geen logica.
 #### Controller
 
 Legt de koppeling tussen model en view.
-
-## Outro
-
-Tekst
