@@ -1,7 +1,7 @@
 % Samenvatting IRDBMS
 % Mathijs Bernson
 
-# Inleiding Relational database management systems
+# Inleiding Relationale database management systemem
 
 <a href="the-sequel.jpg"><img src="the-sequel.jpg" style="width: 35%; float: right;" /></a>
 
@@ -92,7 +92,7 @@ Dit wil zeggen dat het **conceptuele schema** kan veranderen, maar de **externe 
 
 Het schema niet afhankelijk is van de manier waarop het wordt opgeslagen op het opslagmedium (hardeschijf).
 
-#### Tedd Codd
+### Tedd Codd
 
 Bedacht een relationeel model in de jaren '60. Is in de jaren '70 geïmplementeerd door Oracle.
 
@@ -138,8 +138,7 @@ AS SELECT a, b, c
 	FROM t1, t2, t3
 	WHERE a = b AND c = d
 	GROUP BY b
-[WITH CHECK OPTION]; -- INSERT and UPDATE commands on the view will be checked
-                     -- to ensure new rows satisfy the view-defining condition.
+[WITH CHECK OPTION]; -- INSERT and UPDATE commands on the view will be checked to ensure new rows satisfy the view-defining condition.
 ```
 
 Een view bevat geen data, maar is gelinkt aan één of meer _base tables_. De gebruiker ziet het verschil niet bij bijv. een SELECT statement. Views kunnen bijv. handig zijn om een query met JOINs die je vaak gebruikt te vervangen.
@@ -160,9 +159,9 @@ En een **update view** moet het volgende **wel** hebben:
 
 Het is ook mogelijk om een view in de `FROM` clause van een SQL-query te hebben. In dit geval bestaat de view alleen in de query zelf.
 
-### Detour: Active database rules
+### Active database rules
 
-Triggers en stored procedures vallen onder de _active database rules_. D.w.z. dat de database niet alleen maar een passieve kaartenbak is, maar ook acties uit kan voeren.
+Triggers en stored procedures vallen onder de _active database rules_. Daarmee wordt bedoeld dat de database niet alleen maar een passieve kaartenbak is, maar ook acties uit kan voeren.
 
 ### Triggers
 
@@ -187,7 +186,6 @@ Je maakt een trigger met `CREATE TRIGGER`. Bevat het volgende:
 * Conditie
 * Body
 
-Vraag: blocking of non-blocking? Hangt ervan af.
 Bij een transactie moet je wachten tot de trigger is uitgevoerd.
 
 #### Voorbeeld
@@ -220,7 +218,7 @@ END;
 ```
 
 ```sql
-CREATE PROCEDURE schrap_werknemers (variabele_x IN CHAR(4), jobcode_var IN CHAR(6) AS
+CREATE PROCEDURE schrap_werknemers (variabele_x IN CHAR(4), jobcode_var IN CHAR(6)) AS
 BEGIN
 	DELETE FROM werknemer
 	WHERE dnr = variabele_x AND jobcode = jobcode_var
@@ -242,8 +240,8 @@ We maken onderscheid tussen drie soorten constraints.
 	* Zijn direct uit te drukken in het schema van het datamodel.
 	* Bijvoorbeeld: films hebben maar één regisseur. Dit is een _belongs to_ relatie met een _foreign key_.
 3. _Application-based constraints_ of _business rules_
-	* Dit zijn regels die niet in SQL uitgedrukt kunnen worden.
-	* Bijvoorbeeld: Validatie van e-mail adressen e.d.
+	* Dit zijn regels die niet in SQL uitgedrukt kunnen worden, maar wel nodig zijn voor een applicatie.
+	* Bijvoorbeeld: Validatie van e-mail adressen.
 
 In SQL kennen we een aantal verschillende _constraints_:
 
@@ -264,7 +262,7 @@ In SQL kennen we een aantal verschillende _constraints_:
 
 ### Data integriteit
 
-Twee soorten, **entiteits**- en **referentiële** integriteit.
+We onderscheiden twee soorten: **entiteits** integriteit en **referentiële** integriteit.
 
 ## Relationele algebra
 
@@ -279,7 +277,7 @@ R en S zijn willekeurige tabellen.
 * Intersection (R &cap; S)
 	* De records die zowel in R als in S zitten.
 * Difference (R &mdash; S)
-	* De records die in R maar niet in S zitten.
+	* De records die wel in R maar niet in S zitten.
 
 ### Set operators
 
