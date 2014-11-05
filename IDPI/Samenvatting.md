@@ -73,17 +73,19 @@ De student kan:
 
 > Een *design pattern* is een formele manier om een oplossing te documenteren voor een ontwerpprobleem in een bepaald veld.
 
-> Binnen de software-ontwikkeling is een *design pattern* een generieke, herbruikbare oplossing voor een vaak voorkomend probleem (binnen een bepaalde context) in software-ontwerp.
+> Binnen de software-ontwikkeling is een *design pattern* een generieke, herbruikbare oplossing voor een vaak voorkomend probleem (in een bepaalde context) in software-ontwerp.
 
 ### Waarom _design patterns_?
 
-Het ontwerpen van OO-software is moeilijk, en om dit ook nog eens herbruikbaar te maken is nog moeilijker.
+Het ontwerpen van OO-software is moeilijk, en het ontwerpen van *herbruikbare* software is nog moeilijker.
 
-Tegenwoordig laat men vaak het idee van **herbruikbaarheid** (het hergebruiken van classes tussen projecten) vallen, en richt zich vooral op **onderhoudbaarheid** van software.
+Tegenwoordig laat men vaak het doel van **herbruikbaarheid** (van classes tussen projecten) vallen, en richt zich vooral op **onderhoudbaarheid** van software.
+Kan de software makkelijk aangepast worden aan nieuwe eisen?
 
-### Soorten patterns
+### Gang of Four
 
-We onderscheiden drie soorten van design patterns, *structural*, *creational* en *behavioral* patterns.
+In 1994 verscheen het (invloedrijke) boek 'Design Patterns: Elements of Reusable Object-Oriented Software'.
+De vier auteurs van dit boek worden ook wel de **Gang of Four (GoF)** genoemd.
 
 ## Composition over inheritance
 
@@ -112,7 +114,7 @@ Het gebruik van een interface leidt ook tot *dynamic binding* en polymorfisme, w
 
 ### Single Responsibility Principle
 
-Eén verantwoordelijkheid voor iedere *context* (class, functie, variabele).
+Volgens dit principe moet iedere class, functie en variabele een enkele *verantwoordelijkheid* hebben. Die verantwoordelijkheid is erin ingekapseld.
 
 ### Hollywood principle
 
@@ -127,9 +129,27 @@ Je kunt het Hollywood principe zien als een speciale *tell don't ask*.
 
 ([http://c2.com/cgi/wiki?TellDontAsk](http://c2.com/cgi/wiki?TellDontAsk))
 
+Telkens informatie vragen aan een object is niet wenselijk, in plaats daarvan willen we de logica in hetzelfde object hebben.
+Dat is waar OOP om gaat, het bundelen van data en logica.
+
+([http://martinfowler.com/bliki/TellDontAsk.html](http://martinfowler.com/bliki/TellDontAsk.html))
+
 ### Dependency injection
 
-Het toepassen van constructor-injectie of setter-injectie om *Inversion of Control* te bereiken.
+Het toepassen van constructor-injectie of setter-injectie om [*Inversion of Control*](#inversion-of-control-ioc) te bereiken.
+
+### Inversion of Control (IoC)
+
+Hangt sterk samen met *dependency injection*. IoC betekent dat [verwisselbare] delen van een programma instructies ontvangen van een generiek programma.
+Deze instructies zijn afhankelijk van de *control flow* van het generieke programma.
+
+In traditionele, procedurele software roept jouw code de libraries aan. Bij IoC wordt dit principe dus omgedraaid, en roept de library jou aan via een *interface*.
+
+Zie ook het [Hollywood principle](#hollywood-principle).
+
+## Soorten patterns
+
+We onderscheiden drie soorten van design patterns, *structural*, *creational* en *behavioral* patterns.
 
 ## Creational patterns
 
@@ -173,7 +193,7 @@ Voor het instantiëren van de singleton instance kan **lazy** of **eager** initi
 
 ### Factory method
 
-Definieer een interface om een object te creëren, maar laat subclasses bepalen welke class er geïnstantieerd wordt.
+Definieer een interface om een object te creëren, maar laat subclasses bepalen welke concrete class er geïnstantieerd wordt.
 
 ![](FactoryMethod.svg)
 
@@ -198,13 +218,56 @@ Het [composite pattern](#composite) is een voorbeeld van een structural *object*
 
 ### Decorator
 
-Een decorator voegt op dynamische wijze verantwoordelijkheden (functionaliteit) toe aan een object, zonder de class van dat object te beïnvloeden.
+Een decorator voegt op dynamische wijze verantwoordelijkheden (functionaliteit) toe aan een object, waarbij inheritance niet nodig is.
 
-Deze uitbreiding van functionaliteit is doorgaans statisch, maar kan soms ook tijdens runtime gedaan worden.
+![](decorator.gif)
 
-![](Decorator.svg)
+Er zijn twee manieren om het pattern toe te passen. De eerste maakt gebruik van inheritance; de decorator method(s) roept telkens `super()` aan.
+De tweede manier is met *strategies*; we gebruiken constructor-injectie om decorators te bouwen.
+
+Het decorator object moet voldoen aan de interface van het component die het "decoreert". Als je maar één verantwoordelijkheid toevoegt is het niet nodig om een abstracte decorator class te maken.
 
 Het pattern is zo ontworpen dat decorators genest kunnen worden.
+
+Voorbeeld:
+
+```java
+interface VisualComponent {
+	abstract void draw();
+	abstract void resize();
+}
+
+class Decorator implements VisualComponent {
+	private VisualComponent component;
+
+	void draw() {
+		component.draw();
+	}
+
+	void resize() {
+		component.resize();
+	}
+}
+
+class BorderDecorator extends Decorator {
+	BorderDecorator(VisualComponent c, int borderWidth) {
+		// ...
+	}
+
+	void draw() {
+		super.draw();
+		this.drawBorder(borderWidth);
+	}
+}
+
+// Main functie:
+Window window = new Window();
+window.setContents(
+	new BorderDecorator(
+		new ScrollDecorator(textView), 1 // Border width
+	)
+);
+```
 
 ### Adapter
 
@@ -261,15 +324,16 @@ Voert extra acties uit wanneer je een object benadert. Zo kan het:
 
 ### Façade
 
-Een façade verhult een complex systeem en geeft daar één (eenvoudiger) interface voor.
+Een façade verhult een **complex systeem** en geeft daar één (eenvoudige) interface voor.
 
-Met het façade pattern wordt een systeem opgedeeld in subsystemen, om complexiteit tegen te gaan.
+Bij het façade pattern wordt aanbevolen om een systeem op te delen in subsystemen, om complexiteit tegen te gaan.
+Het façade-object kan vervolgens al deze subsystemen instantiëren en op de juiste wijze aanroepen.
 
 #### Wanneer te gebruiken
 
 Als er veel afhankelijkheden tussen clients en implementaties zijn, kan het handig zijn om dit met een façade af te schermen van de rest van het programma.
 
-Het pattern kan ook toegepast worden als je gelaagde subsystemen wilt hebben. Alle communicatie tussen deze lagen verloopt via façades.
+Het pattern kan ook toegepast worden als je subsystemen op wilt delen in **lagen**. Alle communicatie tussen deze lagen verloopt via façades.
 
 #### Voorbeeld
 
@@ -301,13 +365,14 @@ Ook hier maken we onderscheid tussen *behavioral class patterns* en *behavioral 
 
 ### Strategy
 
-Bij het *strategy pattern* hebben we te maken met een reeks algoritmen die uitwisselbaar zijn.
+Bij het *strategy pattern* hebben we te maken met een reeks gerelateerde algoritmen die uitwisselbaar zijn.
 
-Hier wordt "Encapsulate what varies" toegepast.
+Ieder algoritme wordt ingekapseld in een class, zodat er tijdens runtime tussen gekozen kan worden.
+Dit is een voorbeeld van "Encapsulate what varies". De interface is telkens hetzelfde, maar het **gedrag** van de classes verschilt.
 
 ### Observer
 
-Met het *observer pattern* kunnen meerdere objecten (**observers**) luisteren naar updates van een ander object (het **subject**). Het is een publish-subscribe model.
+Met het observer pattern kunnen meerdere objecten (**observers**) luisteren naar updates van een ander object (het **subject**). Dit is een publish-subscribe model.
 
 Het subject geeft veranderingen aan alle clients door. De clients kunnen vervolgens meer informatie aan het subject vragen.
 
@@ -318,16 +383,39 @@ Ook hoeft het *subject* niet te weten **wie** de objecten zijn die luisteren. Di
 
 #### Voorbeeld
 
-Meerdere views moeten een up-to-date weergave doen van één set data.
+Meerdere views moeten een up-to-date weergave doen van één set data. Als de data geüpdatet wordt, krijgen alle views een notificatie hiervan.
 
 #### Voorbeeld 2
 
-Een `Notification` class kan meerdere observers hebben die bepalen hoe deze verstuurd wordt. Zo kan er een `Mail` en een `SMS` observer toegevoegd worden.
-De *manier waarop* de notificatie verzonden (die kan variëren) wordt staat los van de notificatie zelf.
+Een *Notification center* kan meerdere observers hebben die bepalen hoe de notificaties verstuurd worden. Zo kan er een `Mail` en een `SMS` observer toegevoegd worden.
+
+De *manier waarop* de notificatie verzonden (die kan variëren) wordt staat los van de notificaties zelf.
+
+#### Verschillen met *event listener* patterns
+
+Diverse toolkits maken gebruik van *event listeners* om te reageren op gebeurtenissen [zoals kliks]. Of dit onder het **observer pattern** valt hangt af van de context.
+
+In de GoF beschrijving kan een concrete *observer* een signaal terug naar het *subject* geven. De meeste implementaties van *listeners* reageren alleen maar op evenementen van buitenaf.
 
 ### Command
 
-command pattern is een encapsulation van het uit te voeren request.
+Met het command pattern wordt een uit te voeren request ingekapseld in een object. Zie het als een 'tastbare' method call. In veel dynamische talen zouden we callbacks of closures gebruiken. Commands zijn de object-geörienteerde vervanging hiervan.
+
+Het command pattern brengt een aantal voordelen en mogelijkheden met zich mee. Zo kun je:
+
+* De request als parameter rondgeven voordat je hem uitvoert.
+* Requests verdelen over clients.
+* Een (wacht)rij van requests bijhouden.
+* *Undo*-functionaliteit toevoegen.
+
+#### Voorbeeld
+
+In een game kun je gebruikers input (toetsaanslagen, kliks) omzetten naar *commands*. Hiermee is het mogelijk om:
+
+* *Key bindings* makkelijk te definiëren; toetsen worden gekoppeld aan objecten.
+* Willekeurige characters in het spel instructies geven.
+* Een *command stream* opzetten, die de commando's sequentieel verwerkt.
+* *Undo/redo* voor de acties te implementeren.
 
 ### Iterator
 
@@ -395,16 +483,33 @@ Dit probleem kunnen we vermijden door het collectief gedrag in een **mediator** 
 
 ### MVC
 
-Model view controller. Eigenlijk geen GoF pattern?
+Staat voor *Model view controller*. Het is geen GoF pattern, maar is veelgebruikt pattern. MVC is een *architectureel pattern*.
+
+Het splits verantwoordelijkheden op in drie lagen: models, views, en controllers.
 
 #### Model
 
-Data en _business logic_.
+Het model bevat data en _business logic_. Het staat niet in contact met de andere lagen.
 
 #### View
 
-Alleen wat zichtbaar is voor de user. Geen logica.
+Het view omvat de grafische weergave(n), die de user ziet. Het bevat geen logica en kan informatie opvragen uit model-objecten.
 
 #### Controller
 
-Legt de koppeling tussen model en view.
+De controller is een bemiddelaar tussen model en view. Als het model zich updatet, geeft de controller dit door aan de view.
+Wanneer de gebruiker de view manipuleert, reageert de controller hierop, en geeft eventueel instructies door aan het model.
+
+#### Waarom?
+
+Het MVC-pattern brengt een aantal voordelen met zich mee:
+
+* Loose coupling door interfaces
+* Views kunnen makkelijk vervangen worden
+* Maintainability door afsplitsing van taken
+
+MVC applicaties kunnen relatief eenvoudig uitgebreid worden door nieuwe models, views en controllers toe te voegen. Deze beïnvloeden de bestaande objecten niet.
+
+#### Smaken
+
+Sommige mensen vinden dat het view *niet* direct met het model mag praten, anderen vinden weer van wel.
