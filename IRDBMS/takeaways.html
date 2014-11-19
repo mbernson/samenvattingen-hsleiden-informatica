@@ -1,0 +1,27 @@
+<h1 id="irdbms-oefentoets-take-aways">IRDBMS oefentoets take-aways</h1>
+<p>Een <code>JOIN</code> is zwaarder dan een subquery.</p>
+<h3 id="triggers">Triggers</h3>
+<p>Triggers kunnen gebruikt worden voor:</p>
+<ul>
+<li>Notificaties</li>
+<li>Integriteit onderhouden</li>
+<li>Afgeleide data onderhouden</li>
+<li>Views consistent houden</li>
+<li>Business rules implementeren</li>
+</ul>
+<h3 id="indexes-en-tuning">Indexes en tuning</h3>
+<p>Indexes worden niet gebruikt bij <strong>sorteren</strong>.</p>
+<p>Database <em>tuning</em> is <strong>niet</strong> belangrijk om de grootte van de database te beheersen.</p>
+<h3 id="locking-en-concurrency">Locking en concurrency</h3>
+<p><em>Conservative two-phase locking</em> kan deadlocks voorkomen.</p>
+<p>Wanneer een computer meerdere processoren heeft dan is <strong>parallel</strong> processing mogelijk. De meeste concurrency control theorieën gaan echter uit van <strong>interleaved</strong> processing.</p>
+<p>Je kunt tijdens een transactie <code>SAVEPOINT &lt;naam&gt;</code> aangeven om terug te rollen naar dat punt.</p>
+<h3 id="security">Security</h3>
+<h4 id="deze-stellingen-zijn-allebei-juist">Deze stellingen zijn allebei juist:</h4>
+<ul>
+<li>Discretionary security mechanisme betreffen het toekennen en intrekken van rechten aan gebruikers.</li>
+<li>Mandatory security mechanisme betreffen het doorvoeren van multi level security door data en gebruikers te classificeren.</li>
+</ul>
+<p>Op <em>account niveau</em> (level) worden de volgende privileges verstrekt:</p>
+<p><code>CREATE SCHEMA, ALTER, DROP, MODIFY</code>.</p>
+<p>Met <strong>RBAC</strong> kan de hiërarchie van verantwoordelijkheden in de organisatie goed worden weergegeven.</p>
