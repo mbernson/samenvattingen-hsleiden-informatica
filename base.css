@@ -1,9 +1,22 @@
 body {
-    width: 80%; 
-    max-width: 38em;
-    margin: 1.5em 15%;
+    max-width: 38em; /* http://nerd.vasilis.nl/code/measure-help/ */
+    margin: 0;
+    padding: 0 2em;
     line-height: 1.2em;
-    font-family: Helvetica, sans-serif;
+    font: 100%/1.2 Helvetica, sans-serif;
+    -webkit-text-size-adjust: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        width: 80%;
+        padding: 0 15%;
+    }
+}
+
+#header {
+    text-align: center;
+    font-weight: bold;
 }
 
 img, .figure {
@@ -19,6 +32,7 @@ blockquote {
     padding: 3ex 3ex;
     quotes: "\201C""\201D""\2018""\2019";
 }
+
 blockquote:before {
     color: lightgrey;
     content: open-quote;
@@ -27,6 +41,7 @@ blockquote:before {
     margin-right: 0.25em;
     vertical-align: -0.4em;
 }
+
 blockquote p {
     display: inline;
 }
@@ -34,9 +49,11 @@ blockquote p {
 .figure {
     text-align: center;
 }
+
 .figure img {
     border: none;
 }
+
 .figure .caption {
     font-style: italic;
     font-size: 90%;
@@ -44,7 +61,7 @@ blockquote p {
 
 @media print {
     body {
-        width: 94%;
+        max-width: 94%;
         margin: 1.5em;
         font-size: 90%;
     }
