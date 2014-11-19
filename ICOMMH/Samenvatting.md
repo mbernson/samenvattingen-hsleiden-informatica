@@ -129,17 +129,44 @@ ook die sfeer is besmettelijk
 
 Aantekeningen en slides hierin meenemen!
 
+(Plaatje)
+
 ## Conflicthantering
+
+### Escalatieladder van Glasl
+
+* Fase 1 win-win
+* Fase 2 win-lose
+* Fase 3 lose-lose
+
+(Plaatje)
+
+### Fasen van conflicthantering
+
+* Voorbereidingsfase
+  * Wat wil ik bereiken?
+  * Is de ander bereid om mee te werken?
+  * Wat is het doel van de ander?
+* Openingsfase
+  * Waarom ben je bij elkaar, afspraken maken.
+* Verkennende fase
+
+* Onderhandelingsfase
+* Afronding
 
 ## Feedback
 
 ## Tuckman
 
+Forming storming etc
+
+(Plaatje)
+
 ## Vergaderen en besluitvorming
 
 ## Communicatiestijlen
 
-## teams
+## Teams
 
 Pijlers van een team
 
