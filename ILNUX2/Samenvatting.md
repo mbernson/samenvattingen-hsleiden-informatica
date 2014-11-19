@@ -18,7 +18,7 @@ Keuzevak
 
 LPIC 201 en 202
 
-### LPIC 201
+## LPIC 201
 
 ### Capaciteitsplanning
 
@@ -34,7 +34,7 @@ LPIC 201 en 202
 
 ### Systeem onderhoud
 
-### LPIC 202
+## LPIC 202
 
 ### DNS server
 
