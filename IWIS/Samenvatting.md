@@ -9,11 +9,11 @@
 * Studiepunten: 3 ECTS
 * Studiebelasting: ?
 * Modulecode: IWIS
-* Beoordeling: Schriftelijke toets van 120 minuten. Cijfer moet >= 5.5
+* Beoordeling: Schriftelijke toets van 120 minuten. Cijfer moet >= 5.5 zijn.
 
 ## Literatuur
 
-* Moduleboek IWIS, delen A en B
+* Moduleboek(en) IWIS, delen A en B
 
 ## Leerdoelen
 
@@ -27,11 +27,38 @@
 * Binair en hex kennen
 * Bisectie toepassen bij numerieke nulpuntbenadering
 
+## Toetstof
+
+De hoofdstukken uit de modulewijzers.
+
+### Niet inbegrepen
+
+Dit is allemaal **geen** toetsstof:
+
+* §4.5 uit hoofdstuk 4
+* §4.6 alle opgaven behalve: 8, 13, 14
+
+## Errata voor het boek
+
+Het volgende staat verkeerd in het boek:
+
+* §4.7 opgave 2b. Het antwoord moet zijn: 10^4(26^2 - 1)
+
 ## Inhoud
 
 * [Foo](#foo)
 * [Bar](#bar)
 * [Baz](#baz)
+
+## Recurrente betrekkingen
+
+```haskell
+fib 0 = 0
+fib 1 = 1
+fib n = fib (n - 1) + fib (n - 2)
+```
+
+## Combinatoriek
 
 ## Fouten en nauwkeurigheid
 
@@ -51,16 +78,6 @@ a ± f₁ en b ± f₂ zijn twee meetuitkomsten met absolute fouten f₁ en f₂
 
 **(a + b) ± (f₁ + f₂)** resp. **(a - b) ± (f₁ + f₂)**
 
-## Recurrente betrekkingen
-
-```haskell
-fib 0 = 0
-fib 1 = 1
-fib n = fib (n - 1) + fib (n - 2)
-```
-
-## Combinatoriek
-
 ## Intersectieberekeningen
 
 ## Numerieke nulpuntsbenadering met bisectie
@@ -70,3 +87,7 @@ fib n = fib (n - 1) + fib (n - 2)
 ### Inproduct
 
 ## Binaire en hexadecimale talstelsels
+
+## Toetstips
+
+* Zoals altijd zijn de stappen naar je antwoord het belangrijkst. Schrijf het op, maak ook tekeningetjes (bijv. bij combinatoriek).
