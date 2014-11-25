@@ -22,13 +22,20 @@ Examenstof: boek, colleges en oefeningen.
 * Werkstuk 50%
 * Schriftelijke toets (mc) 50%
 
+## Programma
+
+* Week 1 & 2: Hoofdstuk 7
+* Week 3: Hoofstduk 8
+* Week 4: hoofdstuk 9 → casussen inleveren?
+* Week 5: Hoofdstuk 15 → casussen inleveren!
+* Week 6: Hands on workshop college
+* Week 7: Hoofdstuk 10
+* Week 8: Maandag werkstuk inleveren
+* Week 9: Toets
+
+In week 8 **werkstuk inleveren**!
+
 ## Inhoud
 
 * [Tekst](#)
-
-* Week 1
-	* [Tekst](#)
-* Week 2
-* Week 3
-* Week 4
 

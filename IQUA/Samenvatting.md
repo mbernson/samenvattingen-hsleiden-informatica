@@ -12,9 +12,10 @@
 
 ## Literatuur
 
-* #zoekhetmaaruit
 * Literatuur en ondersteunend materiaal via ELO
 	* Denk hierbij aan white-papers en filmpjes.
+
+Kortom: je zoekt het maar uit.
 
 Er zijn geen aanbevolen boeken voor dit vak, iedereen moet maar kijken wat hij doet. Waarom zou dit vak toch zo'n laag slagingspercentage hebben?
 
