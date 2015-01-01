@@ -60,14 +60,18 @@ fib n = fib (n - 1) + fib (n - 2)
 
 ## Combinatoriek
 
-Combinatoriek -> 'slim tellen'
+Combinatoriek is een kwestie van systematisch (en 'slim') tellen.
 
-Permutaties
+Een veel voorkomende vraag is om het aantal rangschikkingen van verschillende objecten te berekenen. Dit noemen we **permutaties**.
 
-Opletten:
+Bij dit soort vragen moet je opletten, en het volgende checken:
 
-* Is de volgorde belangrijk?
+* [Is de volgorde belangrijk?](#geordende-rijen)
 * Zijn de elementen uniek?
+
+Gebruik **nooit** zomaar een formule om tot een antwoord te komen. De context is altijd belangrijk.
+
+Maak het niet te ingewikkeld. Schrijf het probleem bijvoorbeeld uit met stipjes en zet daaronder de vermenigvuldiging (faculteit) die je gaat uitvoeren.
 
 ### Faculteit
 
@@ -79,9 +83,13 @@ Deze manier van rekenen is nuttig als de **volgorde** van de objecten een rol sp
 
 ### Geordende rijen
 
+Een **rij** is per definitie geordend.
+
 $$ \frac{\frac{5!}{(5-3)!}}{3!} = \frac{5!}{3! * (5-3)!} = \frac{120}{6*2} = 10 $$
 
 ### Ongeordende rijen (verzamelingen)
+
+Een rij waarvan de ordening niet belangrijk is noemen we een **verzameling**.
 
 ### Binomiaalcoëfficiënten
 
@@ -94,7 +102,7 @@ $$ \binom{n}{k} = \frac{n!}{k!(n - k)!} $$
 
 Voorbeeld:
 
-$$ \binom{5}{3} = \frac{5!}{3!(5 - 3)!} = \frac{120}{6(5 - 3)} = 10 $$
+$$ \binom{5}{3} = \frac{5!}{3!(5 - 3)!} = \frac{120}{6*2} = 10 $$
 
 ## Fouten en nauwkeurigheid
 

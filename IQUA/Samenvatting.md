@@ -44,3 +44,20 @@ Inzicht krijgen in:
 
 ## Intro
 
+### Wat is kwaliteit?
+
+Het belangrijkste als je dit moet opschrijven is **bewustwording** en **kennis** over kwaliteit.
+
+#### Hoe moet je deze vraag op de toets beantwoorden?
+
+## Kwaliteitsmodellen en methoden
+
+## Software ontwikkelingsmethodieken
+
+### Agile
+
+### Scrum
+
+### Continuous delivery
+
+## Project management methoden
