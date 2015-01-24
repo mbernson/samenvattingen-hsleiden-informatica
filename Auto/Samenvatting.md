@@ -1,20 +1,19 @@
 % Samenvatting Auto theorie
 % Mathijs Bernson
 
-## Informatie
-
-* Overhoord
-
-## Literatuur
+## Literatuur en bronnen
 
 * Vekabest Rijbewijs B - ISBN 978-90-6799-203-9
+* [Lijst van verkeersborden in Nederland](https://nl.wikipedia.org/wiki/Verkeersborden_in_Nederland)
 * Andere samenvattingen
 
 ## Leerdoelen
 
-Het niet doodgaan op de openbare weg.
+* Examen auto theorie B van het CBR halen
 
 ## Inhoud
+
+* Over het examen
 
 * [Veiligheid en gedrag](#veiligheid-en-gedrag)
 * [Wettelijke begrippen](#wettelijke-begrippen)
@@ -29,6 +28,10 @@ Het niet doodgaan op de openbare weg.
 * [Communicatie, licht en weersomstandigheden](#)
 * [Milieu](#)
 * [Technisch](#)
+
+## Over het examen
+
+Het auto theorie examen van het CBR bestaat uit 65 vragen, waarvan **x vragen** over gevaarherkenning, en **y vragen** over  verkeersinzicht.
 
 ## Veiligheid en gedrag
 
@@ -52,7 +55,7 @@ Defensief rijgedrag is gebaseerd op:
 * Effectief kijken
 * Goed reageren
 
-Je rijdt defensief als je vooruitloopt op mogelijke gebeurtenissen, juist reageert op fouten van anderen en juist kijkgebdrag vertoont. Een defensieve bestuurder respecteert de belangen van andere weggebruikers.
+Je rijdt defensief als je vooruitloopt op mogelijke gebeurtenissen, juist reageert op fouten van anderen en juist kijkgedrag vertoont. Een defensieve bestuurder respecteert de belangen van andere weggebruikers.
 
 Je moet echter niet onnodig toeteren, onnodig abrupt remmen/stoppen, of op het laatste moment uitwijken/inhalen.
 
@@ -129,3 +132,22 @@ Iedereen die van de weg gebruik maakt.
 
 ## Wegen
 
+## Inhalen
+
+Inhalen doe je doorgaans **links**. Je mag andere weggebruikers (dus ook voetgangers) hierbij niet in gevaar brengen of hinderen.
+
+Er zijn uitzonderingen op links inhalen, waarbij je dus **rechts** inhaalt:
+
+* Als de bestuurder die je wilt inhalen linksaf slaat [en dat aangeeft] moet je hem rechts inhalen.
+* Rechts van een blokmarkering (zoals een uitrijstrook of voorsorteerstrook).
+* Vlak voor een rotonde.
+* In een file.
+* Rechts inhalen van een tram.
+
+Inhalen is **verboden** op deze plaatsen:
+
+* Vlak voor een VOP (zebrapad).
+* Ter hoogte van een doorgetrokken streep tussen rijstroken [als je die moet overschrijden].
+* Bij inhaalverbods-borden.
+
+Denk bij het inhalen ook aan de **lengte** van het andere voertuig, de **snelheid** en een eventuele **lange lading** die het meedraagt.
