@@ -28,6 +28,13 @@ Portfolio opleveren als PDF. Moet in periode 3 af zijn.
 * [Conflicthantering](#conflicthantering)
 * [Feedback geven en ontvangen](#feedback)
 
+* [Vergaderen en besluitvorming](#vergaderen-en-besluitvorming)
+* [Communicatiestijlen](#communicatiestijlen)
+* [Teams](#teams)
+
+* [SWOT analyse](#swot-analyse)
+* [Ekam (Effectiviteit = kwaliteit * acceptatie * uitvoering)](#ekam)
+
 ## Bewust/onbewust bekwaam/onbekwaam
 
 Elk leerproces, waaronder dat van communiceren bestaat uit de volgende stappen:
@@ -175,3 +182,38 @@ Pijlers van een team
 * Ondersteuning
 
 Een team is altijd een groep, maar een groep is niet altijd een team.
+
+## SWOT analyse
+
+## Ekam
+
+> Effectiviteit = kwaliteit * acceptatie * uitvoering
+
+Dit wordt afgekort als **Ekam**.
+
+## Stappen adviesproces
+
+### Probleemanalyse
+
+Verzamel informatie over de processen van de organisatie. Kijk hierbij naar processen in het verleden, heden en toekomst.
+
+### Oplossingsrichtingen
+
+Denk aan:
+
+* Wat kan er anders georganiseerd worden?
+* Welke nieuwe software kan worden toegepast? En waarom?
+* Welke software moet (opnieuw) geïmplementeerd worden?
+* Of iets heel anders?
+
+### Oplossing kiezen
+
+Kies de oplossing die het beste past.
+
+### Uitvoeren oplossing
+
+De oplossing wordt uitgevoerd. Denk aan:
+
+* Verbeteren processen & organisatie-inrichting.
+* Software-selectie
+* Software-implementatie
