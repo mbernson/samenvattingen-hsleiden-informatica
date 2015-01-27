@@ -1,7 +1,7 @@
 % Samenvatting IQUA
 % Mathijs Bernson
 
-# Samenvatting Kwaliteit in de ICT
+# Kwaliteit in de ICT
 
 ## Informatie
 
@@ -15,11 +15,9 @@
 * Literatuur en ondersteunend materiaal via ELO
 	* Denk hierbij aan white-papers en filmpjes.
 
-Kortom: je zoekt het maar uit.
+Vóór ieder college graag het materiaal bestuderen.
 
-Er zijn geen aanbevolen boeken voor dit vak, iedereen moet maar kijken wat hij doet. Waarom zou dit vak toch zo'n laag slagingspercentage hebben?
-
-Vóór ieder college materiaal bestuderen.
+Er zijn geen aanbevolen boeken voor dit vak, **kortom**: je zoekt het maar uit.
 
 ## Leerdoelen
 
@@ -27,7 +25,7 @@ Kennis opdoen over:
 
 * Definitie(s) van kwaliteit
 * Methoden om kwaliteit te borgen
-* Standaarden [wat voor standaarden?]
+* Standaarden zoals ISO
 
 Inzicht krijgen in:
 
@@ -41,19 +39,22 @@ Inzicht krijgen in:
 * [Wat is kwaliteit?](#wat-is-kwaliteit)
 * [Kwaliteitsmodellen en methoden](#kwaliteitsmodellen-en-methoden)
 	* [INK model](#ink-model)
+	* [Six Sigma](#six-sigma)
 	* [ISO](#iso-normen)
+	* Etc.
 * [Software ontwikkelingsmethodieken](#software-ontwikkelingsmethodieken)
 	* [Waterval](#waterval)
 		* [SDM](#sdm)
 	* [Agile](#agile)
 		* [Scrum](#scrum)
 		* [RUP](#rup)
-		* [Continuous delivery](#continuous-delivery)
+	* [Continuous delivery](#continuous-delivery)
 * [Verschillen tussen methoden](#verschillen-tussen-methoden)
 * [Project management methoden](#project-management-methoden)
 	* [Prince2](#prince2)
 	* [Six Sigma](#six-sigma)
-
+* [Auditing](#auditing)
+	
 ## Intro
 
 ### Wat is kwaliteit?
@@ -99,13 +100,37 @@ Kwaliteit meetbaar maken met ISO of INK?
 
 ### Six Sigma
 
-**TODO**
+Six Sigma is een methode om kwaliteit te beheren en te verbeteren.
+
+#### DMAIC
+
+Bij Six Sigma wordt altijd de de DMAIC-methodiek van procesverbetering gebruikt. Dit staat voor *Define*, *Measure*, *Analyze*, *Improve* en *Control*.
+
+**Plaatje van DMAIC cyclus hier**
+
+##### Define
+
+##### Measure
+
+##### Analyze
+
+##### Improve
+
+##### Control
 
 ### ISO
 
 **TODO**
 
-### INK model (ook wel bekend als het EFQM-model)
+### Capability Maturity Model (CMM)
+
+**TODO**
+
+### CoBIT
+
+**TODO**
+
+### INK model (ook wel bekend als het EFQM-model) en PDCA
 
 *N.b.: dit stuk tekst is linea recta ge-copy-paste uit mijn [samenvatting IIBPM](http://duckson.nl/samenvattingen/IIBPM/samenvatting.html#ink-model-ook-wel-bekend-als-het-efqm-model)*
 
@@ -162,6 +187,10 @@ Veel gemaakte fouten bij het invoeren van processen binnen dienstverlenende orga
 * De norm (ISO) als uitgangspunt kiezen.
 * Procesmanagement delegeren aan kwaliteitsmanager.
 
+### Lean manufacturing (TPS)
+
+**TODO**
+
 ## Software ontwikkelingsmethodieken
 
 Softwareontwikkelmethodes worden gebruikt bij het ontwikkelen van software, tijdens de hele levenscyclus hiervan.
@@ -194,6 +223,8 @@ Zo zie je dat de methodieken gecombineerd kunnen worden, en naast elkaar werken.
 In de watervalmethode werk je telkens (in volgorde) de fasen af. Daarbij kun je niet teruggaan naar de vorige fase.
 Veel mensen zien de watervalmethode als achterhaald.
 
+Het watervelmodel bestaat uit de volgende fasen:
+
 ![Fasen uit de watervalmethode](Waterfall_model.png)
 
 #### Voordelen
@@ -206,7 +237,22 @@ Als er na de eerste fase fouten worden gemaakt, kun je niet meer teruggaan om he
 
 #### SDM
 
-SDM valt onder de watervalmethode. 
+SDM (**system development methodology**) valt onder de watervalmethode. Het wordt vooral gebruikt bij projecten waar een informatiesysteem wordt ontwikkeld.
+
+SDM bestaat uit de volgende fasen:
+
+1. Definitiestudie
+	* Onderzoek of het project uitvoerbaar/haalbaar is.
+2. Basisontwerp
+	* Initieel ontwerp van het systeem.
+3. Detail ontwerp
+	* Er wordt voortgeborduurd op het basisontwerp.
+4. Realisatie
+	* Het systeem wordt gebouwd volgens het ontwerp.
+5. Invoering
+	* Het opgeleverde systeem wordt geïnstalleerd.
+6. Gebruik en beheer
+	* De organisatie gaat het systeem overnemen, maar er zijn richtlijnen voor het beheer en onderhoud.
 
 ### Agile
 
@@ -230,7 +276,16 @@ Een groot onderdeel van Scrum is een prikbord met taken (dit hoeft geen fysiek b
 
 #### RUP
 
-**TODO**
+Rational Unified Process (RUP) is een andere iteratieve software-ontwikkelmethode.
+
+* Inception
+* Elaboration
+* Construction
+* Transition
+
+![De fasen van RUP](rup-development-iterative.gif)
+
+RUP op maat is een boek geschreven door Ordina, waarin een spinoff van RUP beschreven wordt.
 
 ### Continuous delivery
 
@@ -276,3 +331,7 @@ Prince2 is een algemene ontwikkelmethode. Soms zien we "Prince In Name Only" (PI
 **TODO**
 
 ### Requirements en agile
+
+## Auditing
+
+**TODO**
