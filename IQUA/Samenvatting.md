@@ -106,7 +106,19 @@ Six Sigma is een methode om kwaliteit te beheren en te verbeteren.
 
 Bij Six Sigma wordt altijd de de DMAIC-methodiek van procesverbetering gebruikt. Dit staat voor *Define*, *Measure*, *Analyze*, *Improve* en *Control*.
 
-**Plaatje van DMAIC cyclus hier**
+![De DMAIC cyclus](dmaic-wall-sign.png)
+
+1. Define
+	* Definieer het probleem.
+2. Measure
+	* Meet de belangrijkste aspecten van het project en verzamel relevante gegevens.
+3. Analyze
+	* Analyseer de onderzochte gegevens.
+	* Kijk naar oorzaak en gevolg, 
+4. Improve
+	* Verbeter het huidige proces [m.b.v. technieken en andere creatieve oplossingen].
+5. Control(e)
+	* Draait vooral om toezicht, controle zorgt daarvoor.
 
 ##### Define
 
@@ -120,7 +132,51 @@ Bij Six Sigma wordt altijd de de DMAIC-methodiek van procesverbetering gebruikt.
 
 ### ISO
 
-**TODO**
+#### ISO 25010
+
+ISO 25010 is een norm die de kwaliteit[skenmerken] van software beschrijft. Dit doet het door een aantal punten vast te stellen in de categorieën **productkwaliteit** en **kwaliteit tijdens gebruik**.
+De software kan dan getoetst worden a.d.h.v. die punten.
+
+In deze samenvatting gaan we alleen in op de hoofdpunten. Alle sub-eigenschappen daarvan [vind je op Wikipedia](https://nl.wikipedia.org/wiki/ISO_25010).
+
+##### Productkwaliteit
+
+Het model voor **productkwaliteit** bestaat uit acht hoofdcategorieën die zijn onderverdeeld in 31 kwaliteitseigenschappen (niet genoemd).
+
+1. Suitability
+	* Functionele geschiktheid, of een *systeem* de juiste behoeften aankaart.
+2. Performance
+	* Hoe efficiënt presteert het *systeem*?
+3. Compatibility
+	* Kan het *systeem* informatie uitwisselen met andere componenten?
+4. Usability 
+	* Kunnen de gebruikers van het *systeem* er effectief mee werken?
+5. Reliability (betrouwbaarheid)
+	* Werkt het *systeem* onder de gewenste condities, binnen bepaalde tijd?
+6. Security
+	* Juiste toegang en autorisatie.
+7. Portability (overdraagbaarheid)
+	* Kan het *systeem* efficiënt worden overgezet naar andere hardware/software/omgevingen?
+8. Maintainability
+	* Kan het *systeem* gewijzigd worden door de beheerders?
+
+##### Kwaliteit tijdens gebruik
+
+Naast het model voor productkwaliteit beschrijft de norm ook een model voor **kwaliteit tijdens gebruik**. Dit model onderscheidt vijf hoofdcategorieën die zijn onderverdeeld in 11 kwaliteitseigenschappen (niet genoemd).
+
+1. Effectiveness
+	* Kunnen de gebruikers hun doelen *nauwkeurig* en *volledig* bereiken?
+2. Efficiency
+	* Welke hulpbronnen zijn er gebruikt in verhouding tot de *nauwkeurigheid* en *volledigheid* waarmee gebruikers hun doelen behalen?
+	* **Wie verzint dit soort dingen?**
+3. Satisfaction
+	* Worden de gebruikersbehoeften vervuld door het *systeem*?
+4. Freedom from risk
+	* Beperkt het *systeem* de potentiële risico's, in de breedste zin van het woord?
+5. Context coverage
+	* Hoe breed is het *systeem* inzetbaar?
+
+#### ISO 9000 en 9001
 
 ### Capability Maturity Model (CMM)
 
@@ -325,6 +381,24 @@ Het uiteindelijke doel van al deze methoden is om de kwaliteit te borgen.
 ### Prince2
 
 Prince2 is een algemene ontwikkelmethode. Soms zien we "Prince In Name Only" (PINO), of laat men delen van Prince2 vallen. Hier is niet iedereen het mee eens.
+
+Prince2 staat bekend om de grote flexibiliteit.
+
+#### 7 principes
+
+* Voortdurende zakelijke rechtvaardiging
+* Leren van ervaring
+* Gedefinieerde rollen en verantwoordelijkheden
+* Managen per fase
+* Managen 'by' exception
+* Productgerichte aanpak
+* Op maat maken voor de projectomgeving
+
+#### 7 thema's
+
+* Businesscase → waarom?
+* Organisatie → wie?
+* Kwaliteit → wat?
 
 ## Requirements
 
