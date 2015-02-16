@@ -31,9 +31,8 @@
 
 ### Kwantiteit en eenheden
 
----------------------------------------------------
 | Eenheid        | Symbool | SI eenheid | Symbool |
----------------------------------------------------
+|----------------|---------|------------|---------|
 | capacitance    | C       | farad      | F       |
 | charge         | Q       | coulomb    | C       |
 | conductance    | G       | siemens    | S       |
@@ -46,7 +45,6 @@
 | reactance      | X       | ohm        | Ω       |
 | resistance     | R       | ohm        | Ω       |
 | voltage        | V       | volt       | V       |
----------------------------------------------------
 
 **TODO** andere tabel ook overnemen
 
