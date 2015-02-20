@@ -72,10 +72,7 @@ De student kan na (gunstige) afloop van deze module:
 
 ## Inleiding
 
-Je komt altijd in organisaties terecht later, en er zijn vele soorten organisaties.
-
-Je leert begrijpen waarom producten of diensten worden aangeboden, en in welke fase ze zitten.
-
+Je komt altijd in organisaties terecht later, en er bestaan vele soorten organisaties.
 In projecten werk je met mensen uit andere organisatieonderdelen. Je moet hun "taal" kunnen spreken.
 
 ## Organisaties
@@ -177,6 +174,20 @@ Bedrijfscultuur is belangrijk. Je moet zelf aansluiting op de bedrijfscultuur, a
 
 Cultuur komt van alle medewerkers van de organisatie. Daaronder komt het weer van hun achtergrond en opvoeding.
 Cultuur komt ook van de leiding, en van de geografische ligging van het de organisatie.
+
+### Organisatiecultuur
+
+> De organisatiecultuur is de wijze waarop de organisatie zich opstelt, zowel naar de eigen medewerkers als naar de buitenwereld, op grond van de normen en waarden van de organisatie.
+
+De organisatiecultuur heeft veel invloed op de werking van de organisatie en haar medewerkers. Het vormt als het ware de 'persoonlijkheid' van de organisatie.
+
+#### Normen
+
+Normen bepalen de wijze waarop we ons gedragen.
+
+#### Waarden
+
+
 
 ### Culturele typologie van Hofstede
 
