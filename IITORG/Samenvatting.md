@@ -126,7 +126,7 @@ Bijvoorbeeld:
                           ↓
           /---------------|--------------\
           ↓               ↓              ↓
-    Voorlichting    Specificaties    Training
+    Voorlichting    Specificaties     Training
 
 ----------------------------------------------------------
 
@@ -234,6 +234,8 @@ Door welke stadia loopt een product?
 ### Herzberg
 
 ## Value chain
+
+(Porter?)
 
 De waarde van een product neemt toe naarmate er meer bewerkingsstappen worden uitgevoerd. Van grondstof tot eindproduct.
 
