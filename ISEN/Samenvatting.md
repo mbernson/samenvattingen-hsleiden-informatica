@@ -17,15 +17,62 @@
 
 ## Leerdoelen
  
-1. Internet of Things, basisprincipes 	* Het hebben van een beeld van de reikwijdte, de effecten op business en op de samenleving van het "Internet of Things" (IOT). De belangrijkste componenten van het IOT kunnen omschrijven in relatie tot elkaar en met de business en de techniek. De relatie tussen internet of things en Big Data kennen (grotendeels zelfstudie en gastcolleges ). 
-2. Sensortechnologie theorie 
-	*  Heeft een breed basiskennis van sensoren circuits en hoe de extensie hiervan werkt naar sensornetwerken en uiteindelijk internet of things 
-	*  Kent de randvoorwaarden en de principes bij het toepassen van sensoren, op verschillende abstractieniveaus en kent de principes van signalen, versterkers,filters, A/D conversie en digitale signaal bewerking. 
-3. Projectplanning en Uitvoering. 	* De student kent de eisen en kenmerken voor het opstellen van een projectplan. O.a. probleemstelling, onderzoeksvraag, businessplan,deliverables en rapporteren. Het opleveren van een werkende demonstrator op basis van onderzoek door project groep.
+1. Internet of Things, basisprincipes
+	* Het hebben van een beeld van de reikwijdte, de effecten op business en op de samenleving van het "Internet of Things" (IOT). De belangrijkste componenten van het IOT kunnen omschrijven in relatie tot elkaar en met de business en de techniek. De relatie tussen internet of things en Big Data kennen (grotendeels zelfstudie en gastcolleges ). 
+2. Sensortechnologie theorie
+	* Heeft een breed basiskennis van sensoren circuits en hoe de extensie hiervan werkt naar sensornetwerken en uiteindelijk internet of things.
+	* Kent de randvoorwaarden en de principes bij het toepassen van sensoren, op verschillende abstractieniveaus en kent de principes van signalen, versterkers,filters, A/D conversie en digitale signaal bewerking. 
+3. Projectplanning en Uitvoering.
+	* De student kent de eisen en kenmerken voor het opstellen van een projectplan. O.a. probleemstelling, onderzoeksvraag, businessplan,deliverables en rapporteren. Het opleveren van een werkende demonstrator op basis van onderzoek door project groep.
 
 ## Inhoud
 
-* [Foo](#elektriciteit)
+* [Elektriciteit](#elektriciteit)
+	* [Kwantiteit en eenheden](#kwantiteit-en-eenheden)
+	* [Meten](#meten)
+	* [Significant digits](#significant-digits)
+* [Atomen](#atomen)
+	* [Valentie-elektronen](#valentie-elektronen)
+	* [Vrije elektronen](#vrije-elektronen)
+	* [Koperatoom](#koperatoom)
+	* [Materialen](#materialen)
+		* [Geleiders](#geleiders)
+		* [Halfgeleiders](#halfgeleiders)
+		* [Isolatoren](#isolatoren)
+* [Coulomb](#coulomb)
+	* [Wet van Coulomb](#wet-van-coulomb)
+	* [Positieve en negatieve lading](#positieve-en-negatieve-lading)
+* [Voltage](#voltage)
+	* [Voltage als eenheid](#voltage-als-eenheid)
+	* [DC voltage bronnen](#dc-voltage-bronnen)
+		* [Batterijen](#batterijen)
+			* [Typen batterijen](#typen-batterijen)
+		* [Brandstofcellen](#brandstofcellen)
+		* [Zonnecellen](#zonnecellen)
+		* [Generatoren](#generatoren)
+		* [Thermokoppels](#thermokoppels)
+		* [Piëzo-elektrische sensors](#piëzo-elektrische-sensors)
+* [Spanning](#spanning)
+	* [Inleiding](#inleiding)
+	* [Definitie](#definitie)
+* [Weerstand](#weerstand)
+	* [Ohm](#ohm)
+	* [Weerstanden](#weerstanden)
+		* [Kleurcodes](#kleurcodes)
+		* [Variabele weerstanden](#variabele-weerstanden)
+		* [Variabele weerstand sensors](#variabele-weerstand-sensors)
+* [Elektrische circuits](#elektrische-circuits)
+	* [Schakelaars](#schakelaars)
+	* [Bescherming voor circuits](#bescherming-voor-circuits)
+* [Kabels](#kabels)
+	* [Weerstand in kabels](#weerstand-in-kabels)
+* [Aarde](#aarde)
+* [Circuitmetingen](#circuitmetingen)
+* [Wet van Ohm](#wet-van-ohm)
+* [Energy](#energy)
+* [Power](#power)
+
+---------------------------------------------------------
 
 ## Elektriciteit
 
@@ -63,6 +110,8 @@ Tot slot is de **precisie** een maatstaaf van de consistente herhaalbaarheid van
 3. Nullen tussen niet-nul cijfers zijn altijd significant.
 4. Nullen rechts van de decimaal voor een decimaal getal zijn significant.
 5. Nullen links van de decimaal van een heel getal zijn misschien significant, afhankelijk van de meting.
+
+---------------------------------------------------------
 
 ## Atomen
 
@@ -237,6 +286,8 @@ Thermokoppels bestaan uit twee verschillende soorten materiaal. Bij de scheiding
 Deze genereren een voltage wanneer een piëzo-elektrisch materiaal wordt vervormd door een externe kracht.
 Vanwege deze eigenschap worden Piëzo-elektrische sensoren gebruikt in druksensoren, krachtsensoren, versnellingsmeters, microfoons enzovoort.
 
+---------------------------------------------------------
+
 ## Spanning
 
 ### Inleiding
@@ -256,6 +307,8 @@ Spanning wordt gemeten aan het aantal elektronen (hoeveelheid lading) die een pu
 *I* is spanning in Amperes (A). *Q* is de lading van de elektronen in Coulombs (C). *t* is de tijd in seconden.
 
 > Eén ampere (1A) is de hoeveelheid spanning die bestaat wanneer 1 coulomb aan elektronen door een bepaalde doorsnede wordt bewogen in 1 seconde.
+
+---------------------------------------------------------
 
 ## Weerstand
 
@@ -361,6 +414,8 @@ Met schakelaars kan een circuit geopend of gesloten worden.
 
 Zekeringen en circuitbrekers worden gebruikt om opzettelijk een open circuit te maken wanneer de spanning een bepaalde waarde overschrijdt.
 
+---------------------------------------------------------
+
 ## Kabels
 
 Een Amerikaanse norm om de diameter van een kabel te standaardiseren is de American Wire Gauge (AWG). De eenheid hiervan is de **circular mil** (CM).
@@ -391,6 +446,8 @@ Dit maakt de formule voor de mate van weerstand *R*:
 
 Waarin *l* de lengte is en *A* de oppervlakte van de doorsnede.
 
+---------------------------------------------------------
+
 ## Aarde
 
 Aarde is een referentiepunt in het circuit. We kennen twee soorten aarde:
@@ -410,7 +467,88 @@ De kleinste afwijking die een meter kan meten noemen we de **resolutie**.
 
 ## Wet van Ohm
 
+De wet van Ohm beschrijft mathematisch hoe voltage (V), spanning (I), en weerstand (R) binnen een circuit tot elkaar relateren.
+
+De wet kan in drie verschillende vormen worden geschreven. Welke je gebruikt hangt af van de *eenheid* die je moet bepalen.
+
+**I = V / R**
+
+Waar *I* de spanning in amperes is, *V* het voltage in volts is, en *R* de weerstand in Ohms is.
+
+Uit deze formule volgt dat als *V* toeneemt of afneemt, *I* toeneemt of afneemt. Dit principe is omgekeerd met *R*.
+
+### Andere vormen
+
+**V = I * R**
+
+Voltage berekenen als je de spanning en weerstand weet.
+
+**R = V / I**
+
+Weerstand berekenen als je het voltage n de spanning weet.
+
 ## Energy
 
+*Energie* is het vermogen om werk te verrichten.
+*Kracht/power* is de mate waarin energie wordt gebruikt.
+
+Kracht is energie gedeeld door tijd:
+
+**P = W / t**
+
+De SI eenheid voor energie is **Joule** (J).
+
+Als je de joules deelt door tijd in seconden, krijg je een wattage eruit.
+
+Eén **watt** is de hoeveelheid kracht waarbij één joule aan energie in één seconde wordt verbruikt.
+
+Het aantal joules gebruikt in 1 seconde is dus altijd gelijk aan het aantal watts.
+
+### Kilowatt-uur
+
+De **Kilowatt-uur** is een praktische eenheid om elekriciteitsverbruik in uit te drukken. Het staat voor de energie die bij 1000 watt aan kracht in één uur wordt verbruikt.
+
 ## Power
+
+### Wet van Watt
+
+Voor het berekenen van de kracht in een elektronisch circuit.
+
+**P = (I^2) * R**
+
+Power (Watts) = Spanning (Amperes) * Weerstand (Ohms)
+
+**P = V * I**
+
+Power (Watts) = Voltage (Volt) * Spanning (Ampere)
+
+**P = (V^2)/R**
+
+Power (Watts) = Voltage (Volt) kwadraat gedeeld door Weerstand (Ohms)
+
+### Power rating
+
+Maximale hoeveelheid kracht die een weerstand kan weerstaan zonder te beschadigen.
+
+## Energie conversie en voltage drop
+
+Het voltage aan één kant van een weerstand is lager dan aan de andere kant, doordat er energie opgegeven wordt. Dit verschijnsel noemen we de *voltage drop*.
+
+## Efficientie van een voeding
+
+De efficientie is de verhouding van invoer (stroom) over uitvoer (stroom).
+
+De output is **altijd** lager dan de **input**.
+
+### Ampere-uur rating van batterijen
+
+Bepaalt de tijd dat een batterij een bepaalde hoeveelheid spanning kan leveren bij een vastgesteld voltage.
+
+Een rating van 1 ampere-uur betekent dat een batterij gemiddeld 1 ampere aan spanning gedurende een 1 kan leveren, bij een vastgesteld voltage.
+
+Hoe meer spanning een batterij moet leveren, hoe korter de levensduur. Batterijen worden vaak ook vastgesteld op een specifiek amperage, naast het voltage.
+
+Dan hebben we het bijvoorbeeld over een auto-accu van 70Ah, die op 12 volt 3.5 ampere levert. Dit kan hij dus gedurende 20 uur doen.
+
+## Gelijkspanning en wisselspanning
 
