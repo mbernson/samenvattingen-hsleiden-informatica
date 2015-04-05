@@ -279,7 +279,7 @@ Zo zie je dat de methodieken gecombineerd kunnen worden, en naast elkaar werken.
 In de watervalmethode werk je telkens (in volgorde) de fasen af. Daarbij kun je niet teruggaan naar de vorige fase.
 Veel mensen zien de watervalmethode als achterhaald.
 
-Het watervelmodel bestaat uit de volgende fasen:
+Het watervalmodel bestaat uit de volgende fasen:
 
 ![Fasen uit de watervalmethode](Waterfall_model.png)
 
@@ -380,7 +380,7 @@ Het uiteindelijke doel van al deze methoden is om de kwaliteit te borgen.
 
 ### Prince2
 
-Prince2 is een algemene ontwikkelmethode. Soms zien we "Prince In Name Only" (PINO), of laat men delen van Prince2 vallen. Hier is niet iedereen het mee eens.
+Prince2 is een algemene ontwikkelmethode. De afkorting staat voor **PRojects IN Controlled Environments**. Soms zien we "Prince In Name Only" (PINO), of laat men delen van Prince2 vallen. Hier is niet iedereen het mee eens.
 
 Prince2 staat bekend om de grote flexibiliteit.
 
@@ -408,4 +408,10 @@ Prince2 staat bekend om de grote flexibiliteit.
 
 ## Auditing
 
-**TODO**
+**Auditing** is het controleren van een organisatie dit kan het volgende inhouden:
+
+* Onderzoek naar een organisatie of een proces binnen een organisatie.
+* Een accountantscontrole van bepaalde documenten.
+
+Een audit die door interne auditors (in dienst van het bedrijf) wordt uitgevoerd noemen we een **interne audit**. Als onafhankelijke auditors het doen is het een **externe audit**.
+
