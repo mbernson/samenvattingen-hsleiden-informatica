@@ -50,10 +50,36 @@ De student kan na (gunstige) afloop van deze module:
 
 ## Inhoud
 
-* [Inleiding](#inleiding)
 * [Organisaties](#organisaties)
+	* [Missie en visie](#missie-en-visie)
+	* [Stakeholders](#stakeholders)
+		* [Interne stakeholders](#interne-stakeholders)
+		* [Externe stakeholders](#externe-stakeholders)
+	* [Shareholders](#shareholders)
+* [Organisatievormen](#organisatievormen)
+	* [Lijnorganisatie](#lijnorganisatie)
+	* [Lijn-staf-organisatie](#lijn-staf-organisatie)
+		* [Functionele lijn-staf-organisatie](#functionele-lijn-staf-organisatie)
+	* [Matrixorganisatie](#matrixorganisatie)
+* [Leiderschapsstijlen](#leiderschapsstijlen)
+	* [Quinn](#quinn)
+		* [Beheersgericht](#beheersgericht)
+		* [Mensgericht](#mensgericht)
+		* [Innovatie gericht](#innovatie-gericht)
+		* [Resultaatgericht](#resultaatgericht)
+	* [Hersey](#hersey)
+		* [Stijl 1: Leiden](#stijl-1-leiden)
+		* [Stijl 2: Begeleiden](#stijl-2-begeleiden)
+		* [Stijl 3: Steunen](#stijl-3-steunen)
+		* [Stijl 4: Delegeren](#stijl-4-delegeren)
+	* [Competenties](#competenties)
+* [Situationeel leiderschap](#situationeel-leiderschap)
+* [Cultuur](#cultuur)
+	* [Organisatiecultuur](#organisatiecultuur)
+		* [Normen](#normen)
+		* [Waarden](#waarden)
+	* [Culturele typologie van Hofstede](#culturele-typologie-van-hofstede)
 * [Organisatietypologie van Mintzberg](#organisatietypologie-van-mintzberg)
-* [Culturele typologie van Hofstede](#culturele-typologie-van-hofstede)
 * [Levenscyclusmodel van Greiner](#levenscyclusmodel-van-greiner)
 * [5 P's van marketing](#ps-van-marketing)
 * [BCG matrix](#bcg-matrix)
@@ -64,11 +90,43 @@ De student kan na (gunstige) afloop van deze module:
 	* [Adoptiecurve](#adoptiecurve)
 	* [Herzberg](#herzberg)
 * [Value chain](#value-chain)
+	* [Waardeketen van Porter](#waardeketen-van-porter)
 * [5-krachtenmodel van Porter](#krachtenmodel-van-porter)
-* [Organisatievormen (KvK)](#organisatievormen-kvk)
-* [Leiderschapsstijlen](#leiderschapsstijlen)
-	* [Quinn](#quinn)
+* [Organisatievormen (KvK)](#organisatievormen-KvK)
+	* [V.O.F.](#v.o.f.)
+	* [B.V.](#b.v.)
+	* [N.V.](#n.v.)
+	* [Vereniging](#vereniging)
+	* [Stichting](#stichting)
+	* [Maatschap](#maatschap)
+* [Promotie](#promotie)
+	* [Distributie](#distributie)
+* [Groeistrategie Ansoff](#groeistrategie-ansoff)
+	* [Penetratie](#penetratie)
+	* [Productvernieuwing](#productvernieuwing)
+	* [Marktvernieuwing](#marktvernieuwing)
+	* [Diversificatie](#diversificatie)
+* [Bronnen](#bronnen)
+	* [Zelf](#zelf)
+	* [Slides](#slides)
 
+## Belangrijke kopjes
+
+* [Waardeketen van Porter](#waardeketen-van-porter)
+* [Organisatiecomponenten van Mintzberg](#)
+* [Rechtsvormen organisaties](#)
+* [Product vs. dienst](#)
+* [Productsamenstelling Leeflang, Copeland](#)
+* Modellen
+	* [Culturele topologie van Hofstede](#culturele-typologie-van-hofstede)
+	* [BCG matrix](#bcg-matrix)
+	* [Organisatie crisissen](#)
+* Cirkels
+	* [Cirkel van falen](#)
+	* [Cirkel van success](#)
+* Leiderschap
+	* [Leiderschapsstijlen van Quinn](#quinn)
+	* [Situationeel leiderschap Hershey](#hersey)
 
 ## Inleiding
 
@@ -92,10 +150,25 @@ Het bedrijf van een ZZP-er is ook een organisatie. §9.8.3
 * integriteit
 * mission statement
 
-* stakeholder -> belanghebbende
-	* Belastingdienst
-	* Werknemer van een bedrijf
-* shareholder -> aandeelhouder
+### Stakeholders
+
+Een stakeholder heeft bepaalde belangen bij een organisatie. Voorbeelden zijn de belastingdienst, de toeleveranciers en de werknemers van het bedrijf.
+
+#### Interne stakeholders
+
+* Medewerkers
+* Leidinggevenden
+
+#### Externe stakeholders
+
+* Leveranciers
+* Overheid
+* Klanten (niet per sé?)
+* Crediteuren
+
+### Shareholders
+
+Een shareholder heeft ook daadwerkelijk een aandeel in het bedrijf.
 
 ## Organisatievormen
 
@@ -130,6 +203,26 @@ Bijvoorbeeld:
 
 ----------------------------------------------------------
 
+## Product vs. dienst
+
+(Herhaling van IIBPM)
+
+Een product is:
+
+* Tastbaar
+* Eventueel op voorraad
+* Heeft een vaste prijs
+* Heeft garantie
+* Hulpmiddelen
+
+Een dienst:
+
+* Afnemer werkt mee
+* Bestaat nog niet bij koop
+* Is persoonlijk
+* Geen zekerheid
+* Mensenwerk
+
 ## Leiderschapsstijlen
 
 Er zijn veel verschillende modellen voor leiderschapsstijlen. Een aantal zullen we doornemen voor dit vak.
@@ -152,6 +245,8 @@ Quinn heeft een diagram gemaakt met flexibiliteit op de Y-as en de geörienteerd
 
 Op de Y-as de ondersteunendheid van het gedrag, op de X-as de hoeveelheid sturing.
 
+Zie ook [Situationeel leiderschap](#situationeel-leiderschap).
+
 #### Stijl 1: Leiden
 
 #### Stijl 2: Begeleiden
@@ -165,6 +260,8 @@ Op de Y-as de ondersteunendheid van het gedrag, op de X-as de hoeveelheid sturin
 Competenties *leer* je niet, ze komen uit jezelf. Op de Hogeschool doe je kennis op, maar de competenties heb je al. Die moeten alleen nog [op een bepaald moment] ontsloten worden.
 
 ## Situationeel leiderschap
+
+**TODO**
 
 ## Cultuur
 
@@ -207,6 +304,7 @@ Vijf dimensies:
 ## Organisatietypologie van Mintzberg
 
 
+
 ## Levenscyclusmodel van Greiner
 
 ## 5 P's van marketing
@@ -214,6 +312,21 @@ Vijf dimensies:
 > Marketingmix: *Product, Prijs, Plaats, Promotie en Personeel*
 
 ## BCG matrix
+
+Dit model dat ontworpen is door de Boston Consulting Group beschrijft de stadia waar een product doorheen gaat.
+
+![De matrix](BCG-matrix.png)
+
+Er zijn vier stadia:
+
+1. Vraagteken
+	* Het product heeft (nog) een klein aandeel van de markt, maar hoog groeipotentieel. Het kan dus alle kanten op.
+2. Ster
+	* Hoog marktaandeel en hoog potentieel. Dit is wat iedereen wil hebben.
+3. *Cash cow*
+	* De groei is afgeremd, maar er komt nog geld binnen. Het marktaandeel is nog hoog.
+4. *Dog*
+	* Hier wil je vanaf.
 
 ## PMC, PLC, BCG, adoptiecurve, Herzberg en andere modellen
 
@@ -235,14 +348,203 @@ Door welke stadia loopt een product?
 
 ## Value chain
 
-(Porter?)
+### Waardeketen van Porter
 
-De waarde van een product neemt toe naarmate er meer bewerkingsstappen worden uitgevoerd. Van grondstof tot eindproduct.
+De waarde van een product neemt toe naarmate er meer bewerkingsstappen worden uitgevoerd, van grondstof tot eindproduct.
+
+![Waardeketen van Porter (**LET OP:** dit is een belangrijk plaatje)](porter-value-chain.png)
+
+Bij iedere stap waar een product doorheen gaat, wordt er waarde toegevoegd.
+
+Voorbeeld: tuinaarde -> bezakker (stop het in zakken) -> tuincentrum -> klant
+
+#### Onthouden
+
+Ondersteunende activiteiten
+
+* Firm infrastructure
+* Human resources
+* Tech. development
+* Procurement (acquisitie)
+
+Primaire activiteiten
+
+* Inbound logistics
+* Operations
+* Outbound logistics
+* Marketing en sales
+* Service
+
+## Mintzberg
+
+Henry Mintzberg heeft een theorie over organisatiestructuur opgezet in de vorm van abstracte kunt.
+
+Hij onderkent vijf organisatie configuraties:
+
+* ondernemersorganisatie (simpele structuur)
+* machineorganisatie (machinebureaucratie)
+* professionele organisatie
+* innovatieve organisatie (adhocratie)
+* gediversifieerde organisatie (divisiestructuur)
+
+Met de volgende twee extra erbij:
+
+* zendingsorganisatie
+* politieke organisatie
+
+### Vijf onderdelen
+
+In zijn model bestaan organisaties uit de volgende vijf onderdelen:
+
+![Onderdelen](mintzberg/components.gif)
+
+* Operating core
+	* Verzorgt productie.
+* Strategic apex
+	* Dit is de strategische top, zij bepalen beleid.
+	* Zorgt ervoor dat de organisatie haar missie effectief uitvoert.
+* Middle line managers / middenkader
+	* Is de link tussen de *strategic apex* en de *operating core*.
+	* Stuurt de operating core aan.
+* Technostructuur
+	* Bepaalt standaarden, richtlijnen en processen.
+* Support staff
+	* Ondersteunt de organisatie
+	* Bijv. catering, juridische zaken
+
+### Configuraties
+
+#### Simpele structuur (ondernemersorganisatie)
+
+![Ondernemersorganisatie](mintzberg/simple.gif)
+
+Kenmerken van een ondernemersorganisatie zijn:
+
+* De meeste macht ligt bij de strategische top
+* Weinig regels en procedures
+* Weinig middenkader
+* Staf en technostructuur ontbreken volledig
+* Platte, informele organisatie, flexibel
+* Familiecultuur
+
+De communicatie is informeel. Informatie loopt vooral van- en naar de top.
+
+#### Machineorganisatie (machinebureaucratie)
+
+![Machinebureaucratie](mintzberg/machine-bureaucracy.gif)
+
+Dit zijn klassieke organisaties, die voortgekomen zijn uit het tijdperk van industrialisatie.
+Een machineorganisatie is vaak gericht op productie van dingen
+
+Kenmerken:
+
+* Routinematig
+* Sterke hiërarchie en technostructuur
+* Veel regels en procedures
+* Stabiele omgeving
+* Piramidecultuur
+
+Informatie is vastgelegd in regels en procedures. Er ligt een nadruk op beheersing van processen.
+
+#### Professionele organisatie
+
+![Professionele bureaucratie](mintzberg/professional-bureaucracy.gif)
+
+Draait om de *professionals*.
+
+Kenmerken:
+
+* Hoogopgeleid, specialistisch werk
+* Belangrijke rol zelfstandige professionals
+* Grote ondersteunende staf
+* Technostructuur is beperkt
+	* De regels komen van buitenaf (wetgeving, branche organisatie)
+* Geoliede machine cultuur
+
+#### Adhocratie (innovatieve organisatie)
+
+![Adhocratie](mintzberg/adhocracy.gif)
+
+#### Divisiestructuur (gediversifieerde organisatie)
+
+![Divisiestructuur](mintzberg/divisionalised.gif)
+
+### Extra
+
+#### Zendingsorganisatie
+
+#### Politieke organisatie
+
+De politieke organisatie wil (meer) macht verwerven.
+
+### Druk
+
+![Druk](mintzberg/pressures.gif)
 
 ## 5-krachtenmodel van Porter
 
 ## Organisatievormen (KvK) 
 
-* B.V.
-* V.O.F.
-* Enz.
+### Eenmanszaak
+
+### Vennootschap onder Firma (V.O.F.)
+
+### Besloten Vennootschap (B.V.)
+
+LLC
+
+### Naamloze Vennootschap (N.V.)
+
+### Commanditaire Vennootschap (C.V.)
+
+### Vereniging
+
+Wordt bestuurd door haar leden.
+
+### Stichting
+
+Wordt bestuurd door enkele mensen en heeft contribuanten. Als een stichting teveel om gaat zetten komt de belasting om de hoek kijken.
+
+### Maatschap
+
+Van artsen of advocaten. Maten kunnen matennaaien (wettelijke term).
+
+## Promotie
+
+### Distributie
+
+## Groeistrategie Ansoff
+
+Dit is een model voor groei.
+
+Product (oud of nieuw) vs. markt (oud of nieuw). Product staat op de horizontale as, markt op de verticale.
+
+Kijk of een product nieuw is voor een bedrijf, niet of het nieuw is voor de markt?
+
+Volgens Ansoff kun je op de volgende 4 manieren groeien:
+
+### Penetratie
+
+Hier verandert het minste bij. Bestaande producten groeien op bestaande markten. Er wordt niks nieuws gedaan.
+
+### Productvernieuwing
+
+Nieuw product ontwikkelen. Met R&D en visie. Vereist aanpassingen in de marketing.
+
+### Marktvernieuwing
+
+Naar het buitenland of over de grens gaan. Of nieuwe segmenten aanboren zoals jeugd of 65-plus.
+
+### Diversificatie
+
+Dit zijn de voorgaande twee punten, productvernieuwing en marktvernieuwing in één.
+
+## Bronnen
+
+### Zelf
+
+* [Mintzberg Organisatiestructuren / modellen](http://www.expand.nl/hr-weblog/mintzberg-organisatiestructuren---modellen)
+
+### Slides
+
+* [Tekst](#)
