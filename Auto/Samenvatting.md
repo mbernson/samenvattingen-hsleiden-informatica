@@ -151,3 +151,65 @@ Inhalen is **verboden** op deze plaatsen:
 * Bij inhaalverbods-borden.
 
 Denk bij het inhalen ook aan de **lengte** van het andere voertuig, de **snelheid** en een eventuele **lange lading** die het meedraagt.
+
+## Taakprocessen
+
+Bron: https://m.facebook.com/AutorijschoolHerlaar/posts/448721075208423
+
+Vijf taakprocessen
+
+In verkeerssituaties en dus ook bij nadering van een kruispunt ga je uit van de zogenaamde vijf taakprocessen, aan de hand waarvan je uiteindelijk handelt. Deze zijn:
+
+•Waarnemen: door gebruik van je zintuigen komt er veel informatie op je af, waaruit je de informatie moet filteren, die voor jou in de bewuste situatie belangrijk is. Hierbij is verkeersinzicht en kennis van de verkeersregels noodzakelijk.
+•Voorspellen: aan de hand van de binnengekomen informatie voorspel je wat er zou kunnen gebeuren, zowel ten aanzien van je eigen gedrag, als die van de andere weggebruikers
+•Evalueren: ga na of zaken als, veiligheid, doorstroming, milieu niet worden geschaad als jouw voorspelling uitkomt
+•Beslissen: beslis –na bovenstaande taken doorlopen te hebben- wat je gaat doen
+•Handelen: voer uit waartoe je besloten hebt.
+
+Kun je door een -zich wijzigende- situatie niet handelen, dan begint het hele taakproces weer van voor af aan, totdat je veilig je weg kunt vervolgen.
+
+Herkennen kruispunt
+
+Een kruispunt (of rotonde) moet je al vroegtijdig kunnen herkennen en bepalen met wat voor kruispunt je te doen hebt (gelijkwaardig, voorrang etc.). Is het niet direct duidelijk of je een kruispunt nadert, dan kun je dit –ver vooruitkijkend- vermoeden/voorspellen door bijvoorbeeld onderbroken bebouwing, de afwezigheid van geparkeerde voertuigen, anders geplaatste straatverlichting, onderbreking van een bomenrij etc. Nader het kruispunt met gepaste snelheid (meestal de 2de versnelling), zodat je goed en rustig op de verkeerssituatie kunt inspelen. Je naderingssnelheid is natuurlijk mede afhankelijk van de breedte/ruimte van de weg, verkeersdrukte, fietspaden, V.O.P.’s (zebra’s) en dergelijke.
+Ken de regels van voorrang/voor laten gaan en handel hier na. Denk er aan dat je voorrang altijd moet krijgen en nooit mag nemen!
+
+Naderen van kruispunten of rotondes
+Bij het naderen van een kruispunt of rotonde zijn een aantal aandachtspunten gelijk, ongeacht de keuze voor afslaan of rechtdoor gaan, deze zijn:
+
+1.beoordeel het kruispunt ruim van te voren. Weet hoe de voorrang geregeld is!
+2.kijk goed in je spiegels en wees je bewust van de situatie vóór, naast en achter de auto
+3.sorteer indien nodig op tijd voor of kies de juiste rijstrook bij aan komen rijden
+4.nader kruispunten (en rotonde’s) met geringe snelheid. Meestal de 2de versnelling
+
+Verder geldt:
+
+Bij recht door gaan:
+
+1.op enige afstand kijk je voor je (het kruispunt over), links (het eerst mogelijke gevaar), recht voor je en vervolgens rechts. Doe dit ook als een kruispunt door verkeerslichten of door een verkeersregelaar geregeld wordt. Dit geeft misschien de suggestie van veiligheid, maar geeft geen garantie dan iemand niet door rood rijdt of een teken negeert.
+2.bij verdere nadering herhaal je punt 1 nogmaals
+3.bij oprijden en oversteken herhaal je punt 1 weer, maar dan stap voor stap, totdat je het kruispunt veilig over gereden bent
+4.ben je het kruispunt overgestoken, dan doe je een na-controle in je spiegels, zodat je op de hoogte bent van de nieuwe verkeersomstandigheden waarin je jezelf bevindt
+
+Denk er aan dat je bij het overrijden van een kruispunt andere verkeersstromen niet mag hinderen en het kruispunt niet mag blokkeren; je moet dus in één keer het kruispunt over kunnen rijden. Dit laatste geldt niet wanneer er een middenberm (of iets dergelijks) is waar je de auto veilig kunt opstellen.
+
+Bij rechts af slaan:
+
+1.kijk ruim voor de bocht reeds rechts naast de auto (‘dode hoek’) en let ook op naastgelegen fiets-/bromfietspaden
+2.let ook op of tegemoet komend verkeer en verkeer van links juist handelt
+3.kijk vóór je afslaat nogmaals over je rechter schouder en blijf (al rond kijkend) op het overige verkeer letten. Kijk de bocht door in de richting waar je naartoe wilt/denkt te gaan, zodat je een juiste positie/rijstrook kiest
+4.let op een eventueel om de bocht gelegen voetgangersoversteekplaats
+5.herhaal punt 3 zonodig nogmaals, totdat je overtuigd bent dat je veilig door kunt
+6.na de bocht na-controle in je spiegels, je bevindt je immers weer in een nieuwe verkeerssituatie
+
+Bij links afslaan:
+1.ingeval van voorsorteren, let op verkeer rechts en links naast je of achter je
+2.recht doorgaand verkeer en verkeer van rechts voorrang verlenen/voor laten gaan als de situatie dit vereist
+3.nogmaals punt 1 vóór het aansnijden van de bocht en kijk de bocht ook hier door voor de juiste positie/rijstrook
+4.let op een eventueel door de bocht gelegen voetgangersoversteekplaats
+5.na het afslaan na-controle in je spiegels met oog op veranderde verkeerssituatie
+
+Let wel: bij links af slaan: korte bocht gaat voor lange bocht (als je de bocht links indraait, bevindt de andere bestuurder zich in feite rechts van je)
+
+Let wel: recht doorgaand verkeer op dezelfde weg gaat vóór afslaand verkeer (denk ook aan voetgangers)
+
+Let ook op: zwakkere weggebruikers zoals: voetgangers, gehandicapten, fietsers, snor- en bromfietsers, maar ook motorrijders, deze zijn kwetsbaar of instabiel (b.v. bij harde wind)
