@@ -6,4 +6,5 @@ samenvatting.html
 *.pdf
 script/deploy
 Thumbs.db
+Icon*
 .dropbox
