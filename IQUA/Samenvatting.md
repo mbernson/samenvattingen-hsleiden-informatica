@@ -40,7 +40,7 @@ In deze samenvatting wordt op sommige plaatsen opzettelijk verkeerd spatiegebrui
 
 ## Inhoud
 
-* [Intro](#intro)
+*  [Intro](#intro)
 	* [Wat is kwaliteit?](#wat-is-kwaliteit)
 		* [Duivelsdriehoek](#duivelsdriehoek)
 		* [Hoe moet je deze vraag op de toets beantwoorden?](#hoe-moet-je-deze-vraag-op-de-toets-beantwoorden)
@@ -48,16 +48,21 @@ In deze samenvatting wordt op sommige plaatsen opzettelijk verkeerd spatiegebrui
 * [Kwaliteitsmodellen en methoden](#kwaliteitsmodellen-en-methoden)
 	* [Six Sigma](#six-sigma)
 		* [DMAIC](#dmaic)
-	* [ISO](#iso)
+	* [ISO-normen](#iso-normen)
 		* [ISO 25010](#iso-25010)
+			* [Productkwaliteit](#productkwaliteit)
+			* [Kwaliteit tijdens gebruik](#kwaliteit-tijdens-gebruik)
 		* [ISO 9000](#iso-9000)
+			* [Kwaliteits management (systeem) normen](#kwaliteits-management-systeem-normen)
 		* [ISO 9001](#iso-9001)
+			* [Categorieën (eisen aan kwaliteits management systeem)](#categorieën-eisen-aan-kwaliteits-management-systeem)
 		* [ISO 9004](#iso-9004)
 		* [ISO 19011](#iso-19011)
 		* [ISO 25010 (expliciet maken van non-functionele requirements)](#iso-25010-expliciet-maken-van-non-functionele-requirements)
 		* [ISO 27001 (informatiebeveiliging)](#iso-27001-informatiebeveiliging)
 	* [Capability Maturity Model (CMM)](#capability-maturity-model-cmm)
 	* [CoBIT](#cobit)
+	* [PMBoK](#pmbok)
 	* [INK model (ook wel bekend als het EFQM-model) en PDCA](#ink-model-ook-wel-bekend-als-het-efqm-model-en-pdca)
 		* [Fase 1 - Activiteitengeoriënteerd](#fase-1---activiteitengeorienteerd)
 		* [Fase 2 - Procesgeoriënteerd](#fase-2---procesgeorienteerd)
@@ -135,7 +140,15 @@ Kwaliteit meetbaar maken met ISO of INK?
 
 Six Sigma is een methode om kwaliteit te beheren en te verbeteren. Het is ontstaan vanuit twee methodieken: *lean thinking* en *six sigma*.
 
+**N.B.** Six Sigma is ook een kwaliteitsmodel.
+
 Lean staat voor snelheid, six sigma is gericht op kwaliteitsverbetering.
+
+De oorzaak van fouten wordt geïdentificeerd en weggenomen.
+
+Er wordt waarde gehecht aan opleiding van eigen werknemers t.b.v. kwaliteitsverbetering.
+
+Daarnaast is de focus op de klant belangrijk, aan de klantwens moet voldaan worden. De klanttevredenheid moet vergroot worden.
 
 #### DMAIC
 
@@ -155,7 +168,7 @@ Bij Six Sigma wordt altijd de de DMAIC-methodiek van procesverbetering gebruikt.
 5. Control(e)
 	* Draait vooral om toezicht, controle zorgt daarvoor.
 
-### ISO
+### ISO-normen
 
 #### ISO 25010
 
@@ -266,7 +279,55 @@ Compatibel met andere ISO's, zoals 9001 en 14001.
 
 ### CoBIT
 
-**TODO**
+Cobit is een framework (wat voor?) voor het inrichten. Het slaat een brug tussen requirements, technische issues en business risico’s zodat dit makkelijker is voor managers.
+
+> COBIT 5 is a governance and management framework for information and related technology that starts from stakeholder needs with regard to information and technology. The framework is intended for all enterprises, including non‐profit and public sector.
+
+### PMBoK
+
+Staat voor Project management body of knowledge. Het is een verzameling van processen en kennisgebieden die als *best practices* gelden voor project management.
+
+Het biedt het fundament van project management, ongeacht het type project.
+
+Vijf basis procesgroepen.
+
+1. Inleiden
+2. Plannen
+3. Uitvoeren
+4. Monitoren en controleren
+5. Afsluiten
+
+Processen overlappen elkaar en er vindt interactie plaats gedurende een project of fase.
+Processen worden beschreven in:
+
+* Input
+	* Documenten
+	* Plannen
+	* Ontwerpen
+* Tools en technieken
+* Output
+	* Documenten
+	* Producten
+
+Er zijn tien kennisgebieden. Tien dingen die binnen het **project** ge-*managed** worden:
+
+* Stakeholders
+* Communicatie
+	* respecteren van de afspraken over communicatie en rapporterings-lijnen.
+* Human resources
+	* controleren of alle nodige competenties aanwezig zijn in het projectteam.
+* Risico's
+	* alle mogelijke operaties opzetten om potentiële extra uitdagingen onder controle te houden.
+* Integratie (van wat?)
+	* Integreren van processen in het totaalplaatje van het project.
+* Kwaliteit
+	* controleren of het project nog steeds tegemoet komt aan alle contractueel vastgelegde eisen van de opdrachtgever.
+* Bereik
+* Bemiddeling
+* Tijd
+	* controleren of het project nog steeds binnen de afgesproken tijdslimieten klaar zal zijn.
+* Kosten
+	* controleren of het project binnen de afgesproken budgetten gerealiseerd kan worden.
 
 ### INK model (ook wel bekend als het EFQM-model) en PDCA
 
@@ -276,9 +337,36 @@ INK staat voor Instituut Nederlandse Kwaliteit. De Deming-cirkel komt hierin ter
 
 ![Het INK-model](model_ink.gif)
 
+#### Veranderwielen
+
+Het model kent twee veranderwielen:
+
+* Deming/PDCA cyclus
+* IMWR cyclus
+
 ![Het EFQM/INK-model in de Deming-cyclus](deming_efqm.png)
 
-Het INK model beschrijft verder ook 5 oplopende "excellentieniveaus" van organisaties.
+![Het EFQM/INK-model in de IMWR-cyclus](ink_imwr.jpg)
+
+##### IMWR cyclus
+
+Dit staat voor:
+
+* Inspireren
+* Mobiliseren
+* Waarderen
+* Reflecteren
+
+#### 5 fundamentele kenmerken
+* Inspirerend leiderschap 
+* Bouwen op vertrouwen
+* Samenwerking
+* Resultaatgericht
+* Continu verbeteren en vernieuwen
+
+#### Excellentieniveaus
+
+Het INK model beschrijft 5 oplopende "excellentieniveaus" van organisaties.
 
 1. Activiteiten georiënteerd
 2. Proces georiënteerd
@@ -286,31 +374,31 @@ Het INK model beschrijft verder ook 5 oplopende "excellentieniveaus" van organis
 4. Keten georiënteerd
 5. Excelleren en transformeren
 
-#### Fase 1 - Activiteitengeoriënteerd
+##### Fase 1 - Activiteitengeoriënteerd
 
 Dit is de basisfase. Iedereen in de organisatie streeft ernaar in zijn eigen werksituatie het werk zo goed mogelijk te doen. Vakmanschap wordt gewaardeerd en door opleidingen ondersteunt. De organisatie probeert klachten te verhelpen.
 
 M.a.w.: Mensen die verstand hebben van het proces zijn het aan het uitvoeren. Er wordt niet verder gekeken.
 
-#### Fase 2 - Procesgeoriënteerd
+##### Fase 2 - Procesgeoriënteerd
 
 De organisatie beheert het primaire (voortbrengings-) proces. Taken en verantwoordelijkheden liggen vast, en de processtappen zijn geïdentificeerd. Prestatie-indicatoren werken als stuurmiddel. Processen worden verbeterd op basis van geconstateerde afwijkingen.
 
 Mensen die aan het uitvoeren zijn praten wel met elkaar, maar niet met andere lagen van het management.
 
-#### Fase 3 - Systeemgeoriënteerd
+##### Fase 3 - Systeemgeoriënteerd
 
-Er wordt op alle niveaus systematisch gewerkt aan verbeteringen van de organisatie als geheeld. De PDCA-cyclus wordt toegepast in primaire, ondersteunende- en besturingsprocessen.
+Er wordt op alle niveaus systematisch gewerkt aan verbeteringen van de organisatie als geheel. De PDCA-cyclus wordt toegepast in primaire, ondersteunende- en besturingsprocessen.
 
 Voorbeeld: De verkoper en inkoper van verschillende afdelingen praten wel met elkaar om dingen af te stemmen.
 
-#### Fase 4 - Ketengeoriënteerd
+##### Fase 4 - Ketengeoriënteerd
 
 Samen met partners wordt er gestreefd naar maximale "toegevoegde waarde". Per partner wordt bepaald wie het meest geschikt is om een bepaalde taak uit te voeren. [Besturings]systemen worden met elkaar verbonden, innovatie staat voorop.
 
 De organisatie is ook in gesprek met partijen (keten/leverancier) buiten de organisatie. Het gaat hier om het overstijgen van de eigen organisatie en contact leggen met andere organisaties om dingen efficiënter en effectiever te doen.
 
-#### Fase 5 - Excelleren en transformeren
+##### Fase 5 - Excelleren en transformeren
 
 De organisatie behoort tot de top in haar doelgroep/branche. Continue verbetering is verankerd in de organisatiestructuur- en cultuur.
 
@@ -327,7 +415,16 @@ Veel gemaakte fouten bij het invoeren van processen binnen dienstverlenende orga
 
 ### Lean manufacturing (TPS)
 
-**TODO**
+Lean manufacturing is een management methode die maximale waarde voor de klant wil realiseren, met weinig verspilling.
+
+#### Drie mu's
+
+* Muda
+	* **Verspilling**, denk aan niet gevraagde functionaliteiten implementeren
+* Mura
+	* **Ongelijkheid** in productieproces, denk aan tempowisselingen
+* Muri
+	* Boven je machine- of man-capaciteit werken
 
 ## Software ontwikkelingsmethodieken
 
@@ -404,7 +501,7 @@ In het [Agile manifest](http://agilemanifesto.org/iso/nl/) worden deze beschreve
 
 Er zijn een aantal methoden die we als *agile* kwalificeren. De meeste daarvan zijn gericht op teamwerk, ontwikkeling, samenwerking en flexibiliteit van het proces.
 
-#### Scrum
+### Scrum
 
 Bij Scrum bestaat het proces uit korte cycli, *sprints* genaamd.  De duur van een sprint kan per team verschillen, maar ligt meestal tussen de 7 en 30 dagen. Na iedere sprint moet er een tastbaar resultaat zijn, zoals nieuwe features in het product.
 
@@ -412,7 +509,51 @@ Scrum teams hebben een dagelijkse *standup*, waarbij iedereen vertelt wat hij/zi
 
 Een groot onderdeel van Scrum is een prikbord met taken (dit hoeft geen fysiek bord te zijn). Hierop staan alle taken die nog gedaan moeten worden, waar aan gewerkt wordt, en taken die af zijn.
 
-#### RUP
+Onderdelen van Scrum:
+
+#### Rollen
+
+* Product owner
+* Scrum master
+* Team (multidisciplinair)
+	* Programmeurs
+	* Testers
+	* Designers
+	* Etc
+
+#### Sprints
+
+Een sprint is een tijdbox van 1 tot 4 weken.
+Scrum projecten maken voortgang in een serie van sprints.
+
+Bij sprint retrospective wordt het eigen werk beoordeeld.
+
+#### Daily scrum (meeting)
+
++/- 15 min Stand-up meeting waarin 3 vragen gesteld worden:
+* Wat heb je gedaan sinds de vorige meeting?
+* Wat ga je doen tot de volgende meeting?
+* Welke problemen zie je aankomen/heb je ondervonden?
+
+#### Product backlog
+
+De product backlog is het **eisenpakket** (user stories) van het **totale project**.  
+Deze eisen (requirements) worden zo uitgedrukt dat elk item een waarde heeft voor de gebruikers van het product.
+
+#### User stories
+
+> As a **user**, I want to **see all the previous orders**, so that **I can easily reorder**.
+
+> As a developer, I want to **die** so that I can **end the pain**.
+
+#### Tools
+
+* Het bekende Kanban-bord met gele post-its kan gebruikt worden.
+* Burndown chart
+
+Sheets van de presentatie "Introductie tot Scrum" van Jacek Smit zijn te vinden via [deze link](http://sy.ntax.nl/sjvDrS).
+
+### RUP
 
 Rational Unified Process (RUP) is een andere iteratieve software-ontwikkelmethode.
 
