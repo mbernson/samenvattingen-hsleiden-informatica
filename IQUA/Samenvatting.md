@@ -34,6 +34,10 @@ Inzicht krijgen in:
 * Verantwoordelijkheden m.b.t. kwaliteit
 * Hoe projecten in te richten m.b.t. kwaliteit
 
+## N.b.
+
+In deze samenvatting wordt op sommige plaatsen opzettelijk verkeerd spatiegebruik toegepast. Dit is gedaan om lange woorden als "Kwaliteits management (systeem) normen" makkelijker leesbaar te maken.
+
 ## Inhoud
 
 * [Wat is kwaliteit?](#wat-is-kwaliteit)
@@ -100,7 +104,9 @@ Kwaliteit meetbaar maken met ISO of INK?
 
 ### Six Sigma
 
-Six Sigma is een methode om kwaliteit te beheren en te verbeteren.
+Six Sigma is een methode om kwaliteit te beheren en te verbeteren. Het is ontstaan vanuit twee methodieken: *lean thinking* en *six sigma*.
+
+Lean staat voor snelheid, six sigma is gericht op kwaliteitsverbetering.
 
 #### DMAIC
 
@@ -109,7 +115,7 @@ Bij Six Sigma wordt altijd de de DMAIC-methodiek van procesverbetering gebruikt.
 ![De DMAIC cyclus](dmaic-wall-sign.png)
 
 1. Define
-	* Definieer het probleem.
+	* Definieer het probleem. Iedereen is het eens over de inhoud.
 2. Measure
 	* Meet de belangrijkste aspecten van het project en verzamel relevante gegevens.
 3. Analyze
@@ -120,21 +126,11 @@ Bij Six Sigma wordt altijd de de DMAIC-methodiek van procesverbetering gebruikt.
 5. Control(e)
 	* Draait vooral om toezicht, controle zorgt daarvoor.
 
-##### Define
-
-##### Measure
-
-##### Analyze
-
-##### Improve
-
-##### Control
-
 ### ISO
 
 #### ISO 25010
 
-ISO 25010 is een norm die de kwaliteit[skenmerken] van software beschrijft. Dit doet het door een aantal punten vast te stellen in de categorieën **productkwaliteit** en **kwaliteit tijdens gebruik**.
+ISO 25010 is een norm die de kwaliteit/kwaliteitskenmerken van software beschrijft. Dit doet het door een aantal punten vast te stellen in de categorieën **productkwaliteit** en **kwaliteit tijdens gebruik**.
 De software kan dan getoetst worden a.d.h.v. die punten.
 
 In deze samenvatting gaan we alleen in op de hoofdpunten. Alle sub-eigenschappen daarvan [vind je op Wikipedia](https://nl.wikipedia.org/wiki/ISO_25010).
@@ -176,7 +172,64 @@ Naast het model voor productkwaliteit beschrijft de norm ook een model voor **kw
 5. Context coverage
 	* Hoe breed is het *systeem* inzetbaar?
 
-#### ISO 9000 en 9001
+#### ISO 9000
+
+ISO 9000 heeft te maken met de fundamenten (beginsel) van kwaliteits management systemen.
+
+##### Kwaliteits management (systeem) normen
+
+* Klantgerichtheid
+* Leiderschap
+* Continue verbetering
+* Procesbenadering
+
+* Betrokkenheid van medewerkers
+* Systeembenadering van managen
+* Besluitvorming op basis van feiten
+* Win-win relaties met leveranciers
+
+#### ISO 9001
+
+ISO 9001 geeft requirements die organisaties moeten vervullen om aan ISO kwaliteit te voldoen.
+
+Hiermee toont een organisatie aan dat ze in staat is producten te leveren die voldoen aan de eisen van de klant en van de wet.
+De organisatie moet als doel hebben de klanttevredenheid te verhogen door het systeem doeltreffend aan te passen. (**Wtf**?)
+
+##### Categorieën (eisen aan kwaliteits management systeem)
+
+1. Kwaliteits management systeem
+2. Directie verantwoordelijkheid
+3. Management van middelen
+4. Realiseren van het product
+5. Meet analyse en verbetering
+
+#### ISO 9004
+
+ISO 9004 geeft richtlijnen die zowel doeltreffendheid als doelmatigheid van het kwaliteits management systeem in aanmerking nemen.
+
+#### ISO 19011
+
+ISO 19011 geeft richtlijnen voor uitvoeren van audits of kwaliteits / milieu management systemen.
+
+#### ISO 25010 (expliciet maken van non-functionele requirements)
+
+Deze 8 kenmerken **leren**:
+
+* Geschiktheid
+* Prestatie-efficiëntie
+* Uitwisselbaarheid
+* Bruikbaarheid (usability)
+* Beveiligbaarheid
+* Onderhoudbaarheid
+* Overdraagbaarheid
+
+#### ISO 27001 (informatiebeveiliging)
+
+Specificaties, gedragscode en best practices om sterk IT service management te garanderen.
+
+Is technologie-neutraal en vendor-neutraal opgesteld. Het is geen gids.
+
+Compatibel met andere ISO's, zoals 9001 en 14001.
 
 ### Capability Maturity Model (CMM)
 
@@ -188,9 +241,9 @@ Naast het model voor productkwaliteit beschrijft de norm ook een model voor **kw
 
 ### INK model (ook wel bekend als het EFQM-model) en PDCA
 
-*N.b.: dit stuk tekst is linea recta ge-copy-paste uit mijn [samenvatting IIBPM](http://duckson.nl/samenvattingen/IIBPM/samenvatting.html#ink-model-ook-wel-bekend-als-het-efqm-model)*
+*N.b.: dit stuk tekst is ge-copy-paste uit mijn [samenvatting IIBPM](http://duckson.nl/samenvattingen/IIBPM/samenvatting.html#ink-model-ook-wel-bekend-als-het-efqm-model) en nog wat aangepast.*
 
-INK staat voor Instituut Nederlandse Kwaliteit. De Deming-cirkel komt hierin terug.
+INK staat voor Instituut Nederlandse Kwaliteit. De Deming-cirkel komt hierin terug. Met het INK-model kan een organisatie de eigen prestaties afmeten aan een objectieve meetlat.
 
 ![Het INK-model](model_ink.gif)
 
@@ -198,21 +251,21 @@ INK staat voor Instituut Nederlandse Kwaliteit. De Deming-cirkel komt hierin ter
 
 Het INK model beschrijft verder ook 5 oplopende "excellentieniveaus" van organisaties.
 
-1. Activiteitengeoriënteerd
-2. Procesgeoriënteerd
-3. Systeemgeoriënteerd
-4. Ketengeoriënteerd
+1. Activiteiten georiënteerd
+2. Proces georiënteerd
+3. Systeem georiënteerd
+4. Keten georiënteerd
 5. Excelleren en transformeren
 
 #### Fase 1 - Activiteitengeoriënteerd
 
-Dit is de basisfase. Iedereen in de organisatie streeft ernaar in zijn eigen werksituatie het werk zo goed mogelijk te doen. Vakmanschap wordt gewardeerd en door opleidingen ondersteunt. De organisatie probeert klachten te verhelpen.
+Dit is de basisfase. Iedereen in de organisatie streeft ernaar in zijn eigen werksituatie het werk zo goed mogelijk te doen. Vakmanschap wordt gewaardeerd en door opleidingen ondersteunt. De organisatie probeert klachten te verhelpen.
 
 M.a.w.: Mensen die verstand hebben van het proces zijn het aan het uitvoeren. Er wordt niet verder gekeken.
 
 #### Fase 2 - Procesgeoriënteerd
 
-De organisatie beheert het primare (voortbrengings-) proces. Taken en verantwoordelijkheden liggen vast, en de processtappen zijn geïdentificeerd. Prestatie-indicatoren werken als stuurmiddel. Processen worden verbeterd op basis van geconstateerde afwijkingen.
+De organisatie beheert het primaire (voortbrengings-) proces. Taken en verantwoordelijkheden liggen vast, en de processtappen zijn geïdentificeerd. Prestatie-indicatoren werken als stuurmiddel. Processen worden verbeterd op basis van geconstateerde afwijkingen.
 
 Mensen die aan het uitvoeren zijn praten wel met elkaar, maar niet met andere lagen van het management.
 
@@ -425,20 +478,6 @@ Soms zien we "Prince In Name Only" (PINO), of laat men delen van PRINCE2 vallen.
 ## Requirements
 
 **TODO**
-
-## ISO 25010
-
-Kenmerken **leren**:
-
-* Geschiktheid
-* Prestatie-efficiëntie
-* Uitwisselbaarheid
-* Bruikbaarheid (usability)
-* Beveiligbaarheid
-* Onderhoudbaarheid
-* Overdraagbaarheid
-
-
 
 ### Requirements en agile
 
