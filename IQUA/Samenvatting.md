@@ -249,7 +249,7 @@ Veel gemaakte fouten bij het invoeren van processen binnen dienstverlenende orga
 
 ## Software ontwikkelingsmethodieken
 
-Softwareontwikkelmethodes worden gebruikt bij het ontwikkelen van software, tijdens de hele levenscyclus hiervan.
+Software ontwikkelingsmethodieken worden gebruikt bij het ontwikkelen van software, tijdens de hele levenscyclus hiervan.
 
 Er bestaan veel verschillende methoden voor software ontwikkeling:
 
@@ -380,9 +380,31 @@ Het uiteindelijke doel van al deze methoden is om de kwaliteit te borgen.
 
 ### Prince2
 
-Prince2 is een algemene ontwikkelmethode. De afkorting staat voor **PRojects IN Controlled Environments**. Soms zien we "Prince In Name Only" (PINO), of laat men delen van Prince2 vallen. Hier is niet iedereen het mee eens.
+PRINCE2 is een populaire ontwikkelmethode. De afkorting staat voor **PRojects IN Controlled Environments**.
 
-Prince2 staat bekend om de grote flexibiliteit.
+De eerste PRINCE methode werd ontwikkeld in 1989. PRINCE2 verscheen in 1996. Het belangrijkste verschil tussen de twee is dat PRINCE2 niet specifiek op ICT-projecten gericht is. Het is een generieke project management methode.
+
+PRINCE2 staat bekend om de grote flexibiliteit.
+
+Soms zien we "Prince In Name Only" (PINO), of laat men delen van PRINCE2 vallen. Hier is niet iedereen het mee eens.
+
+#### Kenmerken
+
+* Gericht op zakelijke rechtvaardiging
+	* Business case staat centraal
+* Geen organisatiestructuur voor het project management team
+* Planning is gebaseerd op producten
+* Projecten worden onderverdeeld in beheersbare fasen
+* Methode is voor veel soorten projecten geschikt
+
+#### Voordelen
+
+* Projectbeheersing
+* Rechtvaardiging
+	* Op risico's wordt ook gelet
+* iets met structuur
+* Flexibele beslismomenten
+* 
 
 #### 7 principes
 
@@ -403,6 +425,20 @@ Prince2 staat bekend om de grote flexibiliteit.
 ## Requirements
 
 **TODO**
+
+## ISO 25010
+
+Kenmerken **leren**:
+
+* Geschiktheid
+* Prestatie-efficiëntie
+* Uitwisselbaarheid
+* Bruikbaarheid (usability)
+* Beveiligbaarheid
+* Onderhoudbaarheid
+* Overdraagbaarheid
+
+
 
 ### Requirements en agile
 
