@@ -1,5 +1,5 @@
 % Samenvatting IQUA
-% Mathijs Bernson
+% Mathijs Bernson & Jacek Smit
 
 # Kwaliteit in de ICT
 
@@ -40,13 +40,13 @@ In deze samenvatting wordt op sommige plaatsen opzettelijk verkeerd spatiegebrui
 
 ## Inhoud
 
-*  [Intro](#intro)
+* [Intro](#intro)
 	* [Wat is kwaliteit?](#wat-is-kwaliteit)
 		* [Duivelsdriehoek](#duivelsdriehoek)
 		* [Hoe moet je deze vraag op de toets beantwoorden?](#hoe-moet-je-deze-vraag-op-de-toets-beantwoorden)
 * [Projecten](#projecten)
 * [Kwaliteitsmodellen en methoden](#kwaliteitsmodellen-en-methoden)
-	* [Six Sigma](#six-sigma)
+	* [(Lean) Six Sigma](#lean-six-sigma)
 		* [DMAIC](#dmaic)
 	* [ISO-normen](#iso-normen)
 		* [ISO 25010](#iso-25010)
@@ -58,19 +58,23 @@ In deze samenvatting wordt op sommige plaatsen opzettelijk verkeerd spatiegebrui
 			* [Categorieën (eisen aan kwaliteits management systeem)](#categorieën-eisen-aan-kwaliteits-management-systeem)
 		* [ISO 9004](#iso-9004)
 		* [ISO 19011](#iso-19011)
-		* [ISO 25010 (expliciet maken van non-functionele requirements)](#iso-25010-expliciet-maken-van-non-functionele-requirements)
 		* [ISO 27001 (informatiebeveiliging)](#iso-27001-informatiebeveiliging)
 	* [Capability Maturity Model (CMM)](#capability-maturity-model-cmm)
 	* [CoBIT](#cobit)
 	* [PMBoK](#pmbok)
 	* [INK model (ook wel bekend als het EFQM-model) en PDCA](#ink-model-ook-wel-bekend-als-het-efqm-model-en-pdca)
-		* [Fase 1 - Activiteitengeoriënteerd](#fase-1---activiteitengeorienteerd)
-		* [Fase 2 - Procesgeoriënteerd](#fase-2---procesgeorienteerd)
-		* [Fase 3 - Systeemgeoriënteerd](#fase-3---systeemgeorienteerd)
-		* [Fase 4 - Ketengeoriënteerd](#fase-4---ketengeorienteerd)
-		* [Fase 5 - Excelleren en transformeren](#fase-5---excelleren-en-transformeren)
+		* [Veranderwielen](#veranderwielen)
+			* [IMWR cyclus](#imwr-cyclus)
+		* [5 fundamentele kenmerken](#fundamentele-kenmerken)
+		* [Excellentieniveaus](#excellentieniveaus)
+			* [Fase 1 - Activiteitengeoriënteerd](#fase-1---activiteitengeorienteerd)
+			* [Fase 2 - Procesgeoriënteerd](#fase-2---procesgeorienteerd)
+			* [Fase 3 - Systeemgeoriënteerd](#fase-3---systeemgeorienteerd)
+			* [Fase 4 - Ketengeoriënteerd](#fase-4---ketengeorienteerd)
+			* [Fase 5 - Excelleren en transformeren](#fase-5---excelleren-en-transformeren)
 		* [EFQM valkuilen](#efqm-valkuilen)
 	* [Lean manufacturing (TPS)](#lean-manufacturing-tps)
+		* [Drie mu's](#drie-mus)
 * [Software ontwikkelingsmethodieken](#software-ontwikkelingsmethodieken)
 	* [Verschillen tussen methoden](#verschillen-tussen-methoden)
 	* [Waterval](#waterval)
@@ -78,8 +82,15 @@ In deze samenvatting wordt op sommige plaatsen opzettelijk verkeerd spatiegebrui
 		* [Nadelen](#nadelen)
 		* [SDM](#sdm)
 	* [Agile](#agile)
-		* [Scrum](#scrum)
-		* [RUP](#rup)
+	* [Scrum](#scrum)
+		* [Rollen](#rollen)
+		* [Sprints](#sprints)
+		* [Daily scrum (meeting)](#daily-scrum-meeting)
+		* [Product backlog](#product-backlog)
+		* [User stories](#user-stories)
+		* [Tools](#tools)
+	* [RUP](#rup)
+		* [Disciplines](#disciplines)
 	* [Continuous delivery](#continuous-delivery)
 		* [Voordelen](#voordelen-1)
 		* [Nadelen](#nadelen-1)
@@ -89,8 +100,10 @@ In deze samenvatting wordt op sommige plaatsen opzettelijk verkeerd spatiegebrui
 		* [Voordelen](#voordelen-2)
 		* [7 principes](#principes)
 		* [7 thema's](#themas)
+	* [IPMA](#ipma)
 * [Requirements](#requirements)
 	* [Requirements en agile](#requirements-en-agile)
+* [CMMI - Capability Maturity Model Integration](#cmmi---capability-maturity-model-integration)
 * [Auditing](#auditing)
 	
 ## Intro
@@ -109,9 +122,9 @@ De **duivelsdriehoek** is een term die het samenspel van de volgende drie aspect
 * Tijd (sneller)
 * Kwaliteit (beter)
 
-Mathijs: De clou zit 'm erin dat je nooit alledrie aspecten tegelijkertijd kan hebben.
+De clou zit 'm erin dat je nooit alledrie aspecten tegelijkertijd kan hebben.
 
-![Duivelsdriehoek](duivelsdriehoek.jpg)
+![Duivelsdriehoek](lwortmann_03.png)
 
 #### Hoe moet je deze vraag op de toets beantwoorden?
 
@@ -136,7 +149,7 @@ In het boek Projectmanagement (Grit) wordt de levenscyclus van een project onder
 
 Kwaliteit meetbaar maken met ISO of INK?
 
-### Six Sigma
+### (Lean) Six Sigma
 
 Six Sigma is een methode om kwaliteit te beheren en te verbeteren. Het is ontstaan vanuit twee methodieken: *lean thinking* en *six sigma*.
 
@@ -170,16 +183,30 @@ Bij Six Sigma wordt altijd de de DMAIC-methodiek van procesverbetering gebruikt.
 
 ### ISO-normen
 
+* [ISO 25010](#iso-25010)
+	* kwaliteit/kwaliteitskenmerken van software
+* [ISO 9000](#iso-9000)
+	* fundamenten (beginsel) van kwaliteits management systemen
+* [ISO 9001](#iso-9001)
+	* voldoen aan de eisen van de klant en van de wet
+* [ISO 9004](#iso-9004)
+	* richtlijnen over doeltreffendheid en doelmatigheid van het kwaliteits management systeem
+* [ISO 19011](#iso-19011)
+	* **richtlijnen voor uitvoeren van audits**
+* [ISO 27001](#iso-27001-informatiebeveiliging)
+	* informatiebeveiliging [in het algemeen]
+
 #### ISO 25010
 
 ISO 25010 is een norm die de kwaliteit/kwaliteitskenmerken van software beschrijft. Dit doet het door een aantal punten vast te stellen in de categorieën **productkwaliteit** en **kwaliteit tijdens gebruik**.
 De software kan dan getoetst worden a.d.h.v. die punten.
 
-In deze samenvatting gaan we alleen in op de hoofdpunten. Alle sub-eigenschappen daarvan [vind je op Wikipedia](https://nl.wikipedia.org/wiki/ISO_25010).
+In deze samenvatting staan alleen de hoofdpunten. Alle sub-eigenschappen daarvan [vind je op Wikipedia](https://nl.wikipedia.org/wiki/ISO_25010).
 
 ##### Productkwaliteit
 
 Het model voor **productkwaliteit** bestaat uit acht hoofdcategorieën die zijn onderverdeeld in 31 kwaliteitseigenschappen (niet genoemd).
+Dit volgende **leren**!
 
 1. Suitability
 	* Functionele geschiktheid, of een *systeem* de juiste behoeften aankaart.
@@ -201,6 +228,7 @@ Het model voor **productkwaliteit** bestaat uit acht hoofdcategorieën die zijn 
 ##### Kwaliteit tijdens gebruik
 
 Naast het model voor productkwaliteit beschrijft de norm ook een model voor **kwaliteit tijdens gebruik**. Dit model onderscheidt vijf hoofdcategorieën die zijn onderverdeeld in 11 kwaliteitseigenschappen (niet genoemd).
+Dit ook **leren**!
 
 1. Effectiveness
 	* Kunnen de gebruikers hun doelen *nauwkeurig* en *volledig* bereiken?
@@ -235,7 +263,7 @@ ISO 9000 heeft te maken met de fundamenten (beginsel) van kwaliteits management 
 ISO 9001 geeft requirements die organisaties moeten vervullen om aan ISO kwaliteit te voldoen.
 
 Hiermee toont een organisatie aan dat ze in staat is producten te leveren die voldoen aan de eisen van de klant en van de wet.
-De organisatie moet als doel hebben de klanttevredenheid te verhogen door het systeem doeltreffend aan te passen. (**Wtf**?)
+De organisatie moet als doel hebben de klanttevredenheid te verhogen door het systeem doeltreffend aan te passen.
 
 ##### Categorieën (eisen aan kwaliteits management systeem)
 
@@ -253,18 +281,6 @@ ISO 9004 geeft richtlijnen die zowel doeltreffendheid als doelmatigheid van het 
 
 ISO 19011 geeft richtlijnen voor uitvoeren van audits of kwaliteits / milieu management systemen.
 
-#### ISO 25010 (expliciet maken van non-functionele requirements)
-
-Deze 8 kenmerken **leren**:
-
-* Geschiktheid
-* Prestatie-efficiëntie
-* Uitwisselbaarheid
-* Bruikbaarheid (usability)
-* Beveiligbaarheid
-* Onderhoudbaarheid
-* Overdraagbaarheid
-
 #### ISO 27001 (informatiebeveiliging)
 
 Specificaties, gedragscode en best practices om sterk IT service management te garanderen.
@@ -279,7 +295,7 @@ Compatibel met andere ISO's, zoals 9001 en 14001.
 
 ### CoBIT
 
-Cobit is een framework (wat voor?) voor het inrichten. Het slaat een brug tussen requirements, technische issues en business risico’s zodat dit makkelijker is voor managers.
+Cobit is een framework (wat voor?) voor het inrichten en beoordelen van een IT-beheeromgeving. Het slaat een brug tussen requirements, technische issues en business risico’s zodat dit makkelijker te overzien wordt voor managers.
 
 > COBIT 5 is a governance and management framework for information and related technology that starts from stakeholder needs with regard to information and technology. The framework is intended for all enterprises, including non‐profit and public sector.
 
@@ -451,6 +467,8 @@ Dit project bestaat weer uit verschillende subprojecten, waaronder software, inf
 Voor de software van het invoersysteem wordt Scrum toegepast. Daarnaast moet er ook technische infrastructuur gerealiseerd worden, waarbij ASL, BiSL of ITIL gebruikt kunnen worden.
 Voor procesmanagement, (zoals het toetsingsproces **(???)**) kan Prince2 of IPMA toegepast worden.
 
+**IPMA** is een project*management* methode en focust zich op projectvaardigheden van de projectmanager. Prince 2 focust zich daarentegen op producten.
+
 Zo zie je dat de methodieken gecombineerd kunnen worden, en naast elkaar werken. Dan maak je een pakket op maat voor het project.
 
 ### Waterval
@@ -566,6 +584,16 @@ Rational Unified Process (RUP) is een andere iteratieve software-ontwikkelmethod
 
 RUP op maat is een boek geschreven door Ordina, waarin een spinoff van RUP beschreven wordt.
 
+#### Disciplines
+
+De vijf disciplines van RUP zijn:
+
+1. Requirements
+2. Architectuur en bouw
+3. Test
+4. Ondersteuning / organisatie
+5. Projectmanagement / teammanagement
+
 ### Continuous delivery
 
 Bij *continuous delivery* wordt het proces van software levering aan de klant of gebruiker(s) zo veel mogelijk geautomatiseerd. Nadat de developers een nieuwe feature hebben ontwikkeld wordt deze automatisch getest (in meerdere testfasen). Daarna gaat de nieuwe release gelijk naar productie.
@@ -594,7 +622,7 @@ Voorbeelden hiervan zijn o.a.:
 
 * [Prince2](#prince2)
 * PRBOK
-* IPRA
+* [IPMA](#ipma)
 * Meer...
 
 _Deze hoeven we niet in detail te kennen._
@@ -635,6 +663,9 @@ Soms zien we "Prince In Name Only" (PINO), of laat men delen van PRINCE2 vallen.
 * Leren van ervaring
 * Gedefinieerde rollen en verantwoordelijkheden
 * Managen per fase
+	* **Prince2 projecten worden per fase gepland**.
+	* Een fase moet afgerond en goedgekeurd worden door de stuurgroep (de **project board**).
+	* Pas daarna mag aan de volgende fase worden begonnen.
 * Managen 'by' exception
 * Productgerichte aanpak
 * Op maat maken voor de projectomgeving
@@ -645,11 +676,19 @@ Soms zien we "Prince In Name Only" (PINO), of laat men delen van PRINCE2 vallen.
 * Organisatie → wie?
 * Kwaliteit → wat?
 
+### IPMA
+
+**TODO**
+
 ## Requirements
 
 **TODO**
 
 ### Requirements en agile
+
+## CMMI - Capability Maturity Model Integration
+
+... Zie titel
 
 ## Auditing
 
