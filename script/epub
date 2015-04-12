@@ -9,7 +9,7 @@ do
         cd $DIRECTORY
 
         if [ -f Samenvatting.md ]; then
-            EPUB_FILE="../epub/$DIRECTORY.epub"
+            EPUB_FILE="../$DIRECTORY/Samenvatting.epub"
             echo "Converting Samenvatting.md to $EPUB_FILE"
             pandoc Samenvatting.md -o $EPUB_FILE
         fi
