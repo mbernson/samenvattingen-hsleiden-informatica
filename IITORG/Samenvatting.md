@@ -284,7 +284,7 @@ Normen bepalen de wijze waarop we ons gedragen.
 
 #### Waarden
 
-
+**TODO**
 
 ### Culturele typologie van Hofstede
 
@@ -300,10 +300,6 @@ Vijf dimensies:
 * Lange termijn vs. korte termijn oriëntatie (nieuw)
 
 ----------------------------------------------------------
-
-## Organisatietypologie van Mintzberg
-
-
 
 ## Levenscyclusmodel van Greiner
 
@@ -335,6 +331,12 @@ Er zijn vier stadia:
 *Product Markt Combinaties*
 
 ### PLC
+
+1. Development
+2. Introduction
+3. Growth
+4. Maturity
+5. Decline
 
 ### Boston Consulting Group (BCG) matrix
 
@@ -513,6 +515,12 @@ Van artsen of advocaten. Maten kunnen matennaaien (wettelijke term).
 
 ### Distributie
 
+Kort distributiekanaal vs. lang distributiekanaal.
+
+* Direct -> fabrikant levert aan (eind)klant
+* Kort -> slechts één partij die levert aan één winkel, zoals fabrikant aan groothandel
+* Lang -> Twee of drie partijen tussen de fabrikant en klant
+
 ## Groeistrategie Ansoff
 
 Dit is een model voor groei.
@@ -538,6 +546,69 @@ Naar het buitenland of over de grens gaan. Of nieuwe segmenten aanboren zoals je
 ### Diversificatie
 
 Dit zijn de voorgaande twee punten, productvernieuwing en marktvernieuwing in één.
+
+## Prijs
+
+### Wat is prijs
+
+### Prijsstrategieën
+
+Actief vs. passief prijsbeleid
+
+#### Actief prijsbeleid
+
+##### Skimpricing
+
+De prijs beetje bij beetje verlagen om de markt af te romen.
+Deze methode kan alleen worden toegepast in een monopoliepositie.
+
+##### Stay-out pricing
+
+Prijzen laag houden zodat het voor nieuwkomers niet interessant is om zich op deze markt te begeven.
+
+##### Put-out pricing
+
+Druk weg. Op de concurrentie gericht, met een tijdelijke sterk verlaagde prijs die concurrenten uit de markt dwingt.
+
+**Voorbeeld**: supermarkten prijzenoorlog
+
+##### Prijsdifferentiatie
+
+Dezelfde leverancier vraagt verschillende prijzen aan **verschillende klanten**.
+
+**Voorbeeld**: Hotel dat een hogere prijs toont aan Apple-gebruikers omdat zij hogere prijzen gewend zijn.
+
+##### Prijsdiscriminatie
+
+Verschillende prijzen vragen op **verschillende markten** [op grond van verschillende afzetscenario's].
+
+Om dit te kunnen doen moeten de markten moeten gescheiden zijn, zodat de goederen niet van de ene markt naar de andere stromen.
+
+##### Penetratie pricing
+
+Heel snel marktaandeel proberen te veroveren door een lagere prijs dan concurrenten te vragen. Of om snel naamsbekendheid te kunnen vestigen.
+
+#### Passief prijsbeleid
+
+##### Kartelvorming
+
+Prijsafspraken tussen organisaties. (Overleg houden over de prijzen)
+
+Is verboden omdat het de concurrentievorming tegen gaat: de consument heeft geen keuze meer.
+
+##### Me-too pricing
+
+### Prijselasticiteit
+
+Formule hier
+
+## Kosten
+
+### Vaste en variabele kosten
+
+Kosten die **niet** reageren op een verandering in de hoeveelheid bedrijfsactiviteiten.
+
+Reageren (binnen productiegrenzen) **niet** op een verandering in de hoeveelheid
 
 ## Bronnen
 
