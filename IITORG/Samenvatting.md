@@ -34,8 +34,11 @@ De student kan na (gunstige) afloop van deze module:
 
 ## Eindeisen
 
-> De student doorgrondt na (gunstige) afloop de causaliteit van de behandelde modellen en hij kan deze in praktijksituaties toepassen op organisaties.
-> Daarnaast kan de student de achtergrond en opbouw van de bedrijfskundige modellen uitleggen, verklaren en toepassen, alsook leiderschapsstijlen en organisatievormen uitleggen en verklaren. 
+> De student doorgrondt na (gunstige) afloop de causaliteit van de behandelde modellen
+> en hij/zij kan deze in praktijksituaties toepassen op organisaties.
+>
+> Daarnaast kan de student de achtergrond en opbouw van de bedrijfskundige modellen uitleggen,
+> verklaren en toepassen, alsook leiderschapsstijlen en organisatievormen uitleggen en verklaren. 
 
 ## Studietaken
 
@@ -47,6 +50,16 @@ De student kan na (gunstige) afloop van deze module:
 * Waardeketen en 5-krachtenmodel van Porter
 * Organisatievormen (KvK) 
 * Leiderschapsstijlen Oefententamen 
+
+## Lesinhoud
+
+* week 1: organisatie, omgeving, leiderschap, cultuur
+* week 2: value chain, Mintzberg, contingentie, levenscyclus
+* week 3: Greiner: ontwikkeling van organisaties
+* week 4: rechtsvormen, PMC, BCG, PLC, Leeflang, Copeland
+* week 5: promotie, plaats, distributie en kanalen
+* week 6: kosten, (prijs)strategieën, prijselasticiteit, winst
+* week 7: personeel, Maslow, Herzberg, marketingmix/PLC
 
 ## Inhoud
 
@@ -122,8 +135,8 @@ De student kan na (gunstige) afloop van deze module:
 	* [BCG matrix](#bcg-matrix)
 	* [Organisatie crisissen](#)
 * Cirkels
-	* [Cirkel van falen](#)
-	* [Cirkel van success](#)
+	* [Cirkel van falen](#cirkel-van-falen)
+	* [Cirkel van success](#cirkel-van-success)
 * Leiderschap
 	* [Leiderschapsstijlen van Quinn](#quinn)
 	* [Situationeel leiderschap Hershey](#hersey)
@@ -203,6 +216,8 @@ Bijvoorbeeld:
 
 ----------------------------------------------------------
 
+![organisatiestructuren van IIBPM gekopieerd](organisatiestructuren.jpg)
+
 ## Product vs. dienst
 
 (Herhaling van IIBPM)
@@ -225,21 +240,49 @@ Een dienst:
 
 ## Leiderschapsstijlen
 
-Er zijn veel verschillende modellen voor leiderschapsstijlen. Een aantal zullen we doornemen voor dit vak.
+Er zijn veel verschillende modellen voor leiderschapsstijlen. We zullen er een aantal zullen behandelen in dit vak.
 
 ### Quinn
 
-Quinn heeft een diagram gemaakt met flexibiliteit op de Y-as en de geörienteerdheid (intern vs extern) op de X-as. Lees hoofdstuk 17.
+Quinn vindt dat iedereen een bepaalde hoeveelheid leiderschap in zich moet hebben, niet alleen bazen.
 
-**plaatje slide 23**
+Hij heeft een diagram gemaakt met flexibiliteit (flexibel vs inflexibel) op de Y-as en de oriëntatie (intern vs extern) op de X-as.
+
+![Het model van Quinn](quinn-leiderschap.png)
+
+#### Oriëntatie
+
+Uit de "oriëntatie" as lees je af of iemand naar binnen of naar buiten geörienteerd is.
+
+Intern wil zeggen dat diegene zich richt op medewerkers of organisatiestructuur.
+
+Bij een externe oriëntatie houdt het individu zich meer bezig met productie en innovatie, de zaken in de buitenwacht zullen opvallen.
+
+#### Flexibiliteit
+
+Een medewerker met lage flexibiliteit is volgens Quinn conservatief, en wil dus liever geen veranderingen zien.
+Bij hoge flexibiliteit wil diegene eigen medewerkers binden of zakelijke partners verleiden tot nieuwe vormen van van samenwerking.
 
 #### Beheersgericht
 
+Beheersgerichte organisaties worden ook wel hiërarchisch genoemd. Een beheersgerichte organisatie richt zich op zorg voor goede verhoudingen in combinatie met stabiliteit en beheersbaarheid. Kernbegrippen zijn: interne efficiëncy, uniformiteit, veiligheid, controle, stabiliteit en respect voor autoriteit. De bedrijfsstrategie richt zich veelal op Operational Excellence: prestatie-indicatoren en schaalgrootte.
+
 #### Mensgericht
+
+De mensgerichte cultuur wordt ook wel familiecultuur genoemd. Een mensgerichte organisatie richt zich op goede interne verhoudingen, zorg voor het personeel en klantgevoeligheid. Er wordt veel tijd besteed aan het ontwikkelen van medewerkers, participatie, samenwerking, openheid en moreel. De communicatie in een mensgerichte organisatie is veelal mondeling en informeel. De betrokkenheid van de individuele werknemer bij zijn werk en de organisatie staan centraal.
 
 #### Innovatie gericht
 
+De innovatiegerichte cultuur wordt ook wel adhocratiecultuur of ontwikkelingscultuur genoemd. Een innovatieve organisatie kenmerkt zich door: vernieuwing, flexibiliteit, creativiteit, experimenteren, risico’s nemen en groei. De strategie richt zich veelal op Product Leadership. Er wordt veel geld gestoken in technologie-ontwikkeling en R&D. Medewerkers zijn hoog opgeleid, intrinsiek gedreven en werken vaak in projectgroepen aan verschillende projecten. De communicatie is vooral informeel en medewerkers hebben de vrijheid en ruimte om zichzelf te ontwikkelen.
+
 #### Resultaatgericht
+
+Resultaatgericht - het eindproduct staat centraal
+
+    Zijn er targets?
+    Gaat het om kwaliteit of snelheid?
+    Wordt er veel overgewerkt?
+    Wordt dat apart beloond?
 
 ### Hersey
 
@@ -249,11 +292,28 @@ Zie ook [Situationeel leiderschap](#situationeel-leiderschap).
 
 #### Stijl 1: Leiden
 
+
+* Deze stijl wordt ook aangeduid als management by prescription. Veel sturend en weinig ondersteunend leiderschapsgedrag; de leidinggevende schrijft voor wat medewerkers moeten doen, geeft nauwkeurige instructies en controleert de taakuitvoering.
+* Een valkuil is dat de leidinggevende autoritair overkomt: als een baas of een leraar. Deze wijze van leidinggeven werkt alleen als de opdrachten goed zijn te structureren.
+
 #### Stijl 2: Begeleiden
+
+   * De leidinggevende ondersteunt de medewerker door verantwoordelijkheden te delen en door veel vragen te stellen: actief luisteren, de ander raadplegen en betrekken, complimenteren en stimuleren. Wel worden de taken nauwkeurig vastgesteld en zonodig gecontroleerd. Deze stijl wordt ook wel aangeduid als resultaatgericht management.
+   * Deze stijl wordt ineffectief bij manipuleren: wel vragen naar de inbreng van de ander, maar er niets mee doen. Een valkuil is dat de leidinggevende overkomt als therapeut.
+
 
 #### Stijl 3: Steunen
 
+
+* Leidinggevende en medewerkers beslissen samen hoe het werk wordt uitgevoerd. De leidinggevende treedt stimulerend op, is klankbord en helpt de medewerker op verzoek bij de uitvoering. Hij geeft daarbij primair leiding door aandacht te besteden aan de relatie en door het geven van erkenning. Deze stijl wordt ook wel organisch management genoemd.
+* Een valkuil is dat de manager de medewerker gaat betuttelen.
+
+
 #### Stijl 4: Delegeren
+
+* Delegeren is effectief toe te passen wanneer de leidinggevende voor de medewerker de voorwaarden kan scheppen die nodig zijn bij het uitvoeren van de opdracht. De leidinggevende laat beslissingen en de wijze waarop de taak moet worden uitgevoerd over aan de medewerkers, deze zijn zelf verantwoordelijk en krijgen dan ook de nodige bevoegdheden. Deze stijl staat ook bekend als management by exception.
+* De leidinggevende loopt hierbij wel de kans te vervallen in een niet-effectieve laissez-faire stijl.
+
 
 ### Competenties
 
@@ -261,7 +321,20 @@ Competenties *leer* je niet, ze komen uit jezelf. Op de Hogeschool doe je kennis
 
 ## Situationeel leiderschap
 
-**TODO**
+De belangrijkste taak van leiders is het beïnvloeden van anderen, om plannen te realiseren. Soms gaat het om hun eigen plannen, soms om de plannen van een groep. Eén van de bekendste modellen voor leidinggeven is het situationeel leiderschap van Hersey en Blanchard.
+
+Het model heeft twee dimensies: taakgericht en relatiegericht gedrag van de manager.
+
+ 
+
+* Kenmerkend voor taakgericht of sturend leiderschap is het accent op het einddoel en de uitvoering van de taak. De leidinggevende stelt de doelen en doelstellingen vast, plant en organiseert het werk, geeft prioriteiten aan, bepaalt welke werkmethoden er gevolgd worden, hoe controle en evaluaties plaatsvinden en houdt nauwgezet toezicht op de voortgang. Deze stijl zal door veel medewerkers als éénrichting en autoritair worden ervaren.
+* Bij relatiegericht of ondersteunend leiderschap ligt het accent op de onderlinge verhouding. De leidinggevende moedigt aan, bevestigt, prijst, luistert actief, vraagt om suggesties en ideeën, stimuleert zelfstandige probleemoplossing, maakt informatie toegankelijk, moedigt teamwork aan en durft zich kwetsbaar op te stellen. Deze meer participatieve stijl kenmerkt zich door twéérichting communicatie.
+
+ 
+
+Hier ontstaan vier combinatiestijlen van leidinggeven:
+
+![Model van Hersey en Blanchard (Hennibrerard)](./leiderschap/010_leiderschap_leiderschapsstijlen4a_hersey.jpg)
 
 ## Cultuur
 
@@ -284,7 +357,7 @@ Normen bepalen de wijze waarop we ons gedragen.
 
 #### Waarden
 
-**TODO**
+Liggen in het verlengde van de normen. Er zijn *instrumentele* en *intrinsieke* waarden.
 
 ### Culturele typologie van Hofstede
 
@@ -609,6 +682,12 @@ Formule hier
 Kosten die **niet** reageren op een verandering in de hoeveelheid bedrijfsactiviteiten.
 
 Reageren (binnen productiegrenzen) **niet** op een verandering in de hoeveelheid
+
+## Cirkels
+
+### Cirkel van falen
+
+### Cirkel van succes
 
 ## Bronnen
 
