@@ -27,13 +27,11 @@ De implicatie *p* => *q* is alleen **onwaar** als *p* waar is, én *q* onwaar is
 
 We kunnen ook stellen dat: *als p* waar is, *dan* is *q* ook waar.
 
-### Tautologie en contradictie
+### Equivalentie en co.
 
-Als twee beweringen **equivalent** zijn, noemen we dat ook wel een tautologie.
+Twee beweringen zijn **equivalent** wanneer in hun waarheidstabel hun kolommen identiek zijn. Voor equivalentie gebruiken we de operator <=>.
 
-Een uitspraak die altijd waar is (ongeacht de input), noemen we een **tautologie**. Een uitspraak die altijd onwaar is noemen we een **contradictie**.
-
-
+Een uitspraak die altijd waar is (ongeacht de invoer), noemen we een **tautologie**. Een uitspraak die altijd onwaar is noemen we een **contradictie**.
 
 ## Predicaten
 
