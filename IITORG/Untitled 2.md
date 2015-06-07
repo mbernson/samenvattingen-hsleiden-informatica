@@ -13,4 +13,3 @@
 3. Growth
 4. Maturity
 5. Decline
-

@@ -51,7 +51,7 @@ De student kan na (gunstige) afloop van deze module:
 * Organisatievormen (KvK) 
 * Leiderschapsstijlen Oefententamen 
 
-## Lesinhoud
+## Lesinhoud / opbouw
 
 * week 1: organisatie, omgeving, leiderschap, cultuur
 * week 2: value chain, Mintzberg, contingentie, levenscyclus
@@ -143,8 +143,21 @@ De student kan na (gunstige) afloop van deze module:
 
 ## Inleiding
 
-Je komt altijd in organisaties terecht later, en er bestaan vele soorten organisaties.
-In projecten werk je met mensen uit andere organisatieonderdelen. Je moet hun "taal" kunnen spreken.
+Je komt later altijd in organisaties terecht, wat voor werk je ook gaat doen. Er bestaan vele verschillende soorten organisaties.
+In projecten werk je met mensen uit andere organisatieonderdelen. Je moet hun "taal" kunnen spreken. Daarom loont het om te leren hoe organisaties werken.
+
+### Wat leer je?
+
+* Verschillende organisatievormen
+* Begrijpen waarom producten of diensten worden aangeboden, en in welke fase deze zitten.
+* Begrijpen waarom producten of diensten aan een bepaalde markt worden aangeboden.
+* Een kostprijsberekening te maken zodat je eventuele klanten de juiste antwoorden kunt geven.
+* Etcetera.
+
+Daarnaast kun je na deze module:
+
+* Verschillende bedrijfskundige modellen uitleggen, verklaren en toepassen.
+* Een organisatie typeren met gebruik van de organisatietypologie van Mintzberg en de culturele typologie van Hofstede* De 5 P’s van de marketingmix (Product, Prijs, Plaats, Promotie en Personeel) benoemen, verklaren en toepassen* De BCG matrix en de PLC uitleggen en toepassen* De Valuechain en het 5-krachtenmodel van Porter uitleggen en toepassen* Aan de hand van PMC’s nieuwe mogelijkheden voor producten en diensten benoemen* Verschillende leiderschapsstijlen onderscheiden en benoemen
 
 ## Organisaties
 
@@ -165,7 +178,8 @@ Het bedrijf van een ZZP-er is ook een organisatie. §9.8.3
 
 ### Stakeholders
 
-Een stakeholder heeft bepaalde belangen bij een organisatie. Voorbeelden zijn de belastingdienst, de toeleveranciers en de werknemers van het bedrijf.
+Een stakeholder heeft bepaalde belangen bij een organisatie.
+Voorbeelden zijn de belastingdienst, de toeleveranciers en de werknemers van het bedrijf.
 
 #### Interne stakeholders
 
@@ -185,9 +199,18 @@ Een shareholder heeft ook daadwerkelijk een aandeel in het bedrijf.
 
 ## Organisatievormen
 
+De structuur van de organisatie wordt grotendeels bepaald door de organisatievorm
+
+We onderscheiden vier organisatievormen voor dit vak:
+
+* Lijnorganisatie
+* Lijn-staf organisatie
+* Matrixorganisatie
+* Kennisorganisatie
+
 ### Lijnorganisatie
 
-In een lijnorganisatie heeft iedere medewerker (behalve de eindbaas) één baas boven zich.
+In een lijnorganisatie heeft iedere medewerker één baas boven zich (behalve de eindbaas aan de top).
 Het aantal medewerkers dat iedere baas aanstuurt noemen we de *span of control*.
 
 ### Lijn-staf-organisatie
@@ -217,6 +240,31 @@ Bijvoorbeeld:
 ----------------------------------------------------------
 
 ![organisatiestructuren van IIBPM gekopieerd](organisatiestructuren.jpg)
+
+### Kennisorganisatie
+
+De kennisorganisatie komt wat minder vaak voor. De medewerkers van een kennisorganisatie zijn specialisten; deskundigen in een bepaald veld.
+Ze werken alleen maar samen omdat dat onderling voordelen biedt. Deze medewerkers accepteren geen authoriteit op basis van hiërarchie, maar slechts op basis van deskundigheid.
+
+## Ketenvormen
+
+Door het vormen van ketens wordt er waarde toegevoegd aan producten. De ene organisatie levert producten aan de andere, die er een bewerking aan doet en het weer verder verkoopt.
+
+Prijsafspraken tussen organisaties die dezelfde producten leveren (een kartel) zijn niet toegestaan. De Nederlandse Mededingings Autoriteit (NMA) houdt hier toezicht op.
+
+We onderscheiden drie verschillende *pure* ketenvormen:
+
+* Marktgerichte ketens
+* Productgerichte ketens
+* **Productie**-gerichte ketens
+
+### Marktgerichte ketens
+
+
+
+### Productgerichte ketens
+
+### **Productie**-gerichte ketens
 
 ## Product vs. dienst
 
@@ -249,6 +297,17 @@ Quinn vindt dat iedereen een bepaalde hoeveelheid leiderschap in zich moet hebbe
 Hij heeft een diagram gemaakt met flexibiliteit (flexibel vs inflexibel) op de Y-as en de oriëntatie (intern vs extern) op de X-as.
 
 ![Het model van Quinn](quinn-leiderschap.png)
+
+Hieruit komen de volgende leiderschapsstijlen voort:
+
+* Mentor: inzicht in mensen, effectief communiceren
+* Stimulator: teambuilding, conflict management
+* Innovator: leven met verandering, creatief
+* Bemiddelaar: machtsbasis opbouwen en handhaven, onderhandelen, ideeën presenteren
+* Controleur: informatie beheren, omgaan met informatie overvloed, kernprocessen beheren
+* Coördinator: project management, taken ontwerpen
+* Producent: productief werken, tijd en stress management
+* Bestuurder: visie ontwikkelen, doelen formuleren, ontwerpen en organiseren
 
 #### Oriëntatie
 
@@ -292,28 +351,23 @@ Zie ook [Situationeel leiderschap](#situationeel-leiderschap).
 
 #### Stijl 1: Leiden
 
-
 * Deze stijl wordt ook aangeduid als management by prescription. Veel sturend en weinig ondersteunend leiderschapsgedrag; de leidinggevende schrijft voor wat medewerkers moeten doen, geeft nauwkeurige instructies en controleert de taakuitvoering.
 * Een valkuil is dat de leidinggevende autoritair overkomt: als een baas of een leraar. Deze wijze van leidinggeven werkt alleen als de opdrachten goed zijn te structureren.
 
 #### Stijl 2: Begeleiden
 
-   * De leidinggevende ondersteunt de medewerker door verantwoordelijkheden te delen en door veel vragen te stellen: actief luisteren, de ander raadplegen en betrekken, complimenteren en stimuleren. Wel worden de taken nauwkeurig vastgesteld en zonodig gecontroleerd. Deze stijl wordt ook wel aangeduid als resultaatgericht management.
-   * Deze stijl wordt ineffectief bij manipuleren: wel vragen naar de inbreng van de ander, maar er niets mee doen. Een valkuil is dat de leidinggevende overkomt als therapeut.
-
+* De leidinggevende ondersteunt de medewerker door verantwoordelijkheden te delen en door veel vragen te stellen: actief luisteren, de ander raadplegen en betrekken, complimenteren en stimuleren. Wel worden de taken nauwkeurig vastgesteld en zonodig gecontroleerd. Deze stijl wordt ook wel aangeduid als resultaatgericht management.
+* Deze stijl wordt ineffectief bij manipuleren: wel vragen naar de inbreng van de ander, maar er niets mee doen. Een valkuil is dat de leidinggevende overkomt als therapeut.
 
 #### Stijl 3: Steunen
 
-
 * Leidinggevende en medewerkers beslissen samen hoe het werk wordt uitgevoerd. De leidinggevende treedt stimulerend op, is klankbord en helpt de medewerker op verzoek bij de uitvoering. Hij geeft daarbij primair leiding door aandacht te besteden aan de relatie en door het geven van erkenning. Deze stijl wordt ook wel organisch management genoemd.
 * Een valkuil is dat de manager de medewerker gaat betuttelen.
-
 
 #### Stijl 4: Delegeren
 
 * Delegeren is effectief toe te passen wanneer de leidinggevende voor de medewerker de voorwaarden kan scheppen die nodig zijn bij het uitvoeren van de opdracht. De leidinggevende laat beslissingen en de wijze waarop de taak moet worden uitgevoerd over aan de medewerkers, deze zijn zelf verantwoordelijk en krijgen dan ook de nodige bevoegdheden. Deze stijl staat ook bekend als management by exception.
 * De leidinggevende loopt hierbij wel de kans te vervallen in een niet-effectieve laissez-faire stijl.
-
 
 ### Competenties
 
@@ -325,12 +379,8 @@ De belangrijkste taak van leiders is het beïnvloeden van anderen, om plannen te
 
 Het model heeft twee dimensies: taakgericht en relatiegericht gedrag van de manager.
 
- 
-
 * Kenmerkend voor taakgericht of sturend leiderschap is het accent op het einddoel en de uitvoering van de taak. De leidinggevende stelt de doelen en doelstellingen vast, plant en organiseert het werk, geeft prioriteiten aan, bepaalt welke werkmethoden er gevolgd worden, hoe controle en evaluaties plaatsvinden en houdt nauwgezet toezicht op de voortgang. Deze stijl zal door veel medewerkers als éénrichting en autoritair worden ervaren.
 * Bij relatiegericht of ondersteunend leiderschap ligt het accent op de onderlinge verhouding. De leidinggevende moedigt aan, bevestigt, prijst, luistert actief, vraagt om suggesties en ideeën, stimuleert zelfstandige probleemoplossing, maakt informatie toegankelijk, moedigt teamwork aan en durft zich kwetsbaar op te stellen. Deze meer participatieve stijl kenmerkt zich door twéérichting communicatie.
-
- 
 
 Hier ontstaan vier combinatiestijlen van leidinggeven:
 
@@ -350,6 +400,12 @@ Cultuur komt ook van de leiding, en van de geografische ligging van het de organ
 > De organisatiecultuur is de wijze waarop de organisatie zich opstelt, zowel naar de eigen medewerkers als naar de buitenwereld, op grond van de normen en waarden van de organisatie.
 
 De organisatiecultuur heeft veel invloed op de werking van de organisatie en haar medewerkers. Het vormt als het ware de 'persoonlijkheid' van de organisatie.
+Dit wordt niet van tevoren gekozen (of opgelegd). Er kan tot een bepaalde hoogte invloed op de organisatiecultuur worden uitgeoefend.
+
+#### Karakter
+
+Iedere organisatie heeft een bepaald karakter, wat direct invloed heeft op de organisatiecultuur.
+Zo heeft een innovatieve, jonge organisatie een heel ander karakter dan een conservatieve organisatie.
 
 #### Normen
 
@@ -361,13 +417,10 @@ Liggen in het verlengde van de normen. Er zijn *instrumentele* en *intrinsieke* 
 
 ### Culturele typologie van Hofstede
 
-Geert Hofstede.
-
-Vijf dimensies:
+Geert Hofstede bedacht een model met vijf dimensies:
 
 * Machtsafstand
-* Individualisme vs. collectivisme
-	* Ik vs. wij
+* Individualisme vs. collectivisme (Ik vs. wij)
 * Masculiniteit vs. femininiteit
 * Onzekerheidsvermijding
 * Lange termijn vs. korte termijn oriëntatie (nieuw)
@@ -375,6 +428,9 @@ Vijf dimensies:
 ----------------------------------------------------------
 
 ## Levenscyclusmodel van Greiner
+
+TODO
+
 
 ## 5 P's van marketing
 

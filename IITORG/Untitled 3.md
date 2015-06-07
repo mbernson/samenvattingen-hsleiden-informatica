@@ -23,4 +23,3 @@ Vb: supermarkten prijzenoorlog
 ## Rantsoenering
 
 Prijsgegeven dat de consument niet alles kopen kan, maar keuzes moet maken.
-
