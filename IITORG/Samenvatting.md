@@ -439,8 +439,52 @@ Geert Hofstede bedacht een model met vijf dimensies:
 
 ## Levenscyclusmodel van Greiner
 
-TODO
+*Dit model moet je kunnen beschrijven als onderdeel van dit vak.*
 
+Greiner's model draait om de ontwikkeling van een organisatie gedurende haar levenscyclus.
+
+6 fasen met elk een **crisis**
+
+![Het levenscyclusmodel van Greiner](greiner.jpg)
+
+### Fase 1: Pioniersfase
+
+De organisatie is jong. Vooral bezig met het ontwikkelen van product en markt. De oprichters werken hard, hebben de leiding maar verdienen weinig.
+
+Bij groei resulteert dit in een **leiderschapscrisis**.
+Leiderschap is niet meer adequaat als de organisatie te groot wordt. Een leider is namelijk  geen manager.
+
+Als deze crisis niet overleefd wordt valt de organisatie uiteen.
+
+### Fase 2: Managementfase
+
+In fase 2 wordt het management gefixt.
+
+Daarna zijn er te weinig managers waaruit een **autonomiteitscrisis** volgt.
+
+### Fase 3: Decentralisatiefase
+
+Taken, bevoegdheden en verantwoordelijkheden van de toplaag worden omlaag verschuift, naar *middle managers*.
+
+Een **beheercrisis** ontstaat omdat de toegevoegde laag meer structuur nodig heeft.
+
+### Fase 4: Standaardisatiefase
+
+Er worden standaarden geïntroduceerd voor het management van de organisatie.
+Denk aan beheer met ITIL, ASL of BiSL.
+
+Hierdoor komt er meer administratie, totdat er een **bureaucratiecrisis** ontstaat. Er is zoveel papier dat je het bij elkaar moet gaan binden.
+
+### Fase 5: Samenwerkingsfase
+
+De bureaucratie neemt af. In plaats daarvan komt een gemeenschapszin.
+
+Dit mondt uit in een **overlegcrisis** omdat er teveel werk moet gebeuren (teveel hooi op de vork) om het nog met gemeenschapszin te organiseren.
+
+### Fase 6: Ondernemen en groei
+
+Als de organisatie het samenwerken en overleg heeft opgelost, komen we in de zesde fase.
+Op basis van *ondernemen en groei* ontwikkelt de organisatie zich verder.
 
 ## 5 P's van marketing
 
