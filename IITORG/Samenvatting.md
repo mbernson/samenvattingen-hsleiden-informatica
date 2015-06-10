@@ -24,13 +24,13 @@
 De student kan na (gunstige) afloop van deze module: 
 
 * verschillende bedrijfskundige modellen uitleggen, verklaren en toepassen.
-* een organisatie typeren met gebruik van de organisatietypologie van Mintzberg en de culturele typologie van Hofstede.
-* Het levenscyclusmodel van Greiner uitleggen.
-* de 5 P’s van de marketingmix (Product, Prijs, Plaats, Promotie en Personeel) en de daarbij behorende theoretische modellen benoemen, verklaren en toepassen.
-* De BCG matrix en de PLC uitleggen en toepassen.
-* De Valuechain en het 5-krachtenmodel van Porter uitleggen en toepassen.
-* aan de hand van PMC’s nieuwe mogelijkheden voor producten en diensten benoemen.
-* verschillende leiderschapsstijlen onderscheiden en benoemen.
+* een organisatie typeren met gebruik van de [organisatietypologie van Mintzberg](#mintzberg) en de [culturele typologie van Hofstede](#culturele-typologie-van-hofstede).
+* Het [levenscyclusmodel van Greiner](#levenscyclusmodel-van-greiner) uitleggen.
+* de [5 P’s van de marketingmix (Product, Prijs, Plaats, Promotie en Personeel)](#ps-van-marketing) en de daarbij behorende theoretische modellen benoemen, verklaren en toepassen.
+* De [BCG matrix](#bcg-matrix) en [de PLC](#product-life-cycle-plc) uitleggen en toepassen.
+* De [Valuechain](#value-chain) en het [5-krachtenmodel van Porter](#krachtenmodel-van-porter) uitleggen en toepassen.
+* aan de hand van [Product Markt Combinaties](#product-markt-combinaties-pmcs) nieuwe mogelijkheden voor producten en diensten benoemen.
+* verschillende [leiderschapsstijlen](#leiderschapsstijlen) onderscheiden en benoemen.
 
 ## Eindeisen
 
@@ -66,49 +66,48 @@ De student kan na (gunstige) afloop van deze module:
 * [Organisaties](#organisaties)
 	* [Missie en visie](#missie-en-visie)
 	* [Stakeholders](#stakeholders)
-		* [Interne stakeholders](#interne-stakeholders)
-		* [Externe stakeholders](#externe-stakeholders)
 	* [Shareholders](#shareholders)
 * [Organisatievormen](#organisatievormen)
 	* [Lijnorganisatie](#lijnorganisatie)
 	* [Lijn-staf-organisatie](#lijn-staf-organisatie)
-		* [Functionele lijn-staf-organisatie](#functionele-lijn-staf-organisatie)
 	* [Matrixorganisatie](#matrixorganisatie)
+	* [Kennisorganisatie](#kennisorganisatie)
+* [Ketenvormen](#ketenvormen)
+	* [Marktgerichte ketens](#marktgerichte-ketens)
+	* [Productgerichte ketens](#productgerichte-ketens)
+	* [<strong>Productie</strong>-gerichte ketens](#productie-gerichte-ketens)
+* [Product vs. dienst](#product-vs.-dienst)
 * [Leiderschapsstijlen](#leiderschapsstijlen)
 	* [Quinn](#quinn)
-		* [Beheersgericht](#beheersgericht)
-		* [Mensgericht](#mensgericht)
-		* [Innovatie gericht](#innovatie-gericht)
-		* [Resultaatgericht](#resultaatgericht)
 	* [Hersey](#hersey)
-		* [Stijl 1: Leiden](#stijl-1-leiden)
-		* [Stijl 2: Begeleiden](#stijl-2-begeleiden)
-		* [Stijl 3: Steunen](#stijl-3-steunen)
-		* [Stijl 4: Delegeren](#stijl-4-delegeren)
 	* [Competenties](#competenties)
 * [Situationeel leiderschap](#situationeel-leiderschap)
 * [Cultuur](#cultuur)
 	* [Organisatiecultuur](#organisatiecultuur)
-		* [Normen](#normen)
-		* [Waarden](#waarden)
 	* [Culturele typologie van Hofstede](#culturele-typologie-van-hofstede)
-* [Organisatietypologie van Mintzberg](#organisatietypologie-van-mintzberg)
 * [Levenscyclusmodel van Greiner](#levenscyclusmodel-van-greiner)
 * [5 P's van marketing](#ps-van-marketing)
 * [BCG matrix](#bcg-matrix)
 * [PMC, PLC, BCG, adoptiecurve, Herzberg en andere modellen](#pmc-plc-bcg-adoptiecurve-herzberg-en-andere-modellen)
-	* [PMC's](#pmcs)
-	* [PLC](#plc)
+	* [Product Markt Combinaties (PMC's)](#product-markt-combinaties-pmcs)
+	* [Product Life Cycle (PLC)](#product-life-cycle-plc)
 	* [Boston Consulting Group (BCG) matrix](#boston-consulting-group-bcg-matrix)
 	* [Adoptiecurve](#adoptiecurve)
 	* [Herzberg](#herzberg)
 * [Value chain](#value-chain)
 	* [Waardeketen van Porter](#waardeketen-van-porter)
+* [Mintzberg](#mintzberg)
+	* [Vijf onderdelen](#vijf-onderdelen)
+	* [Configuraties](#configuraties)
+	* [Extra](#extra)
+	* [Druk](#druk)
 * [5-krachtenmodel van Porter](#krachtenmodel-van-porter)
-* [Organisatievormen (KvK)](#organisatievormen-KvK)
-	* [V.O.F.](#v.o.f.)
-	* [B.V.](#b.v.)
-	* [N.V.](#n.v.)
+* [Organisatievormen (KvK)](#organisatievormen-kvk)
+	* [Eenmanszaak](#eenmanszaak)
+	* [Vennootschap onder Firma (V.O.F.)](#vennootschap-onder-firma-v.o.f.)
+	* [Besloten Vennootschap (B.V.)](#besloten-vennootschap-b.v.)
+	* [Naamloze Vennootschap (N.V.)](#naamloze-vennootschap-n.v.)
+	* [Commanditaire Vennootschap (C.V.)](#commanditaire-vennootschap-c.v.)
 	* [Vereniging](#vereniging)
 	* [Stichting](#stichting)
 	* [Maatschap](#maatschap)
@@ -119,6 +118,15 @@ De student kan na (gunstige) afloop van deze module:
 	* [Productvernieuwing](#productvernieuwing)
 	* [Marktvernieuwing](#marktvernieuwing)
 	* [Diversificatie](#diversificatie)
+* [Prijs](#prijs)
+	* [Wat is prijs](#wat-is-prijs)
+	* [Prijsstrategieën](#prijsstrategieën)
+	* [Prijselasticiteit](#prijselasticiteit)
+* [Kosten](#kosten)
+	* [Vaste en variabele kosten](#vaste-en-variabele-kosten)
+* [Cirkels](#cirkels)
+	* [Cirkel van falen](#cirkel-van-falen)
+	* [Cirkel van succes](#cirkel-van-succes)
 * [Bronnen](#bronnen)
 	* [Zelf](#zelf)
 	* [Slides](#slides)
@@ -425,6 +433,8 @@ Geert Hofstede bedacht een model met vijf dimensies:
 * Onzekerheidsvermijding
 * Lange termijn vs. korte termijn oriëntatie (nieuw)
 
+*Je moet voor dit vak organisaties kunnen indelen in het model van Hofstede.*
+
 ----------------------------------------------------------
 
 ## Levenscyclusmodel van Greiner
@@ -455,11 +465,11 @@ Er zijn vier stadia:
 
 ## PMC, PLC, BCG, adoptiecurve, Herzberg en andere modellen
 
-### PMC's
+### Product Markt Combinaties (PMC's)
 
 *Product Markt Combinaties*
 
-### PLC
+### Product Life Cycle (PLC)
 
 1. Development
 2. Introduction
@@ -508,9 +518,8 @@ Primaire activiteiten
 
 ## Mintzberg
 
-Henry Mintzberg heeft een theorie over organisatiestructuur opgezet in de vorm van abstracte kunt.
-
-Hij onderkent vijf organisatie configuraties:
+Henry Mintzberg heeft een theorie over organisatiestructuur opgezet.
+Hij onderkent vijf organisatie configuraties, die worden uitgedrukt met een soort abstracte vormpjes:
 
 * ondernemersorganisatie (simpele structuur)
 * machineorganisatie (machinebureaucratie)
@@ -523,11 +532,11 @@ Met de volgende twee extra erbij:
 * zendingsorganisatie
 * politieke organisatie
 
+*Je moet voor dit vak organisaties kunnen indelen (typeren met Remco's woorden) met dit model.*
+
 ### Vijf onderdelen
 
 In zijn model bestaan organisaties uit de volgende vijf onderdelen:
-
-![Onderdelen](mintzberg/components.gif)
 
 * Operating core
 	* Verzorgt productie.
@@ -542,6 +551,8 @@ In zijn model bestaan organisaties uit de volgende vijf onderdelen:
 * Support staff
 	* Ondersteunt de organisatie
 	* Bijv. catering, juridische zaken
+
+![De vijf onderdelen van iedere organisatie](mintzberg/components.gif)
 
 ### Configuraties
 
