@@ -266,17 +266,34 @@ We onderscheiden drie verschillende *pure* ketenvormen:
 * Productgerichte ketens
 * **Productie**-gerichte ketens
 
+
+
 ### Marktgerichte ketens
 
+De marktgerichte keten richt zich op de vraag van de markt.
+Organisaties werken samen om de afnemer maximaal te bedienen.
+Hierbij komt iedereen posititief uit, dus is er geen noodzaak om illegale prijsafspraken te maken of belasting te ontduiken.
 
+**Voorbeeld**: I.p.v. het traditionele zorgsysteem gebruik maken van *zorgstraten*, waarbij de patiënt door een gestroomlijnde rondgang gaat. Dit scheelt iedereen tijd, ook voor de dokters is het efficiënter. 
 
 ### Productgerichte ketens
 
+De *product*gerichte ketens richten zich op het stellen van een bovengrens van het product/dienst die geleverd wordt. Het product/dienst moet kwalitatief zo goed mogelijk zijn.
+
+De concurrent kan moeilijk iets maken dat nóg beter is. Een veel goedkoper product dat van mindere kwaliteit is, is voor de concurrent wel te realiseren.
+
+**Voorbeeld**: Apple vs. Samsung
+
 ### **Productie**-gerichte ketens
+
+Zijn gericht op een effciënt productieproces zodat er de prijs/kwaliteit verhouding hoog is. Echter is de keuze die geboden wordt aan de afnemer beperkt.
+Er wordt dus geproduceerd voor een **gunstige** prijs.
+
+**Voorbeeld**: Optimaliseren voor een duurzame productie, met laag gebruik van grondstoffen en weinig ecologische belasting.
 
 ## Product vs. dienst
 
-(Herhaling van IIBPM)
+*(Herhaling van IIBPM)*
 
 Een product is:
 
@@ -296,17 +313,22 @@ Een dienst:
 
 ## Leiderschapsstijlen
 
-Er zijn veel verschillende modellen voor leiderschapsstijlen. We zullen er een aantal zullen behandelen in dit vak.
+Er zijn veel verschillende modellen voor leiderschapsstijlen.
+We zullen er een aantal behandelen in dit vak.
 
 ### Quinn
 
 Quinn vindt dat iedereen een bepaalde hoeveelheid leiderschap in zich moet hebben, niet alleen bazen.
 
-Hij heeft een diagram gemaakt met flexibiliteit (flexibel vs inflexibel) op de Y-as en de oriëntatie (intern vs extern) op de X-as.
+Hij heeft een model gemaakt met flexibiliteit (flexibel vs inflexibel) op de Y-as en de oriëntatie (intern vs extern) op de X-as.
+
+Met dit model kan er onderzocht worden of het leiderschap binnen een organisatie klopt met de omstandigheden. Daarbij wordt er naar iedereen gekeken (iedereen is een leider), dus niet alleen het bestuur.
+
+Het model van Quinn kan met het [model van Hersey](#hersey) worden gecombineerd.
 
 ![Het model van Quinn](quinn-leiderschap.png)
 
-Hieruit komen de volgende leiderschapsstijlen voort:
+Uit het model komen de volgende leiderschapsstijlen voort:
 
 * Mentor: inzicht in mensen, effectief communiceren
 * Stimulator: teambuilding, conflict management
@@ -352,6 +374,24 @@ Resultaatgericht - het eindproduct staat centraal
     Wordt dat apart beloond?
 
 ### Hersey
+
+Het leiderschapsmodel van Hersey beschrijft de vormen van leiderschap binnen een organisatie.
+
+#### Gedrag
+
+Iemands gedrag kunnen we waarnemen, maar we kunnen niet zien wat de achtergrond/oorzaak hiervan is.
+Het gedrag wordt veroorzaakt door bepaalde *motivatoren* die van buitenaf onzichtbaar zijn.
+De wisselwerking tussen interne (onzichtbare) normen en waarden en het externe (zichtbare) gedrag noemen we *affecten*.
+
+Hersey onderscheidt *ondersteunend gedrag* en *sturend gedrag*.
+
+##### Ondersteunend gedrag
+
+
+
+##### Sturend gedrag
+
+
 
 Op de Y-as de ondersteunendheid van het gedrag, op de X-as de hoeveelheid sturing.
 
@@ -485,6 +525,12 @@ Dit mondt uit in een **overlegcrisis** omdat er teveel werk moet gebeuren (tevee
 
 Als de organisatie het samenwerken en overleg heeft opgelost, komen we in de zesde fase.
 Op basis van *ondernemen en groei* ontwikkelt de organisatie zich verder.
+De organisatie kan zich opsplitsen in verschillende "cellen" met hun eigen creatieve resultaten.
+
+Daarnaast kan de organisatie zich verder ontwikkelen door acquisities, externe partijen die worden bijgevoegd.
+
+Er kan echter nog een **identiteitscrisis** plaatsvinden, omdat de organisatie steeds verder van de oorspronkelijke drijfveren en motivatoren weg gaat.
+Het is mogelijk dat de organisatie hierdoor uiteenvalt in nieuwe "cellen".
 
 ## 5 P's van marketing
 
@@ -520,6 +566,8 @@ Er zijn vier stadia:
 3. Growth
 4. Maturity
 5. Decline
+
+![Stadia van de product levenscyclus](product-life-cycle-stages-plc.jpg)
 
 ### Boston Consulting Group (BCG) matrix
 
@@ -659,6 +707,8 @@ Kenmerken:
 
 #### Zendingsorganisatie
 
+**TODO**
+
 #### Politieke organisatie
 
 De politieke organisatie wil (meer) macht verwerven.
@@ -669,15 +719,23 @@ De politieke organisatie wil (meer) macht verwerven.
 
 ## 5-krachtenmodel van Porter
 
+**TODO**
+
 ## Organisatievormen (KvK) 
 
 ### Eenmanszaak
 
+**TODO**
+
 ### Vennootschap onder Firma (V.O.F.)
+
+**TODO**
 
 ### Besloten Vennootschap (B.V.)
 
-LLC
+Een LLC in Amerika lijkt hetzelfde
+
+**TODO**
 
 ### Naamloze Vennootschap (N.V.)
 
@@ -735,6 +793,8 @@ Dit zijn de voorgaande twee punten, productvernieuwing en marktvernieuwing in é
 
 ### Wat is prijs
 
+TODO
+
 ### Prijsstrategieën
 
 Actief vs. passief prijsbeleid
@@ -782,6 +842,8 @@ Is verboden omdat het de concurrentievorming tegen gaat: de consument heeft geen
 
 ##### Me-too pricing
 
+**TODO**
+
 ### Prijselasticiteit
 
 Formule hier
@@ -798,7 +860,11 @@ Reageren (binnen productiegrenzen) **niet** op een verandering in de hoeveelheid
 
 ### Cirkel van falen
 
+TODO
+
 ### Cirkel van succes
+
+TODO
 
 ## Bronnen
 
