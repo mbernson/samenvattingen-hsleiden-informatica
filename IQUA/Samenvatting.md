@@ -1,5 +1,5 @@
 % Samenvatting IQUA
-% Mathijs Bernson & Jacek Smit
+% Mathijs Bernson
 
 # Kwaliteit in de ICT
 
@@ -13,7 +13,7 @@
 ## Literatuur
 
 * Literatuur en ondersteunend materiaal via ELO
-	* Denk hierbij aan white-papers en filmpjes.
+  * Denk hierbij aan white-papers en filmpjes.
 
 Vóór ieder college graag het materiaal bestuderen.
 
@@ -34,78 +34,78 @@ Inzicht krijgen in:
 * Verantwoordelijkheden m.b.t. kwaliteit
 * Hoe projecten in te richten m.b.t. kwaliteit
 
-## N.b.
+## Opmerkingen
 
 In deze samenvatting wordt op sommige plaatsen opzettelijk verkeerd spatiegebruik toegepast. Dit is gedaan om lange woorden als "Kwaliteits management (systeem) normen" makkelijker leesbaar te maken.
 
 ## Inhoud
 
 * [Intro](#intro)
-	* [Wat is kwaliteit?](#wat-is-kwaliteit)
-		* [Duivelsdriehoek](#duivelsdriehoek)
-		* [Hoe moet je deze vraag op de toets beantwoorden?](#hoe-moet-je-deze-vraag-op-de-toets-beantwoorden)
+  * [Wat is kwaliteit?](#wat-is-kwaliteit)
+    * [Duivelsdriehoek](#duivelsdriehoek)
+    * [Hoe moet je deze vraag op de toets beantwoorden?](#hoe-moet-je-deze-vraag-op-de-toets-beantwoorden)
 * [Projecten](#projecten)
 * [Kwaliteitsmodellen en methoden](#kwaliteitsmodellen-en-methoden)
-	* [(Lean) Six Sigma](#lean-six-sigma)
-		* [DMAIC](#dmaic)
-	* [ISO-normen](#iso-normen)
-		* [ISO 25010](#iso-25010)
-			* [Productkwaliteit](#productkwaliteit)
-			* [Kwaliteit tijdens gebruik](#kwaliteit-tijdens-gebruik)
-		* [ISO 9000](#iso-9000)
-			* [Kwaliteits management (systeem) normen](#kwaliteits-management-systeem-normen)
-		* [ISO 9001](#iso-9001)
-			* [Categorieën (eisen aan kwaliteits management systeem)](#categorieën-eisen-aan-kwaliteits-management-systeem)
-		* [ISO 9004](#iso-9004)
-		* [ISO 19011](#iso-19011)
-		* [ISO 27001 (informatiebeveiliging)](#iso-27001-informatiebeveiliging)
-	* [Capability Maturity Model (CMM)](#capability-maturity-model-cmm)
-	* [CoBIT](#cobit)
-	* [PMBoK](#pmbok)
-	* [INK model (ook wel bekend als het EFQM-model) en PDCA](#ink-model-ook-wel-bekend-als-het-efqm-model-en-pdca)
-		* [Veranderwielen](#veranderwielen)
-			* [IMWR cyclus](#imwr-cyclus)
-		* [5 fundamentele kenmerken](#fundamentele-kenmerken)
-		* [Excellentieniveaus](#excellentieniveaus)
-			* [Fase 1 - Activiteitengeoriënteerd](#fase-1---activiteitengeorienteerd)
-			* [Fase 2 - Procesgeoriënteerd](#fase-2---procesgeorienteerd)
-			* [Fase 3 - Systeemgeoriënteerd](#fase-3---systeemgeorienteerd)
-			* [Fase 4 - Ketengeoriënteerd](#fase-4---ketengeorienteerd)
-			* [Fase 5 - Excelleren en transformeren](#fase-5---excelleren-en-transformeren)
-		* [EFQM valkuilen](#efqm-valkuilen)
-	* [Lean manufacturing (TPS)](#lean-manufacturing-tps)
-		* [Drie mu's](#drie-mus)
+  * [(Lean) Six Sigma](#lean-six-sigma)
+    * [DMAIC](#dmaic)
+  * [ISO-normen](#iso-normen)
+    * [ISO 25010](#iso-25010)
+      * [Productkwaliteit](#productkwaliteit)
+      * [Kwaliteit tijdens gebruik](#kwaliteit-tijdens-gebruik)
+    * [ISO 9000](#iso-9000)
+      * [Kwaliteits management (systeem) normen](#kwaliteits-management-systeem-normen)
+    * [ISO 9001](#iso-9001)
+      * [Categorieën (eisen aan kwaliteits management systeem)](#categorieën-eisen-aan-kwaliteits-management-systeem)
+    * [ISO 9004](#iso-9004)
+    * [ISO 19011](#iso-19011)
+    * [ISO 27001 (informatiebeveiliging)](#iso-27001-informatiebeveiliging)
+  * [Capability Maturity Model (CMM)](#capability-maturity-model-cmm)
+  * [CoBIT](#cobit)
+  * [PMBoK](#pmbok)
+  * [INK model (ook wel bekend als het EFQM-model) en PDCA](#ink-model-ook-wel-bekend-als-het-efqm-model-en-pdca)
+    * [Veranderwielen](#veranderwielen)
+      * [IMWR cyclus](#imwr-cyclus)
+    * [5 fundamentele kenmerken](#fundamentele-kenmerken)
+    * [Excellentieniveaus](#excellentieniveaus)
+      * [Fase 1 - Activiteitengeoriënteerd](#fase-1---activiteitengeorienteerd)
+      * [Fase 2 - Procesgeoriënteerd](#fase-2---procesgeorienteerd)
+      * [Fase 3 - Systeemgeoriënteerd](#fase-3---systeemgeorienteerd)
+      * [Fase 4 - Ketengeoriënteerd](#fase-4---ketengeorienteerd)
+      * [Fase 5 - Excelleren en transformeren](#fase-5---excelleren-en-transformeren)
+    * [EFQM valkuilen](#efqm-valkuilen)
+  * [Lean manufacturing (TPS)](#lean-manufacturing-tps)
+    * [Drie mu's](#drie-mus)
 * [Software ontwikkelingsmethodieken](#software-ontwikkelingsmethodieken)
-	* [Verschillen tussen methoden](#verschillen-tussen-methoden)
-	* [Waterval](#waterval)
-		* [Voordelen](#voordelen)
-		* [Nadelen](#nadelen)
-		* [SDM](#sdm)
-	* [Agile](#agile)
-	* [Scrum](#scrum)
-		* [Rollen](#rollen)
-		* [Sprints](#sprints)
-		* [Daily scrum (meeting)](#daily-scrum-meeting)
-		* [Product backlog](#product-backlog)
-		* [User stories](#user-stories)
-		* [Tools](#tools)
-	* [RUP](#rup)
-		* [Disciplines](#disciplines)
-	* [Continuous delivery](#continuous-delivery)
-		* [Voordelen](#voordelen-1)
-		* [Nadelen](#nadelen-1)
+  * [Verschillen tussen methoden](#verschillen-tussen-methoden)
+  * [Waterval](#waterval)
+    * [Voordelen](#voordelen)
+    * [Nadelen](#nadelen)
+    * [SDM](#sdm)
+  * [Agile](#agile)
+  * [Scrum](#scrum)
+    * [Rollen](#rollen)
+    * [Sprints](#sprints)
+    * [Daily scrum (meeting)](#daily-scrum-meeting)
+    * [Product backlog](#product-backlog)
+    * [User stories](#user-stories)
+    * [Tools](#tools)
+  * [RUP](#rup)
+    * [Disciplines](#disciplines)
+  * [Continuous delivery](#continuous-delivery)
+    * [Voordelen](#voordelen-1)
+    * [Nadelen](#nadelen-1)
 * [Project management methoden](#project-management-methoden)
-	* [Prince2](#prince2)
-		* [Kenmerken](#kenmerken)
-		* [Voordelen](#voordelen-2)
-		* [7 principes](#principes)
-		* [7 thema's](#themas)
-	* [IPMA](#ipma)
+  * [Prince2](#prince2)
+    * [Kenmerken](#kenmerken)
+    * [Voordelen](#voordelen-2)
+    * [7 principes](#principes)
+    * [7 thema's](#themas)
+  * [IPMA](#ipma)
 * [Requirements](#requirements)
-	* [Requirements en agile](#requirements-en-agile)
+  * [Requirements en agile](#requirements-en-agile)
 * [CMMI - Capability Maturity Model Integration](#cmmi---capability-maturity-model-integration)
 * [Auditing](#auditing)
-	
+  
 ## Intro
 
 ### Wat is kwaliteit?
@@ -170,31 +170,31 @@ Bij Six Sigma wordt altijd de de DMAIC-methodiek van procesverbetering gebruikt.
 ![De DMAIC cyclus](dmaic-wall-sign.png)
 
 1. Define
-	* Definieer het probleem. Iedereen is het eens over de inhoud.
+  * Definieer het probleem. Iedereen is het eens over de inhoud.
 2. Measure
-	* Meet de belangrijkste aspecten van het project en verzamel relevante gegevens.
+  * Meet de belangrijkste aspecten van het project en verzamel relevante gegevens.
 3. Analyze
-	* Analyseer de onderzochte gegevens.
-	* Kijk naar oorzaak en gevolg, 
+  * Analyseer de onderzochte gegevens.
+  * Kijk naar oorzaak en gevolg, 
 4. Improve
-	* Verbeter het huidige proces [m.b.v. technieken en andere creatieve oplossingen].
+  * Verbeter het huidige proces [m.b.v. technieken en andere creatieve oplossingen].
 5. Control(e)
-	* Draait vooral om toezicht, controle zorgt daarvoor.
+  * Draait vooral om toezicht, controle zorgt daarvoor.
 
 ### ISO-normen
 
 * [ISO 25010](#iso-25010)
-	* kwaliteit/kwaliteitskenmerken van software
+  * kwaliteit/kwaliteitskenmerken van software
 * [ISO 9000](#iso-9000)
-	* fundamenten (beginsel) van kwaliteits management systemen
+  * fundamenten (beginsel) van kwaliteits management systemen
 * [ISO 9001](#iso-9001)
-	* voldoen aan de eisen van de klant en van de wet
+  * voldoen aan de eisen van de klant en van de wet
 * [ISO 9004](#iso-9004)
-	* richtlijnen over doeltreffendheid en doelmatigheid van het kwaliteits management systeem
+  * richtlijnen over doeltreffendheid en doelmatigheid van het kwaliteits management systeem
 * [ISO 19011](#iso-19011)
-	* **richtlijnen voor uitvoeren van audits**
+  * **richtlijnen voor uitvoeren van audits**
 * [ISO 27001](#iso-27001-informatiebeveiliging)
-	* informatiebeveiliging [in het algemeen]
+  * informatiebeveiliging [in het algemeen]
 
 #### ISO 25010
 
@@ -209,21 +209,21 @@ Het model voor **productkwaliteit** bestaat uit acht hoofdcategorieën die zijn 
 Dit volgende **leren**!
 
 1. Suitability
-	* Functionele geschiktheid, of een *systeem* de juiste behoeften aankaart.
+  * Functionele geschiktheid, of een *systeem* de juiste behoeften aankaart.
 2. Performance
-	* Hoe efficiënt presteert het *systeem*?
+  * Hoe efficiënt presteert het *systeem*?
 3. Compatibility
-	* Kan het *systeem* informatie uitwisselen met andere componenten?
+  * Kan het *systeem* informatie uitwisselen met andere componenten?
 4. Usability 
-	* Kunnen de gebruikers van het *systeem* er effectief mee werken?
+  * Kunnen de gebruikers van het *systeem* er effectief mee werken?
 5. Reliability (betrouwbaarheid)
-	* Werkt het *systeem* onder de gewenste condities, binnen bepaalde tijd?
+  * Werkt het *systeem* onder de gewenste condities, binnen bepaalde tijd?
 6. Security
-	* Juiste toegang en autorisatie.
+  * Juiste toegang en autorisatie.
 7. Portability (overdraagbaarheid)
-	* Kan het *systeem* efficiënt worden overgezet naar andere hardware/software/omgevingen?
+  * Kan het *systeem* efficiënt worden overgezet naar andere hardware/software/omgevingen?
 8. Maintainability
-	* Kan het *systeem* gewijzigd worden door de beheerders?
+  * Kan het *systeem* gewijzigd worden door de beheerders?
 
 ##### Kwaliteit tijdens gebruik
 
@@ -231,16 +231,16 @@ Naast het model voor productkwaliteit beschrijft de norm ook een model voor **kw
 Dit ook **leren**!
 
 1. Effectiveness
-	* Kunnen de gebruikers hun doelen *nauwkeurig* en *volledig* bereiken?
+  * Kunnen de gebruikers hun doelen *nauwkeurig* en *volledig* bereiken?
 2. Efficiency
-	* Welke hulpbronnen zijn er gebruikt in verhouding tot de *nauwkeurigheid* en *volledigheid* waarmee gebruikers hun doelen behalen?
-	* **Wie verzint dit soort dingen?**
+  * Welke hulpbronnen zijn er gebruikt in verhouding tot de *nauwkeurigheid* en *volledigheid* waarmee gebruikers hun doelen behalen?
+  * **Wie verzint dit soort dingen?**
 3. Satisfaction
-	* Worden de gebruikersbehoeften vervuld door het *systeem*?
+  * Worden de gebruikersbehoeften vervuld door het *systeem*?
 4. Freedom from risk
-	* Beperkt het *systeem* de potentiële risico's, in de breedste zin van het woord?
+  * Beperkt het *systeem* de potentiële risico's, in de breedste zin van het woord?
 5. Context coverage
-	* Hoe breed is het *systeem* inzetbaar?
+  * Hoe breed is het *systeem* inzetbaar?
 
 #### ISO 9000
 
@@ -317,33 +317,33 @@ Processen overlappen elkaar en er vindt interactie plaats gedurende een project 
 Processen worden beschreven in:
 
 * Input
-	* Documenten
-	* Plannen
-	* Ontwerpen
+  * Documenten
+  * Plannen
+  * Ontwerpen
 * Tools en technieken
 * Output
-	* Documenten
-	* Producten
+  * Documenten
+  * Producten
 
 Er zijn tien kennisgebieden. Tien dingen die binnen het **project** ge-*managed** worden:
 
 * Stakeholders
 * Communicatie
-	* respecteren van de afspraken over communicatie en rapporterings-lijnen.
+  * respecteren van de afspraken over communicatie en rapporterings-lijnen.
 * Human resources
-	* controleren of alle nodige competenties aanwezig zijn in het projectteam.
+  * controleren of alle nodige competenties aanwezig zijn in het projectteam.
 * Risico's
-	* alle mogelijke operaties opzetten om potentiële extra uitdagingen onder controle te houden.
+  * alle mogelijke operaties opzetten om potentiële extra uitdagingen onder controle te houden.
 * Integratie (van wat?)
-	* Integreren van processen in het totaalplaatje van het project.
+  * Integreren van processen in het totaalplaatje van het project.
 * Kwaliteit
-	* controleren of het project nog steeds tegemoet komt aan alle contractueel vastgelegde eisen van de opdrachtgever.
+  * controleren of het project nog steeds tegemoet komt aan alle contractueel vastgelegde eisen van de opdrachtgever.
 * Bereik
 * Bemiddeling
 * Tijd
-	* controleren of het project nog steeds binnen de afgesproken tijdslimieten klaar zal zijn.
+  * controleren of het project nog steeds binnen de afgesproken tijdslimieten klaar zal zijn.
 * Kosten
-	* controleren of het project binnen de afgesproken budgetten gerealiseerd kan worden.
+  * controleren of het project binnen de afgesproken budgetten gerealiseerd kan worden.
 
 ### INK model (ook wel bekend als het EFQM-model) en PDCA
 
@@ -436,11 +436,11 @@ Lean manufacturing is een management methode die maximale waarde voor de klant w
 #### Drie mu's
 
 * Muda
-	* **Verspilling**, denk aan niet gevraagde functionaliteiten implementeren
+  * **Verspilling**, denk aan niet gevraagde functionaliteiten implementeren
 * Mura
-	* **Ongelijkheid** in productieproces, denk aan tempowisselingen
+  * **Ongelijkheid** in productieproces, denk aan tempowisselingen
 * Muri
-	* Boven je machine- of man-capaciteit werken
+  * Boven je machine- of man-capaciteit werken
 
 ## Software ontwikkelingsmethodieken
 
@@ -449,13 +449,13 @@ Software ontwikkelingsmethodieken worden gebruikt bij het ontwikkelen van softwa
 Er bestaan veel verschillende methoden voor software ontwikkeling:
 
 * Waterval
-	* SDM
+  * SDM
 * Iteratieve methoden (IAD)
 * Agile
-	* Scrum
-	* Agile Unified Process
-	* Extreme Programming (XP)
-	* Test-driven Development (TDD)
+  * Scrum
+  * Agile Unified Process
+  * Extreme Programming (XP)
+  * Test-driven Development (TDD)
 * Rational Unified Process (RUP)
 * CDJ
 
@@ -495,17 +495,17 @@ SDM (**system development methodology**) valt onder de watervalmethode. Het word
 SDM bestaat uit de volgende fasen:
 
 1. Definitiestudie
-	* Onderzoek of het project uitvoerbaar/haalbaar is.
+  * Onderzoek of het project uitvoerbaar/haalbaar is.
 2. Basisontwerp
-	* Initieel ontwerp van het systeem.
+  * Initieel ontwerp van het systeem.
 3. Detail ontwerp
-	* Er wordt voortgeborduurd op het basisontwerp.
+  * Er wordt voortgeborduurd op het basisontwerp.
 4. Realisatie
-	* Het systeem wordt gebouwd volgens het ontwerp.
+  * Het systeem wordt gebouwd volgens het ontwerp.
 5. Invoering
-	* Het opgeleverde systeem wordt geïnstalleerd.
+  * Het opgeleverde systeem wordt geïnstalleerd.
 6. Gebruik en beheer
-	* De organisatie gaat het systeem overnemen, maar er zijn richtlijnen voor het beheer en onderhoud.
+  * De organisatie gaat het systeem overnemen, maar er zijn richtlijnen voor het beheer en onderhoud.
 
 ### Agile
 
@@ -534,10 +534,10 @@ Onderdelen van Scrum:
 * Product owner
 * Scrum master
 * Team (multidisciplinair)
-	* Programmeurs
-	* Testers
-	* Designers
-	* Etc
+  * Programmeurs
+  * Testers
+  * Designers
+  * Etc
 
 #### Sprints
 
@@ -642,7 +642,7 @@ Soms zien we "Prince In Name Only" (PINO), of laat men delen van PRINCE2 vallen.
 #### Kenmerken
 
 * Gericht op zakelijke rechtvaardiging
-	* Business case staat centraal
+  * Business case staat centraal
 * Geen organisatiestructuur voor het project management team
 * Planning is gebaseerd op producten
 * Projecten worden onderverdeeld in beheersbare fasen
@@ -652,7 +652,7 @@ Soms zien we "Prince In Name Only" (PINO), of laat men delen van PRINCE2 vallen.
 
 * Projectbeheersing
 * Rechtvaardiging
-	* Op risico's wordt ook gelet
+  * Op risico's wordt ook gelet
 * iets met structuur
 * Flexibele beslismomenten
 * 
@@ -663,9 +663,9 @@ Soms zien we "Prince In Name Only" (PINO), of laat men delen van PRINCE2 vallen.
 * Leren van ervaring
 * Gedefinieerde rollen en verantwoordelijkheden
 * Managen per fase
-	* **Prince2 projecten worden per fase gepland**.
-	* Een fase moet afgerond en goedgekeurd worden door de stuurgroep (de **project board**).
-	* Pas daarna mag aan de volgende fase worden begonnen.
+  * **Prince2 projecten worden per fase gepland**.
+  * Een fase moet afgerond en goedgekeurd worden door de stuurgroep (de **project board**).
+  * Pas daarna mag aan de volgende fase worden begonnen.
 * Managen 'by' exception
 * Productgerichte aanpak
 * Op maat maken voor de projectomgeving
