@@ -1,8 +1,10 @@
-# Samenvattingen
+# [Samenvattingen](http://samenvatten.metmathijs.nl)
 
-Summaries for computer-science related courses at [Hogeschool Leiden](http://www.hsleiden.nl/informatica/) (HBO).
+Course summaries for HBO computer-science (informatica) at [Hogeschool Leiden](http://www.hsleiden.nl/informatica/).
 
-## Generating HTML, EPUB, etc.
+This repository contains the markdown source files, the rendered summaries are [available on the web](http://samenvatten.metmathijs.nl).
+
+## Generating HTML and EPUB formats
 
 The build and watch scripts require [Pandoc](http://johnmacfarlane.net/pandoc/) and [Kicker](https://github.com/alloy/kicker) to be installed, respectively.
 
