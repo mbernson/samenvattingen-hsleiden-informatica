@@ -28,7 +28,7 @@ De begrippen die je moet kennen voor dit vak zijn onder andere:
 * Authentication, Accountability,Non Repudiation
 * Threats, Attacks,Security Services,Security Mechanisms,
 * Security Policies
-* Network Aspects ,OSI-TCPIP Security, Bandwidth, Channel Capacity
+* Network Aspects, OSI-TCPIP Security, Bandwidth, Channel Capacity
 * Error Detection and Correction Coding, Hash Coding
 * Shannons Theorems on Capacity, Source Coding, Huffmann Coding
 * Parity Checking, Checksums, Cyclic Redundancy Coding
@@ -44,7 +44,7 @@ Technieken:
 
 * De verschillen tussen symmetrische en asymmetrische encryptie beschrijven* De stappen bij Kerberos authenticatie beschrijven en aangeven welke beveiligingsdoeleinden door de verschillende stappen worden geleverd* De stappen bij Public Key Encryptie beschrijven* De stappen bij Private Key Encryptie beschrijven* De verschillende typen en de werking van firewalls beschrijven* De functie en werking van een Demilitarized Zone (DMZ) beschrijven* De functie en werking van een Virtual Private Network (VPN) 
 
-Behandeld worden de onderwerpen beveiligingsbeleid, beveiligingsrisico’s, internetdiensten, firewalls, DMZ, VPN, error detection en correction, symetrische / asymetrische / public key encryptie, crypto-analyse, intrusion detection, logische en fysieke beveiliging, authenticatie, Kerberos, packet filtering.
+Behandeld worden de onderwerpen beveiligingsbeleid, beveiligingsrisico’s, internetdiensten, firewalls, DMZ, VPN, error detection en correction, symmetrische / asymmetrische / public key encryptie, crypto-analyse, intrusion detection, logische en fysieke beveiliging, authenticatie, Kerberos, packet filtering.
 
 ## Toets tips
 
@@ -128,7 +128,7 @@ Een passieve aanval verandert niks aan systeem *resources*.
 Een actieve aanval doet dit wel.
 
 Passieve aanvallen zijn moeilijk om te detecteren, maar er zijn manieren om hun success te **voorkomen**.
-Het is moelijk om actieve aanvallen te voorkomen, omdat er teveel mogelijke fysieke, software en netwerk kwetsbaarheden zijn. Bij actieve aanvallen ligt de nadruk op het **detecteren**.
+Het is moeilijk om actieve aanvallen te voorkomen, omdat er teveel mogelijke fysieke, software en netwerk kwetsbaarheden zijn. Bij actieve aanvallen ligt de nadruk op het **detecteren**.
 
 #### Passive attack
 
@@ -154,6 +154,8 @@ Deel van een legitiem bericht wordt veranderd om een ongeautoriseerd effect te b
 
 ##### Denial of service
 
+Het normale gebruik van een communicatiemiddel blokkeren, bijvoorbeeld door het te overladen met berichten.
+
 ### X.800 security services
 
 * Authenticatie
@@ -176,30 +178,30 @@ TODO
 
 ## Encryptie
 
-### Terminologie
+Er worden twee soorten encryptie behandeld: [**symmetrische encryptie**](#symmetrische-encryptie) en [**public-key encryptie**](#public-key-encryptie).
 
-* Plaintext
-* Ciphertext
-
-### Symmetrisch vs. asymmetrisch
-
-#### Symmetrisch
+### Symmetrischche encryptie
 
 * Symmetrische encryptie bestaat uit 5 delen:
-	* Plaintext
-	* Encryptie algoritme
-	* Geheime sleutel (secret key)
-	* Ciphertext
-	* Decryptie algoritme
+	* **Plaintext** - Het oorspronkelijke bericht
+	* **Encryptie algoritme** - Die de plaintext transofrmeert
+	* **Geheime sleutel** (secret key) - Dient als invoer voor het algoritme
+	* **Ciphertext** - *Scrambled* uitvoer van het algoritme
+	* **Decryptie algoritme** - Transformeert de ciphertext
 
-De veiligheid van symmetrische encryptie valt of staat met de geheimhouding van de **geheime sleutel**.
+De veiligheid van symmetrische encryptie valt of staat met de **geheimhouding** van de **geheime sleutel**.
 
 Voor het veilig gebruiken van symmetrische encryptie zijn er twee voorwaarden:
 
 1. Er wordt een sterk algoritme gebruikt.
 2. De secret key blijft geheim, en wordt op een veilige manier uitgewisseld.
 
-#### Asymmetrisch
+### Public-key encryptie
+
+* Asymmetrisch
+* Niet inherent veiliger
+* Geen vervanger van symmetrische encryptie vanwege overhead
+* Key distributie is (wederom) de bottleneck
 
 ### Algoritmen
 
@@ -238,12 +240,10 @@ Een voorbeeld hiervan is RC4.
 
 ### Feistel cipher structuur
 
-### Public key encryptie
-
-* Asymmetrisch
-* Niet inherent veiliger
-* Geen vervanger van symmetrische encryptie vanwege overhead
-* Key distributie is (wederom) bottleneck
-
 #### Diffie Helman key exchange
 
+## Parity check
+
+Met een parity bit
+
+## Cyclic Redundancy check (CRC)
