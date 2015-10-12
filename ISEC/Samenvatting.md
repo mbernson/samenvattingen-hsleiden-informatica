@@ -42,7 +42,13 @@ De begrippen die je moet kennen voor dit vak zijn onder andere:
 
 Technieken:
 
-* De verschillen tussen symmetrische en asymmetrische encryptie beschrijven* De stappen bij Kerberos authenticatie beschrijven en aangeven welke beveiligingsdoeleinden door de verschillende stappen worden geleverd* De stappen bij Public Key Encryptie beschrijven* De stappen bij Private Key Encryptie beschrijven* De verschillende typen en de werking van firewalls beschrijven* De functie en werking van een Demilitarized Zone (DMZ) beschrijven* De functie en werking van een Virtual Private Network (VPN) 
+* De verschillen tussen symmetrische en asymmetrische encryptie beschrijven
+* De stappen bij Kerberos authenticatie beschrijven en aangeven welke beveiligingsdoeleinden door de verschillende stappen worden geleverd
+* De stappen bij Public Key Encryptie beschrijven
+* De stappen bij Private Key Encryptie beschrijven
+* De verschillende typen en de werking van firewalls beschrijven
+* De functie en werking van een Demilitarized Zone (DMZ) beschrijven
+* De functie en werking van een Virtual Private Network (VPN) 
 
 Behandeld worden de onderwerpen beveiligingsbeleid, beveiligingsrisico’s, internetdiensten, firewalls, DMZ, VPN, error detection en correction, symmetrische / asymmetrische / public key encryptie, crypto-analyse, intrusion detection, logische en fysieke beveiliging, authenticatie, Kerberos, packet filtering.
 
@@ -234,7 +240,10 @@ C = E(K3, D(K2, E(K1, P)))
 #### Stream cipher vs. block cipher
 
 Een *block cipher* verwerkt de input als een blok, in één keer.
-Een *stream cipher* doet dit als een continue stroom van data. Het kan een plain text encrypten terwijl de data binnenkomt, byte voor byte.
+
+Een *stream cipher* doet dit als een continue stroom van data. 
+
+Het kan een plain text encrypten terwijl de data binnenkomt, byte voor byte.
 
 Een voorbeeld hiervan is RC4.
 
