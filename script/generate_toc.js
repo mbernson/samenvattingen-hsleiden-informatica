@@ -21,7 +21,7 @@ function generate_toc(depth) {
     }
     console.log(nodes);
 
-    [].forEach.call($$(nodes.join(',')), function(n) {
+    [].forEach.call(document.querySelectorAll(nodes.join(',')), function(n) {
         var nodeName = n.nodeName.toLowerCase();
         var indent;
         switch(nodeName) {

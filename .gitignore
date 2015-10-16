@@ -8,3 +8,4 @@ script/deploy
 Thumbs.db
 Icon*
 .dropbox
+*.mindnode
