@@ -359,8 +359,6 @@ Pad waarin gezocht wordt naar executables, wanneer je niet het volledige pad naa
 
 Volgorde? Aliases?
 
-
-
 #### 103.2 Process text streams using filters
 
 #### 103.3 Basic file management 
