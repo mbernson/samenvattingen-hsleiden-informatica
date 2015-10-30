@@ -756,3 +756,7 @@ We onderscheiden grofweg 4 vormen van NoSQL:
 * Cassandra
 * Mongo
 * HBase
+
+# Bronnen
+
+* https://github.com/henryr/cap-faq

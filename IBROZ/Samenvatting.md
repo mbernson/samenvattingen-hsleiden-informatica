@@ -11,10 +11,9 @@
 
 ## Literatuur
 
-* Boek X - ISBN 000000000
 * The Shallows, Nicholas Carr - ISBN 9780393339758
-* Slides Z
-* [Reader A](http://example.com)
+* Slides
+
 
 ## Leerdoelen
 
