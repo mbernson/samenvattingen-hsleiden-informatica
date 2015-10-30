@@ -54,7 +54,9 @@ De enige markt waar het Linux niet is gelukt om in door te dringen is die van de
 
 ### Linux en Unix
 
-TODO, plaatje erbij!
+TODO
+
+[![](Unix_history-simple.svg) Tijdlijn van Unices (klik voor vergroting)](Unix_history-simple.svg)
 
 ### Leertips
 
@@ -254,14 +256,16 @@ Processen beëindigen.
 
 Linux gebruikt *runlevels* om te bepalen welke features op het moment beschikbaar zijn.
 
-| Runlevel |    Doel    |
-| 0 | Transitie van levels |
+----------------------------
+| Runlevel  |    Doel    |
+| 0         | Transitie van levels |
 | 1, s of S | Single-user mode |
-| 2 | Debian multi-user (grafisch) |
-| 3 | Fedora/Mandriva/RH multi-user met console login |
-| 4 | Ongedefinieerd, of voor eigen gebruik |
-| 5 | Fedora/Mandriva/RH multi-user met grafische login |
-| 6 | Reboot het systeem (transitie) |
+| 2         | Debian multi-user (grafisch) |
+| 3         | Fedora/Mandriva/RH multi-user met console login |
+| 4         | Ongedefinieerd, of voor eigen gebruik |
+| 5         | Fedora/Mandriva/RH multi-user met grafische login |
+| 6         | Reboot het systeem (transitie) |
+----------------------------
 
 In `/etc/inittab` staan alle services die bij een bepaald runlevel moeten werken.
 
@@ -285,7 +289,15 @@ APT/dpkg, RPM, yum, pacman...
 
 #### 102.1 Hard disk layout
 
+Partitioneren van schijven
+
+Partitie tabellen
+
+Mount points?
+
 #### 102.2 Boot manager installeren
+
+Zie [het kopje over bootloaders](#bootloaders).
 
 #### 102.3 Shared libraries
 
@@ -297,11 +309,52 @@ APT/dpkg, RPM, yum, pacman...
 
 Core utils?
 
+#### ls, mv, cp, rm, touch, file
+
+Info over en manipulatie van bestanden.
+
+* ls -> directory listing
+* mv -> move [source] [target]
+* cp -> copy (-r = recursive) [source] [target]
+* rm -> remove (-f = force) [target]
+* rmdir -> rm -r
+* touch -> creëer bestand [target] of update de modified timestamp
+* file -> bestands informatie
+
+#### dd
+
+Rauwe (binaire) kopie van- en naar bestanden of devices maken.
+
+#### Compressie
+
+Tar is de meestgebruikte compressiemethode op UNIX/Linux systemen.
+
+##### gzip, gunzip, zcat
+
+TAR ezelsbruggetje:
+
+> tar xzf = eXtract Ze Files
+
+> tar czf = Compress Ze Files
+
+##### xz
+
+(De)compressie van .xz/.lzma bestanden. Syntax is vrijwel hetzelfde als die van gzip.
+
+##### CPIO
+
+Manipuleert en maakt archive bestanden (tar, binary, (old) ASCII, CRC, HPUX).
+Het heeft drie modi:
+
+1. Copy-out mode - maakt een archief en kopieert bestanden ernaartoe
+2. Copy-in mode - haalt data uit een archief
+3. Copy-pass mode - kopieert een directory tree van één plaats naar een ander
+
 #### 103.1 Work on the command line
 
 ##### Command line basics
 
-Op Linux zul je vaak werken met een command line. Hierbij gebruikt je altijd een programma dat we de **shell** noemen. Het accepteert tekst invoer en geeft je tekst terug.
+Op Linux zul je veel werken met een command line. Hierbij gebruikt je altijd een programma dat we de **shell** noemen. Het accepteert tekst invoer en geeft je tekst terug.
 
 ##### Verschillende shells
 
@@ -349,15 +402,18 @@ Verdeeld in sections
 8. System administration commands (programs run mostly or exclusively by root)
 9. Kernel routines
 
-##### stdin, stdout en stderr
-
-http://www.linusakesson.net/programming/tty/
-
 #### $PATH
 
 Pad waarin gezocht wordt naar executables, wanneer je niet het volledige pad naar de executable hebt gegeven.
 
 Volgorde? Aliases?
+
+#### Globbing
+
+Globbing wil zeggen dat een padnaam wordt uitgebreid door de shell. Dit is wat er gebeurt wanneer we bijv. wildcards (*) gebruiken.
+
+We geven bijvoorbeeld het commando `mv -n *.txt` in een map waar `foo.txt`, `bar.txt` en `archive.zip` staan.
+De shell breidt dit automatisch uit naar: `mv -n foo.txt bar.txt`. Dit is het daadwerkelijke commando dat uitgevoerd wordt.
 
 #### 103.2 Process text streams using filters
 
@@ -365,13 +421,111 @@ Volgorde? Aliases?
 
 #### 103.4 Use streams, pipes and redirects
 
+Streams, pipes and redirects zijn belangrijk om te leren in Linux/UNIX. 
+
+Linux behandelt de input en output van programma's allebei als *streams*. Streams zijn een gestandaardiseerde interface, waarmee de invoer en uitvoer van programma's beheerd en gekoppeld kan worden.
+
+##### stdin, stdout en stderr
+
+De drie belangrijke soorten streams zijn:
+
+1. stdin - standard input
+2. stdout - standard output
+3. stderr - standard error output
+
+#### Redirection
+
+*Redirection* wil zeggen dat we de input of output ergens anders naartoe sturen. Hiervoor zijn een aantal operators beschikbaar in de shell.
+
+Voorbeelden:
+
+* `psql mijndatabase < dump.sql`
+	* Stuur de inhoud van `dump.sql` naar het commando psql.
+* `cat >> ~/.ssh/authorized_keys`
+	* Stuur de inhoud van het toetsenbord naar het bestand authorized_keys.
+
+#### File combining commands
+
+##### Join
+
+Met het `join` commando kunnen we een relationele join doen op twee tekstbestanden die meerdere kolommen bevatten.
+
+Het commando is echter vrij beperkt; de tekstbestanden moeten allebei op **dezelfde volgorde** staan.
+
+Voorbeeld: `join -1 3 -2 2 cameras.txt lenses.txt`
+
+##### Paste
+
+Dit commando combineert twee bestanden regel voor regel. Hierbij wordt regel 1 uit bestand 1 gevolgd uit regel 1 uit bestand 2, enzovoort.
+
+Use case is bijv. om twee CSV-bestanden te combineren tot één tabel, met alle kolommen uit beide bestanden.
+
 #### 103.5 Create, monitor and kill processes
+
+##### Procesinformatie
+
+Er zijn een aantal commando's om informatie te krijgen over draaiende processen:
+
+* `ps` - Geeft eenmalig een lijst met draaiende processen (volgens de gegeven opties)
+* `top` - Geeft een procesoverzicht dat voortdurend ververst wordt met een instelbare interval.
+* `htop` - Hetzelfde als `top`, maar met mooie kleurtjes.
+
+##### Job control
+
+Binnen onze shell kunnen we meerdere processen beheren. Met ctrl-z stuur je een signaal naar de shell om het proces op de voorgrond te *pauzeren* (suspend). Hierdoor kunnen we andere dingen doen.
+
+Met het commando `jobs` krijg je een overzicht van alle processen in de shell. Ieder proces is genummerd, beginnend bij 1. Let op: deze nummering **staat los** van de PIDs.
+
+Met `fg [number]` roep je een job naar de voorgrond, en hervat deze indien nodig. `bg [number]` laat de job doorlopen in de achtergrond als deze gepauzeerd was.
+
+Een programma kan ook direct naar de achtergrond worden gestuurd door een *&* (ampersand) achter het commando te zetten.
+
+##### Signals
+
+<img src="Kill_Linux.jpg" alt="Process killing" style="width: 35%; float: right; border: 0;">
+
+Processen in de kernel kun je manipuleren door de kernel er **signalen** naartoe te laten sturen. Er zijn rond de 64 signalen gedefinieerd. Je kunt zien welke signalen jouw systeem ondersteunt door `kill -l` uit te voeren.
+
+Een aantal van de belangrijkste signalen zijn:
+
+* SIGINT (interrupt) - Stop op een nette manier
+* SIGKILL - Forceer stop, zonder cleanup
+* SIGQUIT - Eindig het proces en geef een *core dump*
+* SIGTSTP - Pauzeer executie
+* SIGSEGV - Krijgt het proces als het ongeldig virtueel geheugen probeert te benaderen
+* SIGTERM - Eindig het proces, bijna gelijk aan SIGINT
+
+Sommige toetscombinaties in de shell sturen ook een signaal naar het proces dat op de voorgrond draait:
+
+* Ctrl-C stuurt een `SIGINT`
+* Ctrl-Z stuurt een `SIGTSTP`
+* Ctrl-\ stuurt een `SIGQUIT`
+
+Met het commando `kill` kunnen we een signaal naar één of meer processen sturen. Dit commando heeft de volgende vorm: `kill [options] <pid> [...]`.
+
+Het `killall` commando is een variant op het `kill` commando. Deze killt processen op basis van hun naam i.p.v. hun PID. **Let op**: Op sommige niet-Linux systemen zorgt het `killall` commando ervoor dat **alle processen** onder de huidige gebruiker gekilld worden. Dus RTFM.
+
+**Tip**: lees het artikel [The TTY demystified](http://www.linusakesson.net/programming/tty/) door Linus Akesson voor diepte informatie over dit onderwerp!
 
 #### 103.6 Modify execution priorities
 
+Ieder proces in Linux/UNIX krijgt een prioriteit toegewezen. Aan de hand hiervan bepaalt de kernel hoeveel CPU-tijd ieder proces krijgt. Deze prioriteit is een heel getal tussen -20 en 19.
+Standaard is deze 0. De CPU-prioriteit in Linux/UNIX wordt ook wel *nice[ness]* genoemd.
+
+**Let op**: Hoe lager het getal, hoe hoger de prioriteit.
+
+Met de commando's `nice` en `renice` bepaal je wat voor prioriteit een proces heeft. `nice` start een proces met een gegeven prioriteit, en `renice` stelt de prioriteit van een lopend proces bij.
+
+Voorbeeldjes:
+
+* `nice -n priority command`
+* `renice priority [[-p] pids] [[-g] pgrps] [[-u] users]`
+
 #### 103.7 Regular expressions
 
-#### 103.8 vi en vim
+TODO
+
+#### 103.8 vi (en vim)
 
 Vi is een text editor op de command-line. De naam staat voor 'visual' [editor]. De Nederlander Bram Molenaar heeft later 'vim' (vi-improved) geschreven. Deze voegt een heleboel functionaliteit toe bovenop vi, maar de basisprincipes blijven hetzelfde.
 
@@ -420,13 +574,19 @@ Tekst doorzoeken kan met `/` en `?`. Slash zoekt vooruit, vraagteken zoekt achte
 
 #### 104.2 Filesystem integrity
 
+fsck
+
 #### 104.3 Mounting and unmounting
+
+mount umount
 
 #### 104.4 Disk quotas
 
 #### 104.5 Permissions and ownership
 
 #### 104.6 Hard links and symbolic links
+
+Al een beetje behandeld
 
 #### 104.7 Find files and place files
 
@@ -459,6 +619,10 @@ X-window system.
 ### Netwerk fundamenten
 
 ### Security
+
+## Verklarende woordenlijst
+
+* RTFM - Read the f*cking manpage/manual
 
 ## Bronnen
 
