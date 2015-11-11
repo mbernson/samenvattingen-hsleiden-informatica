@@ -27,7 +27,7 @@ De student kent voorbeelden van problemen die zich efficiënt laten oplossen en
 
 Daarnaast ken de student voorbeelden van problemen die zich enkel in **onrealistische tijd en ruimte** laten oplossen en problemen die partieel- correct of helemaal niet correct oplosbaar zijn.
 
-De student kan parallelle algoritmes ontwerpen en kent de beperkingen op het gebied van de Orde van het algoritme.
+De student kan parallelle algoritmes ontwerpen en kent de beperkingen op het gebied van de **Orde** van het algoritme.
 
 ## Inhoud
 
@@ -51,7 +51,7 @@ De student kan parallelle algoritmes ontwerpen en kent de beperkingen op het geb
 		* [Encoding](#encoding)
 		* [Decoding](#decoding)
 * [Grafentheorie](#grafentheorie)
-* 
+*
 ## Voorbeeldvragen toets
 
 > Waarom zou je in-place sorting toepassen, en waar wordt dit gebruikt?
@@ -70,6 +70,8 @@ Geeft de (tijd)complexiteitsgraad van een algoritme aan. Dat wil zeggen hoe het 
 
 > Indicatie van hoe de tijd die het algoritme nodig heeft toeneemt naarmate de grootte van de invoer toeneemt.
 
+![Big-O complexiteit visueel in een grafiek](big-o-complexity.png)
+
 ## P vs. NP
 
 *P = NP* is een belangrijk onopgelost probleem in de informatica. Het stelt dat:
@@ -77,6 +79,12 @@ Geeft de (tijd)complexiteitsgraad van een algoritme aan. Dat wil zeggen hoe het 
 > Problemen die moeilijk op te lossen zijn, ook moeilijk te controleren zijn.
 
 **P** zijn de problemen die in polynomiale tijd opgelost kunnen worden. **NP** zijn problemen waarvan het *antwoord* in polynomiale tijd gecontroleerd kan worden.
+
+## Halting problem (stopprobleem)
+
+Het *halting problem* is het probleem of, gegeven een computerprogramma, er vastgesteld kan worden of het programma ooit nog zal stoppen of eeuwig door blijft gaan.
+
+Alan Turing bewees in 1936 dat een algoritme voor het oplossen van het *halting problem* voor alle mogelijke combinaties van programma's en invoer niet kan bestaan.
 
 ## Sorteeralgo's
 
@@ -112,7 +120,24 @@ void sort(Comparable[] a) {
 
 ### Mergesort
 
-Werking: Pak van een array telkens
+* Om een array te sorteren:
+	* Splits het in twee helften
+	* Sorteer de twee helften recursief
+	* Voeg de resultaten samen (merge)
+
+Eén aantrekkelijke eigenschap van *merge sort* is dat het een array van N elementen gegarandeerd sorteert in tijd proportioneel tot N log N.
+
+Zie pagina's **270 en 271 van Sedgewick**.
+
+![Visueel overzicht van merge sort](mergesort_visual.png)
+
+### Quicksort
+
+Quicksort is gebaseerd op het *verdeel en heers* principe. Het maakt twee *partities* (subarrays) van de array, en sorteert deze onafhankelijk.
+
+Quicksort is een aanvulling op *merge sort*. Het verschil is als volgt:
+
+> Bij *merge sort* maken we twee subarrays en mergen we deze samen. Bij quicksort rangschikken we het zo, dat na het sorteren van de twee subarrays de hele array gesorteerd is!
 
 ### Heapsort
 
@@ -120,11 +145,7 @@ TODO
 
 ### Bubblesort
 
-Zeer inefficient
-
-### Quicksort
-
-TODO
+Zeer inefficient!
 
 ## Zoek algo's
 
@@ -134,11 +155,11 @@ De complexiteit van zoek algo's is als volgt:
 
 | Algoritme     | Best    | Average | Worst   |
 |---------------|---------|---------|---------|
-| Binary search |         | log n   |         |
+| Binary search | ???     | log n   | ???     |
 
 ## Herkennen van complexiteit
 
-Vaak is van de code af te leiden wat de complexiteit van het geïmplementeerde algoritme is. Dit gaat niet altijd op, maar 
+Vaak is van de code af te leiden wat de complexiteit van het geïmplementeerde algoritme is. Dit gaat niet altijd op, maar
 
 ## Datastructuren
 
@@ -161,6 +182,8 @@ TODO
 #### AVL tree
 
 Georgy Adelson-Velsky and Evgenii Landis' tree, named after the inventors.
+
+Lookup, insert en delete gebeuren allemaal in O(log n) tijd.
 
 ## Compressie
 
@@ -201,7 +224,7 @@ TODO, zie isec
 9		         add P + C to the string table
 10           P = C
 11   END WHILE
-12   output code for P 
+12   output code for P
 ```
 
 #### Decoding
@@ -232,3 +255,4 @@ TODO
 
 * http://www.kennislink.nl/publicaties/p-np-dat-is-de-vraag
 * https://en.wikipedia.org/wiki/P_versus_NP_problem
+* http://bigocheatsheet.com/
