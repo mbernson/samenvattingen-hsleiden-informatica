@@ -301,9 +301,87 @@ Zie [het kopje over bootloaders](#bootloaders).
 
 #### 102.3 Shared libraries
 
-#### 102.4 Debian package management
+#### Package management
 
-#### 102.5 RPM en YUM package management
+Software onder Linux wordt doorgaans beheerd d.m.v. *package managers*. Deze tools automatiseren de installatie, de-installatie en upgrades van software op het systeem.
+
+Er bestaan twee grote package managers: RPM en Debian package managers.
+
+Bij het begrijpen van package management zijn de volgende begrippen van belang:
+
+* **Packages**: een verzameling bestanden die geïnstalleerd worden op het systeem. Bevat daarnaast metadata over zichzelf.
+* **Installed file database**: iedere package manager houdt bij welke bestanden en packages geïnstalleerd zijn in een vorm van een database.
+* **Depencendies (afhankelijkheden)**: de package manager houdt bij welke packages van elkaar afhankelijk zijn.
+* **Checksums**: er wordt gecontroleerd of de packages en bestanden geldig zijn d.m.v. checksums.
+* **Upgrades en de-installatie**: Omdat er een bestandenlijst wordt bijgehouden is het makkelijk om packages te updaten of te de-installeren. Deze handelingen vervangen of verwijderen ieder bestand van de package.
+* **Binary package creation**: Je kunt zelf binaries (gecompileerde) packages creëren als je wilt.
+
+##### 102.4 Debian package management
+
+Het basis commando van Debian package management is `dpkg`. De belangrijkste subcommando's zijn:
+
+* `dpgk -i` - installeer package
+* `dpgk -r` - verwijder package, maar behoud de configuratie ervan.
+* `dpgk -P|--purge` - verwijder package inclusief de configuratie
+
+APT (advanced package tool) is een suite van commando's die met werken met dpkg makkelijker maken. Zo geeft `apt-cache` informatie over de Debian package database.
+Het commando `apt-get` lijkt op `yum` bij RedHat distro's. Het is een meta package manager die gemakkelijk packages kan installeren en updaten over het internet of vanaf een CD-ROM.
+
+De belangrijkste apt-get commando's zijn:
+
+* `apt-get update` - Werk de database van beschikbare packages bij
+* `apt-get upgrade` - Upgrade alle geïnstalleerde packages naar de nieuwste versie
+* `apt-get install [packages]` - Installeer packages
+* `apt-get remove [packages]` - Verwijder packages, maar laat configuratie intact
+* `apt-get purge [packages]` - Verwijder packages inclusief configuratie
+
+De tools dselect, aptitude, and Synaptic bieden een higher-level interface voor APT.
+
+##### 102.5 RPM en YUM package management
+
+###### RPM - RedHat Package Manager
+
+RPM is door Red Hat ontwikkeld voor hun Linux-distributie. Het wordt inmiddels gebruikt door vele andere distributies.
+
+RPM's package naming conventie is: `packagename-a.b.c-x.arch.rpm`. Daarin staat `a.b.c` voor de versie, `x` voor het buildnummer en `arch` voor de architectuur.
+
+Ieder RPM package zou in theorie werken op een RPM-distributie. Echter kun je last krijgen van de volgende compatibiliteitsproblemen:
+
+* Verschillende distro's gebruiken verschillende versies van RPM
+* Sommige packages zijn niet beschikbaar voor bepaalde distributies
+* Package namen kunnen verschillen per distributie
+* Bestanden in de package kunnen per distributie verschillen
+* Packages kunnen afhankelijk zijn van de directory layout van een bepaalde distributie
+
+RPM is het low-level programma om packages te installeren. De belangrijkste commando's zijn:
+
+* Querying and verifying packages:
+	* `rpm {-q|--query} [select-options] [query-options]`
+	* `rpm {-V|--verify} [select-options] [verify-options]`
+* Installing, upgrading and removing packages:
+	* `rpm {-i|--install} [install-options] PACKAGE_FILE ...`
+	* `rpm {-U|--upgrade} [install-options] PACKAGE_FILE ...`
+	* `rpm {-F|--freshen} [install-options] PACKAGE_FILE ...`
+	* `rpm {-e|--erase} [--allmatches] [--nodeps] [--noscripts] [--notriggers] [--test] PACKAGE_NAME ...`
+
+###### YUM - Yellowdog updater modified
+
+Yum is een package manager met een hoger niveau van abstractie dan RPM. Het kan automatisch packages en hun afhankelijkheden installeren vanuit *package repositories* over het internet.
+
+De syntax van Yum is `yum [options] [command] [package...]`, en de belangrijkste commando's zijn:
+
+* `yum install` - installeer één of meer package
+* `yum update` - update één of meer packages
+* `yum check-update` - Controleer of er updates zijn
+* `yum upgrade` - Equivalent aan `yum update --obsoletes`
+* `yum remove|erase` - Verwijder een package en de dependencies
+* `yum list` - Toon package informatie
+
+Oefen de rest zelf!
+
+##### Package managers vergelijking
+
+Debian en RPM zijn incompatibel met elkaar. In 99% van de situaties heb je maar één van deze package managers op je systeem.
 
 ### 103 GNU en Unix commands
 
