@@ -67,6 +67,9 @@ blockquote p {
     }
 }
 
+th {
+    text-align: center;
+}
 td {
     border: 1px solid gray;
     text-align: center;

@@ -31,9 +31,9 @@ Het leren kennen en beheren van diverse soorten katten.
 Bij statische tests wordt de code niet uitgevoerd.
 In dynamische tests wordt de code wel uitgevoerd, met test data.
 
-Coverage analyse doen.
-
 ## Zeven testprincipes van ISTQP
+
+**Dit leren!**
 
 1. Testing shows the presence of bugs
 	* Not their absence!
@@ -98,3 +98,38 @@ Hoe ernstig is het als het mis gaat met de software? Stem de testen/testmethodes
 
 Er zijn altijd errors, je kan niet bewijzen dat ze er niet zijn.
 Als je geen errors hebt lijkt alles goed te gaan en bug-vrij te zijn.
+
+## Testtypes
+
+* Regression test -> geschiktheid
+* Load test -> prestatie-efficiëntie
+* Stress test -> prestatie-efficiëntie
+* Performance test -> prestatie-efficiëntie
+* Penetratie test (pentest) -> beveiligbaarheid
+* Usability test -> bruikbaarheid
+* Failover test -> betrouwbaarheid
+
+## Defensive en non-defensive programming
+
+### Non-defensive
+
+* I can't make a mistake.
+* It doesn't matter what people think.
+* Whatever my brain comes up with is going to be a great idea.
+
+* It is possible to write perfect software.
+* My brain tells me the truth, and it can't find any errors, therefore I have written perfect software.
+* My code is who I am and people who criticize its perfection are criticizing me.
+
+### Defensive
+
+* Software has errors.
+* You are not your software, yet you are are responsible for the errors.
+* You can never remove the errors, only reduce their probability.
+
+## Design by contract
+
+Bij _design by contract_ worden de interfaces van abstracte software componenten precies gedefinieerd.
+Zo'n specificatie noemen we een _contract_.
+
+![Design by contract](Design_by_contract.svg)

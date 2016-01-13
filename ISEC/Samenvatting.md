@@ -16,11 +16,9 @@
 * Computernetwerken, een top-down benadering (Kurose en Ross) *niet verplicht*
 * Slides
 
-## Leerdoelen
-
-Voor ISEC moet je 
-
 ## Onderwerpen
+
+### Kennen
 
 De begrippen die je moet kennen voor dit vak zijn onder andere:
 
@@ -40,7 +38,7 @@ De begrippen die je moet kennen voor dit vak zijn onder andere:
 * Demilitarized zones, Firewalls, Virtual Private Networks, Intrusion Detection
 * Authentication protocols (Kerberos). Digital Signatures ,Password Strength, Pretty Good Privacy PGP
 
-Technieken:
+### Technieken
 
 * De verschillen tussen symmetrische en asymmetrische encryptie beschrijven
 * De stappen bij Kerberos authenticatie beschrijven en aangeven welke beveiligingsdoeleinden door de verschillende stappen worden geleverd
@@ -50,12 +48,24 @@ Technieken:
 * De functie en werking van een Demilitarized Zone (DMZ) beschrijven
 * De functie en werking van een Virtual Private Network (VPN) 
 
-Behandeld worden de onderwerpen beveiligingsbeleid, beveiligingsrisico’s, internetdiensten, firewalls, DMZ, VPN, error detection en correction, symmetrische / asymmetrische / public key encryptie, crypto-analyse, intrusion detection, logische en fysieke beveiliging, authenticatie, Kerberos, packet filtering.
+Behandeld worden de onderwerpen beveiligingsbeleid, beveiligingsrisico's, internetdiensten, firewalls, DMZ, VPN, error detection en correction, symmetrische / asymmetrische / public key encryptie, crypto-analyse, intrusion detection, logische en fysieke beveiliging, authenticatie, Kerberos, packet filtering.
+
+### Kunnen
+
+* Barcode checksums
+* **Huffman coding**!
+* **Cyclic redundancy check**!
+* Parity bits uitzoeken
+* Zelf public key encryptie kunnen doen
 
 ## Toets tips
 
+Voor dit vak moet je zowel dingen **kennen** als dingen **kunnen**. Als je teveel colleges mist, zal dit laatste waarschijnlijk mislukken. Zaken als Huffman coding, CRC checks, parity checks en barcode checksums moet je met de hand kunnen doen.
+
 Neem een (wetenschappelijke) rekenmachine mee! Deze zul je nodig hebben voor de berekeningen.
-**Let op**: een **grafische rekenmachine** is niet toegestaan.
+**Let op**: een *grafische rekenmachine* is niet toegestaan.
+
+Zorg dat je aanwezig bent bij alle colleges, je zult het nodig hebben.
 
 ## Inhoud
 
@@ -95,9 +105,33 @@ Neem een (wetenschappelijke) rekenmachine mee! Deze zul je nodig hebben voor de 
 ## Security concepts
 
 Technologie op zichzelf is onvoldoende om goede beveiliging te kunnen bereiken.
-Security is een combinatie van technologie, proces en gedrag. (En beleid/policies?)
+Security is een combinatie van technologie, proces en gedrag.
 
 > Information security = network security + computer security
+
+```
+         Information security
+                    ^
+                    |
+        /---------------------\
+       |                      |
+Computer security       Network security
+```
+
+Een pragmatische aanpak van security is nodig, want dat is wat in de praktijk werkt. Besef dat een systeem nooit 100% veilig/waterdicht kan zijn.
+
+Het doel is altijd om security tot een **acceptabel niveau** te houden, omdat je nooit alles kunt voorkomen.
+Wat de precieze definitie van "acceptabel" is, verschilt per situatie of doelgroep.
+
+> Network and information security is a **combined** set of actions in *technology*, *process* and *behavior*
+> in order to main **C, I, and A** at an **acceptable level**.
+
+Issues binnen security zijn onder meer:
+
+* Transmissies beveiligen
+* Continuïteit van systemen bewaken
+	* DDOS-preventie en afwee
+* Gegevensbeveiliging
 
 ### CIA triad
 
@@ -110,22 +144,37 @@ Security is een combinatie van technologie, proces en gedrag. (En beleid/policie
 * **Availability**
 	* Systeem werkt en reageert op tijd, service is beschikbaar voor geautoriseerde gebruikers.
 
-Authentication, accountability, non-repudiation
+Tegenstellen met:
 
-Set van acties in **technologie**, **proces** en **gedrag** behouden *confidentiality*, *integrity* en *availability* op een **acceptabel** niveau.
-Wat "acceptabel" inhoudt, verschilt per situatie of doelgroep.
+* Confidentiality -> disclosure
+* Integrity -> destruction (of wijziging)
+* Availability -> denial
+
+### Extended CIA-triad
+
+De CIA triad is uitgebreid met:
+
+* Authentication
+	* Identiteitsverificatie
+	* *Proof of identity*
+* Accountability
+	* Aansprakelijkheid
+	* Realiseren met bijv. logging
+* Non-repudiation
+	* Bewijzen dat een bericht echt van de afzender is
+	* It implies that one party of a transaction cannot deny having received a transaction nor can the other party deny having sent a transaction.
 
 ### Threats
 
-Gebruik maken van een *vulnerability* (zwakte), om security te doorbreken en schade te veroorzaken.
+Een *threat* is het gebruik maken van een *vulnerability* (zwakte), om security te doorbreken en schade te veroorzaken.
 
-> A possible danger that might exploit a vulnerability given a Circumstance, Capability, action, or event to breach security and cause harm
+> A possible danger that might exploit a vulnerability given a Circumstance, Capability, action, or event to breach security and cause harm.
 
 ### Attack
 
 Een aanval die resulteert van een threat.
 
-> An assault on system security that derives from a threat
+> An assault on system security that derives from a threat.
 
 ### Soorten attacks
 
@@ -142,15 +191,17 @@ Passieve aanvallen omvatten het aftappen/afluisteren van communicatie zonder dez
 
 ##### Interception
 
-
+TODO
 
 ##### Traffic analysis
+
+TODO
 
 #### Active attack
 
 Een actieve aanval omvat het aanpassen van de data stroom of het namaken van een legitieme datastroom.
 
-##### Replay
+##### Replay attack
 
 Data wordt met op een passieve manier afgevangen, en later opnieuw verzonden om een ongeautoriseerd effect te behalen.
 
@@ -174,9 +225,57 @@ TODO
 
 ## OSI TCP/IP
 
+1. Physical
+2. Data link
+3. Network
+4. Transport
+5. Session
+6. Presentation
+7. Application
+
+![](osi-layers.png)
+
+![](osi-tcp-ip-layers.png)
+
 ### Information theory
 
+#### Shannon's theorem(s)
+
+```
+information ≅ 1/P, where P is probability
+```
+
+Het symbool '≅' betekent 'ongeveer gelijk aan'.
+
+#### Logaritmen
+
+`²log x` kan je niet invoeren in de TI83. Maar het kan wel anders. Op je rekenmachine zitten twee logaritmische functies `log` en `ln`.
+
+Met behulp van die functies gaat het wel:
+
+`f(x) = ²log x`
+
+kan je schrijven als
+
+`f(x) = log(x)/log(2)`
+
+Voorbeeld: `²log(64) = 6`
+
+Met je TI83 wordt dat `log(64)/log(2) = 6`
+Dit kan natuurlijk ook met `ln`.
+
 #### Channel capacity, bandwith
+
+Shannon's channel capacity theorem luidt:
+
+```
+C = B • log^2(1 + S/N)
+
+where:
+C is channel capacity in bits/sec
+B is bandwith in Hertz
+S/N is the signal to noise ratio
+```
 
 #### Source coding, compression
 
@@ -211,15 +310,20 @@ Voor het veilig gebruiken van symmetrische encryptie zijn er twee voorwaarden:
 
 ### Algoritmen
 
-* DES
-	* 3DES (triple DES)
-* AES
+* [DES](#des)
+	* [3DES (triple-DES)](#3des)
+* [AES](#aes)
 
 #### DES
 
+**DES (Data Encryption Standard)** is een methode van symmetrische encryptie. Het is vrij oud, en inmiddels niet zo veilig meer.
+Doordat de sleutellengte van DES kort is (64 bits), wordt het algoritme als praktisch kraakbaar beschouwd.
+
+![The Feistel function (F function) of DES](Data_Encription_Standard_Flow_Diagram.svg)
+
 #### 3DES
 
-Doet een encrypt-decrypt-encrypt sequentie zoals:
+Doet een encrypt-decrypt-encrypt sequentie met DES, zoals bijvoorbeeld:
 
 ```
 E = Encryptie functie
@@ -227,15 +331,21 @@ D = Decryptie functie
 
 K = key
 P = plaintext
+C = ciphertext
 
 C = E(K3, D(K2, E(K1, P)))
 ```
 
 **Voordeel**: Triple-DES kan data decrypten die door single-DES is encrypted.
+Het is backwards-compatible.
 
-**Nadeel**: Geen cryptografisch voordeel boven DES.
+**Nadeel**: Het biedt geen cryptografisch voordeel boven DES.
 
 #### AES
+
+**Advanced Encryption Standard (AES)** is de opvolger van DES.
+Uit een wedstrijd voor een opvolger van DES werkt de Rijndael cipher geselecteerd, dat is toen AES geworden.
+AES is een *block cipher*.
 
 #### Stream cipher vs. block cipher
 
@@ -249,10 +359,62 @@ Een voorbeeld hiervan is RC4.
 
 ### Feistel cipher structuur
 
+![Diagram van een Feistel cipher structuur](Feistel_cipher_diagram_en.svg)
+
 #### Diffie Helman key exchange
+
+TODO
 
 ## Parity check
 
-Met een parity bit
+TODO
+
+## Huffman coding
+
+Stel: je hebt de brontekst "duke blue devils".
+
+Maak een frequentietabel van elk karakter:
+`e:3, d:2, u:2, l:2, space:2, k:1, b:1, v:1, i:1, s:1`.
+
+Pak telkens de nodes met de laagste frequentie en combineer deze onder een nieuwe node.
+De twee nodes worden dan verwijderd uit de set, en vervangen door de nieuwe parent node.
+
+Dit wordt herhaald totdat er maar één (root) node over is.
+
+## Hamming distance
+
+* De *hamming distance* van twee bit strings is gelijk aan het aantal bit posities waarijn zij verschillen.
+* Wanneer de geldige woorden van een code een minimum Hamming distance van D hebben, dan kunnen er D-1 bit errors gedetecteerd worden.
+* Wanneer de geldige woorden van een code een minimum Hamming distance van D hebben, dan kunnen [(D-1)/2] errors gecorrigeerd worden.
+
+
+## Hamming inequality
+
+Hamming inequality kunnen toepassen **op toets**!!!
+
+## Two-dimensional parity
+
+Tweede dimensie toevoegen aan 1-dimensionale parity, met een *parity byte* die de eerdere *parity bits* checkt.
+
+TODO: **Zie slide**
+
+## Error correcting codes
+
+Belangrijk:
+
+* Hamming code
+* Reed-Solomon code (wordt niet behandeld in dit vak, hoef je niet te leren)
 
 ## Cyclic Redundancy check (CRC)
+
+TODO!
+
+## Message authenticaiton en message digest
+
+Een *message digest* maakt geen gebruik van een sleutel.
+
+Een *message authentication code* maakt **wel** gebruik van een sleutel. Het is een vorm van symmetrische encryptie. Zender en ontvanger moeten eerst de sleutels hebben.
+
+## Bronnen
+
+* http://www.wisfaq.nl/show3archive.asp?id=179&j=2001
