@@ -5,17 +5,17 @@ if [ -z `which kicker` ]; then
     exit 1;
 fi
 
-DIRECTORY=$1
+COURSE=$1
 
-if [ -z "$DIRECTORY" ]; then
+if [ -z "$COURSE" ]; then
     echo "USAGE:"
     echo "$ script/watch <course>"
     exit 0;
 fi
 
-MD_PATH="$DIRECTORY/Samenvatting.md"
-HTML_PATH="$DIRECTORY/samenvatting.html"
+MD_PATH="$COURSE/Samenvatting.md"
+HTML_PATH="$COURSE/samenvatting.html"
 
 kicker -e "pandoc $MD_PATH -o $HTML_PATH -c ../base.css" $MD_PATH &
-# watch -n60 script/deploy &
-open IRDBMS/*.{md,html}
+watch -n 60 script/deploy &
+open "$MD_PATH $HTML_PATH"

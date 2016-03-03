@@ -11,14 +11,24 @@
 
 ## Literatuur
 
-* Boek X - ISBN 000000000
-* Boek Y - ISBN 000000000
-* Slides Z
-* [Reader A](http://example.com)
+* Test Driven Development By Example, Kent Beck - ISBN 9780321146533
+* Software Testing: An ISEB Foundation, Morgan & Samaroo - ISBN 9781902505794
 
-## Leerdoelen
+## Onderwerpen
 
-Het leren kennen en beheren van diverse soorten katten.
+### Kennen
+
+* Soorten/typen tests
+* Unit testing
+* Test coverage
+* Input space partitioning
+* Design by contract
+* ISTQB principes
+
+### Kunnen
+
+* Test driven development uitvoeren/demonstreren
+* Mocken d.m.v. bijv. Mockito
 
 ## Inhoud
 
@@ -31,30 +41,28 @@ Het leren kennen en beheren van diverse soorten katten.
 Bij statische tests wordt de code niet uitgevoerd.
 In dynamische tests wordt de code wel uitgevoerd, met test data.
 
-## Zeven testprincipes van ISTQP
+## De wet van Bernson
+
+> Alle software breekt voortdurend.
+
+## Zeven testprincipes van ISTQB
 
 **Dit leren!**
 
-1. Testing shows the presence of bugs
-	* Not their absence!
+1. Testing shows the presence of bugs, not their absence!
 2. Exhaustive testing is impossible
-	* Je kan nooit alles testen.
-3. Early testing (is recommended)
-	* Eerder testen is beter.
-4. Defect clustering
-	* Defecten zijn niet gelijkmatig verdeeld.
-5. Pesticide paradox
-	* Er komen altijd nieuwe soorten bugs.
-6. Testing is context dependent
-	* Hoe belangrijk is het testen, en wat moet je wel/niet testen?
+3. Early testing is recommended
+4. Defects are clustered
+5. Pesticide paradox: new types of bugs will always appear
+6. [Importance of] testing is context dependent
 7. Absence of errors fallacy
 	* De afwezigheid van errors kan bedrieglijk zijn.
 
-### 1. Testing shows the presence of bugs
+### 1. Testing shows the presence of bugs, not absence
 
 > Program testing can be used to show the presence of bugs, but never to show their absence!
 
-Edsger Dijkstra quote. Je zou eerst moeten denken aan de specificaties, en die hand-in-hand laten gaan met het testen.
+Dijkstra quote. Je zou eerst moeten denken aan de specificaties, en die hand-in-hand laten gaan met het testen.
 
 ### 2. Exhaustive testing is impossible
 
@@ -99,6 +107,16 @@ Hoe ernstig is het als het mis gaat met de software? Stem de testen/testmethodes
 Er zijn altijd errors, je kan niet bewijzen dat ze er niet zijn.
 Als je geen errors hebt lijkt alles goed te gaan en bug-vrij te zijn.
 
+## ISTQB kort
+
+1. Testen bewijst de **aanwezigheid** van bugs, niet de **afwezigheid**
+2. Je kan **nooit alles** testen
+3. Begin **zo vroeg mogelijk** met testen
+4. Fouten zijn **ongelijkmatig** verdeeld
+5. Er komen altijd nieuwe bugs waar je niet aan gedacht had (**pesticide paradox**)
+6. Hoe belangrijk testing is hangt af van de **context**
+7. **Errors zijn er altijd**, ook al zie je ze niet
+
 ## Testtypes
 
 * Regression test -> geschiktheid
@@ -133,3 +151,26 @@ Bij _design by contract_ worden de interfaces van abstracte software componenten
 Zo'n specificatie noemen we een _contract_.
 
 ![Design by contract](Design_by_contract.svg)
+
+## Test driven development
+
+Test driven development (TDD) is een proces waarbij het schrijven van de code geleidt wordt door de tests. De tests worden eerst geschreven, en pas daarna wordt de code geïmplementeerd.
+
+1. Add a test and watch it fail
+2. Write code until the tests are green
+3. Refactor code
+
+Repeat as many times as necessary.
+
+Meer uitgebreid:
+
+1. Add a [little] test
+2. Run all tests and watch it fail
+3. Make a little change
+4. Run the tests and succeed
+5. Refactor to remove duplication
+
+### Isolated test
+
+Tests mogen elkaar **nooit** beïnvloeden.
+Ze moeten elkaar volledig [kunnen] negeren.

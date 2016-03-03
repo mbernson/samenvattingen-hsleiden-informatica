@@ -1,8 +1,14 @@
 #!/bin/bash
 
 if [ -z `which kicker` ]; then
-    echo "Please install 'Kicker' by running 'gem install kicker'."
-    exit 1;
+    read -p "I need the 'kicker' gem to work. Would you like to install it? (y/n) " -n 1 -r;
+    echo    # (optional) move to a new line
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        gem install kicker;
+    else
+        echo "Please install 'Kicker' by running 'gem install kicker'."
+        exit 1;
+    fi
 fi
 
 DIRECTORY=$1
@@ -14,7 +20,7 @@ if [ -z "$DIRECTORY" ]; then
 fi
 
 if [[ "--mathjax" == $2 ]]; then
-    MATHJAX="--mathjax='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'"
+    MATHJAX="--mathjax"
 else
     MATHJAX=""
 fi

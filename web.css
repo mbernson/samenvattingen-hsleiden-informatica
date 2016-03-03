@@ -19,3 +19,9 @@ hr {
     border: none;
     border-radius: 2px;
 }
+
+#disclaimer {
+    border: 2px solid red;
+    border-radius: 16px;
+    padding: 0 1em;
+}
