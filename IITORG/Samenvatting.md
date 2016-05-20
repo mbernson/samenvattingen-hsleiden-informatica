@@ -66,10 +66,13 @@ De student kan na (gunstige) afloop van deze module:
 * [Organisaties](#organisaties)
 	* [Missie en visie](#missie-en-visie)
 	* [Stakeholders](#stakeholders)
+		* [Interne stakeholders](#interne-stakeholders)
+		* [Externe stakeholders](#externe-stakeholders)
 	* [Shareholders](#shareholders)
 * [Organisatievormen](#organisatievormen)
 	* [Lijnorganisatie](#lijnorganisatie)
 	* [Lijn-staf-organisatie](#lijn-staf-organisatie)
+		* [Functionele lijn-staf-organisatie](#functionele-lijn-staf-organisatie)
 	* [Matrixorganisatie](#matrixorganisatie)
 	* [Kennisorganisatie](#kennisorganisatie)
 * [Ketenvormen](#ketenvormen)
@@ -79,13 +82,35 @@ De student kan na (gunstige) afloop van deze module:
 * [Product vs. dienst](#product-vs.-dienst)
 * [Leiderschapsstijlen](#leiderschapsstijlen)
 	* [Quinn](#quinn)
+		* [Oriëntatie](#oriëntatie)
+		* [Flexibiliteit](#flexibiliteit)
+		* [Beheersgericht](#beheersgericht)
+		* [Mensgericht](#mensgericht)
+		* [Innovatie gericht](#innovatie-gericht)
+		* [Resultaatgericht](#resultaatgericht)
 	* [Hersey](#hersey)
+		* [Gedrag](#gedrag)
+			* [Ondersteunend gedrag](#ondersteunend-gedrag)
+			* [Sturend gedrag](#sturend-gedrag)
+		* [Stijl 1: Leiden](#stijl-1-leiden)
+		* [Stijl 2: Begeleiden](#stijl-2-begeleiden)
+		* [Stijl 3: Steunen](#stijl-3-steunen)
+		* [Stijl 4: Delegeren](#stijl-4-delegeren)
 	* [Competenties](#competenties)
 * [Situationeel leiderschap](#situationeel-leiderschap)
 * [Cultuur](#cultuur)
 	* [Organisatiecultuur](#organisatiecultuur)
+		* [Karakter](#karakter)
+		* [Normen](#normen)
+		* [Waarden](#waarden)
 	* [Culturele typologie van Hofstede](#culturele-typologie-van-hofstede)
 * [Levenscyclusmodel van Greiner](#levenscyclusmodel-van-greiner)
+	* [Fase 1: Pioniersfase](#fase-1-pioniersfase)
+	* [Fase 2: Managementfase](#fase-2-managementfase)
+	* [Fase 3: Decentralisatiefase](#fase-3-decentralisatiefase)
+	* [Fase 4: Standaardisatiefase](#fase-4-standaardisatiefase)
+	* [Fase 5: Samenwerkingsfase](#fase-5-samenwerkingsfase)
+	* [Fase 6: Ondernemen en groei](#fase-6-ondernemen-en-groei)
 * [5 P's van marketing](#ps-van-marketing)
 * [BCG matrix](#bcg-matrix)
 * [PMC, PLC, BCG, adoptiecurve, Herzberg en andere modellen](#pmc-plc-bcg-adoptiecurve-herzberg-en-andere-modellen)
@@ -96,10 +121,18 @@ De student kan na (gunstige) afloop van deze module:
 	* [Herzberg](#herzberg)
 * [Value chain](#value-chain)
 	* [Waardeketen van Porter](#waardeketen-van-porter)
+		* [Onthouden](#onthouden)
 * [Mintzberg](#mintzberg)
 	* [Vijf onderdelen](#vijf-onderdelen)
 	* [Configuraties](#configuraties)
+		* [Simpele structuur (ondernemersorganisatie)](#simpele-structuur-ondernemersorganisatie)
+		* [Machineorganisatie (machinebureaucratie)](#machineorganisatie-machinebureaucratie)
+		* [Professionele organisatie](#professionele-organisatie)
+		* [Adhocratie (innovatieve organisatie)](#adhocratie-innovatieve-organisatie)
+		* [Divisiestructuur (gediversifieerde organisatie)](#divisiestructuur-gediversifieerde-organisatie)
 	* [Extra](#extra)
+		* [Zendingsorganisatie](#zendingsorganisatie)
+		* [Politieke organisatie](#politieke-organisatie)
 	* [Druk](#druk)
 * [5-krachtenmodel van Porter](#krachtenmodel-van-porter)
 * [Organisatievormen (KvK)](#organisatievormen-kvk)
@@ -121,6 +154,16 @@ De student kan na (gunstige) afloop van deze module:
 * [Prijs](#prijs)
 	* [Wat is prijs](#wat-is-prijs)
 	* [Prijsstrategieën](#prijsstrategieën)
+		* [Actief prijsbeleid](#actief-prijsbeleid)
+			* [Skimpricing](#skimpricing)
+			* [Stay-out pricing](#stay-out-pricing)
+			* [Put-out pricing](#put-out-pricing)
+			* [Prijsdifferentiatie](#prijsdifferentiatie)
+			* [Prijsdiscriminatie](#prijsdiscriminatie)
+			* [Penetratie pricing](#penetratie-pricing)
+		* [Passief prijsbeleid](#passief-prijsbeleid)
+			* [Kartelvorming](#kartelvorming)
+			* [Me-too pricing](#me-too-pricing)
 	* [Prijselasticiteit](#prijselasticiteit)
 * [Kosten](#kosten)
 	* [Vaste en variabele kosten](#vaste-en-variabele-kosten)
@@ -128,15 +171,13 @@ De student kan na (gunstige) afloop van deze module:
 	* [Cirkel van falen](#cirkel-van-falen)
 	* [Cirkel van succes](#cirkel-van-succes)
 * [Bronnen](#bronnen)
-	* [Zelf](#zelf)
-	* [Slides](#slides)
-
+* 
 ## Belangrijke kopjes
 
 * [Waardeketen van Porter](#waardeketen-van-porter)
-* [Organisatiecomponenten van Mintzberg](#)
+* [Organisatiecomponenten van Mintzberg](#mintzberg)
 * [Rechtsvormen organisaties](#)
-* [Product vs. dienst](#)
+* [Product vs. dienst](#product-vs.-dienst)
 * [Productsamenstelling Leeflang, Copeland](#)
 * Modellen
 	* [Culturele topologie van Hofstede](#culturele-typologie-van-hofstede)
@@ -165,7 +206,12 @@ In projecten werk je met mensen uit andere organisatieonderdelen. Je moet hun "t
 Daarnaast kun je na deze module:
 
 * Verschillende bedrijfskundige modellen uitleggen, verklaren en toepassen.
-* Een organisatie typeren met gebruik van de organisatietypologie van Mintzberg en de culturele typologie van Hofstede* De 5 P’s van de marketingmix (Product, Prijs, Plaats, Promotie en Personeel) benoemen, verklaren en toepassen* De BCG matrix en de PLC uitleggen en toepassen* De Valuechain en het 5-krachtenmodel van Porter uitleggen en toepassen* Aan de hand van PMC’s nieuwe mogelijkheden voor producten en diensten benoemen* Verschillende leiderschapsstijlen onderscheiden en benoemen
+* Een organisatie typeren met gebruik van de organisatietypologie van Mintzberg en de culturele typologie van Hofstede
+* De 5 P’s van de marketingmix (Product, Prijs, Plaats, Promotie en Personeel) benoemen, verklaren en toepassen
+* De BCG matrix en de PLC uitleggen en toepassen
+* De Valuechain en het 5-krachtenmodel van Porter uitleggen en toepassen
+* Aan de hand van PMC’s nieuwe mogelijkheden voor producten en diensten benoemen
+* Verschillende leiderschapsstijlen onderscheiden en benoemen
 
 ## Organisaties
 
@@ -186,7 +232,7 @@ Het bedrijf van een ZZP-er is ook een organisatie. §9.8.3
 
 ### Stakeholders
 
-Een stakeholder heeft bepaalde belangen bij een organisatie.
+Een stakeholder is een **belanghebbende** in een organisatie.
 Voorbeelden zijn de belastingdienst, de toeleveranciers en de werknemers van het bedrijf.
 
 #### Interne stakeholders
@@ -245,14 +291,14 @@ Bijvoorbeeld:
           ↓               ↓              ↓
     Voorlichting    Specificaties     Training
 
-----------------------------------------------------------
-
 ![organisatiestructuren van IIBPM gekopieerd](organisatiestructuren.jpg)
 
 ### Kennisorganisatie
 
 De kennisorganisatie komt wat minder vaak voor. De medewerkers van een kennisorganisatie zijn specialisten; deskundigen in een bepaald veld.
 Ze werken alleen maar samen omdat dat onderling voordelen biedt. Deze medewerkers accepteren geen authoriteit op basis van hiërarchie, maar slechts op basis van deskundigheid.
+
+----------------------------------------------------------
 
 ## Ketenvormen
 
@@ -265,8 +311,6 @@ We onderscheiden drie verschillende *pure* ketenvormen:
 * Marktgerichte ketens
 * Productgerichte ketens
 * **Productie**-gerichte ketens
-
-
 
 ### Marktgerichte ketens
 
@@ -310,6 +354,8 @@ Een dienst:
 * Is persoonlijk
 * Geen zekerheid
 * Mensenwerk
+
+----------------------------------------------------------
 
 ## Leiderschapsstijlen
 
@@ -387,11 +433,11 @@ Hersey onderscheidt *ondersteunend gedrag* en *sturend gedrag*.
 
 ##### Ondersteunend gedrag
 
-
+TODO
 
 ##### Sturend gedrag
 
-
+TODO
 
 Op de Y-as de ondersteunendheid van het gedrag, op de X-as de hoeveelheid sturing.
 
@@ -421,7 +467,7 @@ Zie ook [Situationeel leiderschap](#situationeel-leiderschap).
 
 Competenties *leer* je niet, ze komen uit jezelf. Op de Hogeschool doe je kennis op, maar de competenties heb je al. Die moeten alleen nog [op een bepaald moment] ontsloten worden.
 
-## Situationeel leiderschap
+### Situationeel leiderschap volgens Hersey
 
 De belangrijkste taak van leiders is het beïnvloeden van anderen, om plannen te realiseren. Soms gaat het om hun eigen plannen, soms om de plannen van een groep. Eén van de bekendste modellen voor leidinggeven is het situationeel leiderschap van Hersey en Blanchard.
 
@@ -532,9 +578,28 @@ Daarnaast kan de organisatie zich verder ontwikkelen door acquisities, externe p
 Er kan echter nog een **identiteitscrisis** plaatsvinden, omdat de organisatie steeds verder van de oorspronkelijke drijfveren en motivatoren weg gaat.
 Het is mogelijk dat de organisatie hierdoor uiteenvalt in nieuwe "cellen".
 
+----------------------------------------------------------
+
 ## 5 P's van marketing
 
-> Marketingmix: *Product, Prijs, Plaats, Promotie en Personeel*
+Met de marketingmix bedoelen we de onderdelen die een organisatie kan gebruiken voor het invullen van haar marketingstrategie.
+Deze hebben een onderlinge wisselwerking.
+
+
+### Product
+
+### Plaats
+
+### Promotie
+
+### Prijs
+
+### Personeel
+
+Deze is nieuwer dan de bovenstaande "originele" 4 P's.
+
+
+----------------------------------------------------------
 
 ## BCG matrix
 
@@ -866,12 +931,107 @@ TODO
 
 TODO
 
-## Bronnen
+----------------------------------------------------------
 
-### Zelf
+## Vocatio
+
+Fucking shit
+
+Bij het voeren van een klantgesprek is het handig het model *VOCATIO* te gebruiken, ontwikkeld door Wage in 1970. De eerste letters van dat woord staan voor de volgende gespreksfasen:
+
+* Verkenning
+* Omschrijving klantprobleem
+* Confrontatie
+* Argumentatie
+* Tegenwerpingen opvangen
+* Instemming verkrijgen
+* Order verwerven
+
+### Verkenning
+
+### Omschrijving klantprobleem
+
+### Confrontatie
+
+### Argumentatie
+
+### Tegenwerpingen opvangen
+
+### Instemming verkrijgen
+
+### Order verwerven
+
+## Bronnen
 
 * [Mintzberg Organisatiestructuren / modellen](http://www.expand.nl/hr-weblog/mintzberg-organisatiestructuren---modellen)
 
-### Slides
+### Hoorcollege/slidedeck 2
 
-* [Tekst](#)
+#### Algemeen
+
+* [http://www.rijsenbrij.net/archive1/vision/nl/ http://www.scribd.com/doc/55218117/42/Waardeketen-value-chain-Porter](http://www.rijsenbrij.net/archive1/vision/nl/ http://www.scribd.com/doc/55218117/42/Waardeketen-value-chain-Porter)
+* [http://www.cram.nl/ieni/930107.htm](http://www.cram.nl/ieni/930107.htm)
+
+#### Value chain (Porter)
+
+* [http://zakelijk.infonu.nl/marketing/24488-het-waardeketenmodel-value-chain-van-porter.html](http://zakelijk.infonu.nl/marketing/24488-het-waardeketenmodel-value-chain-van-porter.html)
+
+#### Value chain Informatie
+
+* [http://logisticsglobal.blogspot.com/2011/08/value-chain-sample-primary-and-support.html](http://logisticsglobal.blogspot.com/2011/08/value-chain-sample-primary-and-support.html)
+
+#### Mintzberg
+
+* [http://www.lindsay-sherwin.co.uk/guide_managing_change/html_change_strategy/07_mintzberg.htm](http://www.lindsay-sherwin.co.uk/guide_managing_change/html_change_strategy/07_mintzberg.htm)
+
+#### Greiner
+
+* [http://www.gertjanschop.com/modellen/greiner.html http://www.managementmodellensite.nl/](http://www.gertjanschop.com/modellen/greiner.html http://www.managementmodellensite.nl/)
+
+### Hoorcollege/slidedeck 4
+
+#### Algemeen
+
+* [http://nl.wikipedia.org/wiki/A-merk](http://nl.wikipedia.org/wiki/A-merk)
+* [http://www.retailwiki.nl/wiki02/index.php/Convenience_good](http://www.retailwiki.nl/wiki02/index.php/Convenience_good)
+
+#### Rechtsvormen
+
+* [http://www.kvk.nl/ondernemen/rechtsvormen/overzicht-van-alle-rechtsvormen/](http://www.kvk.nl/ondernemen/rechtsvormen/overzicht-van-alle-rechtsvormen/)
+
+#### PMC
+
+* [http://www.scienceprogress.nl/marketing/product-market-groei-matrix](http://www.scienceprogress.nl/marketing/product-market-groei-matrix)
+
+#### BCG
+
+* [http://www.intemarketing.nl/marketing/modellen/bcg-matrix](http://www.intemarketing.nl/marketing/modellen/bcg-matrix)
+
+#### Adoptiecurve Rogers
+
+* [http://nl.wikipedia.org/wiki/Innovatietheorie_van_Rogers](http://nl.wikipedia.org/wiki/Innovatietheorie_van_Rogers)
+
+#### PLC
+
+* [http://nl.wikipedia.org/wiki/Productlevenscyclus](http://nl.wikipedia.org/wiki/Productlevenscyclus)
+
+#### MarketingMix
+
+* [http://nl.wikipedia.org/wiki/Marketingmix](http://nl.wikipedia.org/wiki/Marketingmix)
+
+### Hoorcollege/slidedeck 5
+
+#### Promotie
+
+* [http://nl.wikipedia.org/wiki/Reclame http://nl.wikipedia.org/wiki/Public_relations](http://nl.wikipedia.org/wiki/Reclame http://nl.wikipedia.org/wiki/Public_relations)
+* [http://nl.wikipedia.org/wiki/Direct_marketing](http://nl.wikipedia.org/wiki/Direct_marketing)
+
+#### Verkooptechniek
+
+* [http://www.leren.nl/cursus/professionele-vaardigheden/verkopen/vocatio.html](http://www.leren.nl/cursus/professionele-vaardigheden/verkopen/vocatio.html)
+
+#### Distributie
+
+* [http://www.retailwiki.nl/wiki02/index.php/Distributie](http://www.retailwiki.nl/wiki02/index.php/Distributie)
+* [http://www.retailwiki.nl/wiki02/index.php/Parallelisatie](http://www.retailwiki.nl/wiki02/index.php/Parallelisatie)
+* [http://www.retailwiki.nl/wiki02/index.php/Differentiatie](http://www.retailwiki.nl/wiki02/index.php/Differentiatie)
