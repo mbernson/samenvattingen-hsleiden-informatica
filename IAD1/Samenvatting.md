@@ -165,11 +165,13 @@ Vaak is van de code af te leiden wat de complexiteit van het geïmplementeerde a
 
 ### Hash table
 
-Een *hash table* slaat key => value paren op, op een manier waarop deze snel opgevraagd kunnen worden.
+Een *hash table* is een type *symbol table*. Een symbol table associeert een bepaalde **key** met een bepaalde **value**. Ze worden ook wel dictionaries genoemd.
+
 
 De plaats in de interne **array** wordt bepaald door de **key** door een **hash functie** te halen. Het resultaat hiervan is het adres in de array waar de **value** wordt opgeslagen.
 
-Als twee **keys** dezelfde **hashwaarde** hebben, spreken we van een **collision**. Eén mogelijke oplossing hiervoor is **linear probing**, waarbij de waarde verder in de hash wordt geplaatst. Er is ook **quadratic probing** en **double hashing**.
+Als twee **keys** dezelfde **hashwaarde** hebben, spreken we van een **collision**. Eén mogelijke oplossing hiervoor is **linear probing**, waarbij de waarde op de eerstvolgende plaats in de hash wordt gezet.
+Er is ook **quadratic probing** en **double hashing** (hoef je niet te weten).
 
 Met **separate chaining** worden er **buckets** in de interne array bijgehouden, waardoor elementen met dezelfde hashwaarde samen in een bucket vallen.
 
