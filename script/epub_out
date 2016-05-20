@@ -1,0 +1,34 @@
+#!/bin/bash
+
+FORMAT=$1
+
+if [ -z "$FORMAT" ]; then
+    echo "USAGE:"
+    echo "$ script/out <format file extension>"
+    exit 0;
+fi
+mkdir -p "out/$FORMAT"
+
+for DIRECTORY in `find . -type d -maxdepth 1`
+do
+    if [ $DIRECTORY != "./script" ]; then
+    if [ $DIRECTORY != "./.git" ]; then
+    if [ $DIRECTORY != "." ]; then
+
+        cd $DIRECTORY
+
+        if [ -f Samenvatting.md ]; then
+            FULL_PATH="../out/$FORMAT/$DIRECTORY.$FORMAT"
+            echo "Converting Samenvatting.md to $FULL_PATH"
+            pandoc Samenvatting.md -o $FULL_PATH
+        fi
+
+        cd ..
+
+    fi
+    fi
+    fi
+done
+
+# pandoc $MD_PATH -o $HTML_PATH -c ../base.css
+

@@ -40,6 +40,5 @@ function generate_toc(depth) {
     });
 
     return text;
-
 }
 console.log(generate_toc());
