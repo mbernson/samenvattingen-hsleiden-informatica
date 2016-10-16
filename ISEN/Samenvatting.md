@@ -25,6 +25,14 @@
 3. Projectplanning en Uitvoering.
 	* De student kent de eisen en kenmerken voor het opstellen van een projectplan. O.a. probleemstelling, onderzoeksvraag, businessplan,deliverables en rapporteren. Het opleveren van een werkende demonstrator op basis van onderzoek door project groep.
 
+Uit de nieuwe modulewijzer:
+
+* Sensorentechnologie en Internet of Things (IoT)
+    * Student kan sensoren circuits herkennen en classificeren en concepten generaliseren naar sensornetwerken en uiteindelijk internet of things
+    * Kan de randvoorwaarden en de principes bij het toepassen van sensoren, op verschillende abstractieniveaus analyseren en beschrijven.
+    * Is in staat de principes van signalen, sensoren circuits , versterkers, filters, A/D conversie en digitale signaal bewerking uit te leggen en te illustreren en kan de voortvloeiende numerieke problemen oplossen.
+    * Kan de reikwijdte, de effecten op business en op de samenleving van het “Internet of Things” (IOT) in beeld brengen. De belangrijkste componenten van het IOT kunnen omschrijven in relatie tot elkaar en met de business en de techniek. Kan de verschillende ICT lagen vergelijken en ICT activiteiten daarin plaatsen.
+
 ## Inhoud
 
 * [Elektriciteit](#elektriciteit)
@@ -81,19 +89,26 @@
 | Eenheid        | Symbool | SI eenheid | Symbool |
 |----------------|---------|------------|---------|
 | capacitance    | C       | farad      | F       |
-| charge         | Q       | coulomb    | C       |
+| **charge**     | Q       | coulomb    | C       |
 | conductance    | G       | siemens    | S       |
-| current        | I       | ampere     | A       |
+| **current**    | I       | ampere     | A       |
 | energy or work | W       | joule      | J       |
 | frequency      | f       | hertz      | Hz      |
 | impedance      | Z       | ohm        | Ω       |
 | inductance     | L       | henry      | H       |
-| power          | P       | watt       | W       |
+| **power**      | P       | watt       | W       |
 | reactance      | X       | ohm        | Ω       |
-| resistance     | R       | ohm        | Ω       |
-| voltage        | V       | volt       | V       |
+| **resistance** | R       | ohm        | Ω       |
+| **voltage**    | V       | volt       | V       |
 
-**TODO** andere tabel ook overnemen
+| Eenheid           | SI eenheid | Symbool |
+|-------------------|------------|---------|
+| Lengte            | Meter      | m       |
+| Massa             | Kilogram   | kg      |
+| Tijd              | Seconde    | s       |
+| Temperatuur       | Kelvin     | K       |
+| Licht intensiteit | Candela    | cd      |
+| Hoeveelheid subst | Mol        | mol     |
 
 ### Meten
 
@@ -551,4 +566,17 @@ Hoe meer spanning een batterij moet leveren, hoe korter de levensduur. Batterije
 Dan hebben we het bijvoorbeeld over een auto-accu van 70Ah, die op 12 volt 3.5 ampere levert. Dit kan hij dus gedurende 20 uur doen.
 
 ## Gelijkspanning en wisselspanning
+
+TODO
+
+
+------------------------------------
+
+## Current divider (stroomdeler)
+
+Wanneer meerdere weerstanden parallel geschakeld zijn spreken we van een *current divider* (stroomdeler).
+
+![](Current_division_example.svg)
+
+## Voltage divider (spanningsdeler)
 
