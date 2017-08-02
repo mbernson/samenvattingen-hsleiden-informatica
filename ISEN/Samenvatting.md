@@ -580,3 +580,22 @@ Wanneer meerdere weerstanden parallel geschakeld zijn spreken we van een *curren
 
 ## Voltage divider (spanningsdeler)
 
+------------------------------------
+
+## CD track afstand
+
+------------------------------------
+
+## Toepassingen
+
+### Filter
+
+### Amplifier
+
+### A/D converter
+
+### Smart sensor netwerk
+
+### OV-chipkaart
+
+### Seismologie en geofoon
